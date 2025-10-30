@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4 - Tablas HTML</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Estilos para las tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Une los bordes */
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #667eea;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Filas alternas con fondo gris */
+        }
+
+        tr:hover {
+            background-color: #e3f2fd; /* Color al pasar el mouse */
+        }
+
+        .tabla-compacta td {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .tabla-colorida th {
+            background-color: #4caf50;
+        }
+
+        .tabla-colorida tr:nth-child(odd) {
+            background-color: #fff3e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- NAVEGACIÓN -->
+        <a href="index.html" class="btn-volver">← Volver al Menú</a>
+
+        <!-- ENCABEZADO -->
+        <h1>📊 Actividad 4: Tablas HTML</h1>
+
+        <div class="descripcion">
+            <p><strong>Objetivo:</strong> Aprender a crear y diseñar tablas en HTML</p>
+            <p><strong>Instrucciones:</strong> Observa los ejemplos y completa las tareas</p>
+        </div>
+
+        <!-- SECCIÓN 1: TABLA BÁSICA -->
+        <div class="seccion">
+            <h2>1️⃣ Tabla Básica</h2>
+            <p class="explicacion">
+                Una tabla se compone de:
+            </p>
+            <ul>
+                <li><strong>&lt;table&gt;</strong> - Contenedor de la tabla</li>
+                <li><strong>&lt;tr&gt;</strong> - Fila de la tabla (Table Row)</li>
+                <li><strong>&lt;th&gt;</strong> - Encabezado de columna (Table Header)</li>
+                <li><strong>&lt;td&gt;</strong> - Celda de datos (Table Data)</li>
+            </ul>
+
+            <div class="caja-ejemplo">
+                <h3>Ejemplo: Lista de Estudiantes</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Ciudad</th>
+                    </tr>
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>20</td>
+                        <td>Medellín</td>
+                    </tr>
+                    <tr>
+                        <td>María García</td>
+                        <td>22</td>
+                        <td>Bogotá</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos López</td>
+                        <td>21</td>
+                        <td>Cali</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 🎯 TAREA 1: Crea tu tabla de amigos -->
+            <div class="tarea">
+                <h3>🎯 TAREA 1: Crea tu tabla de amigos</h3>
+                <p>Crea una tabla con 3 columnas: Nombre, Edad, Pasatiempo</p>
+                <p>Incluye al menos 3 filas con datos de tus amigos o familia</p>
+
+                <!--
+                    PISTA - ESTRUCTURA DE UNA TABLA:
+
+                    <table>
+                        <tr>
+                            <th>Columna 1</th>
+                            <th>Columna 2</th>
+                            <th>Columna 3</th>
+                        </tr>
+                        <tr>
+                            <td>Dato 1</td>
+                            <td>Dato 2</td>
+                            <td>Dato 3</td>
+                        </tr>
+                    </table>
+
+                    RECUERDA:
+                    - <table> abre la tabla
+                    - <tr> es una fila (table row)
+                    - <th> es un encabezado (table header) - va en la primera fila
+                    - <td> es una celda de datos (table data)
+                    - Cierra todo con </table>
+
+                    EJEMPLO COMPLETO CON TUS DATOS:
+
+                    <table>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Pasatiempo</th>
+                        </tr>
+                        <tr>
+                            <td>Carlos Pérez</td>
+                            <td>25</td>
+                            <td>Jugar fútbol</td>
+                        </tr>
+                        <tr>
+                            <td>Ana Gómez</td>
+                            <td>23</td>
+                            <td>Leer libros</td>
+                        </tr>
+                        <tr>
+                            <td>Luis Martínez</td>
+                            <td>28</td>
+                            <td>Tocar guitarra</td>
+                        </tr>
+                    </table>
+
+                    AHORA TÚ: Copia el ejemplo de arriba y cambia los nombres, edades y pasatiempos:
+                -->
+
+                <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+
+
+
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2: TABLA CON THEAD, TBODY Y TFOOT -->
+        <div class="seccion">
+            <h2>2️⃣ Tabla Estructurada</h2>
+            <p class="explicacion">
+                Para tablas más organizadas, podemos dividirlas en secciones:
+            </p>
+            <ul>
+                <li><strong>&lt;thead&gt;</strong> - Encabezado de la tabla</li>
+                <li><strong>&lt;tbody&gt;</strong> - Cuerpo de la tabla (datos)</li>
+                <li><strong>&lt;tfoot&gt;</strong> - Pie de la tabla (totales, resúmenes)</li>
+            </ul>
+
+            <div class="caja-ejemplo">
+                <h3>Ejemplo: Ventas Mensuales</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mes</th>
+                            <th>Producto</th>
+                            <th>Ventas (COP)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Enero</td>
+                            <td>Laptop</td>
+                            <td>$2,500,000</td>
+                        </tr>
+                        <tr>
+                            <td>Febrero</td>
+                            <td>Mouse</td>
+                            <td>$150,000</td>
+                        </tr>
+                        <tr>
+                            <td>Marzo</td>
+                            <td>Teclado</td>
+                            <td>$300,000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"><strong>TOTAL</strong></td>
+                            <td><strong>$2,950,000</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <p class="explicacion">
+                <strong>colspan:</strong> Une columnas horizontalmente<br>
+                En el ejemplo, <code>colspan="2"</code> hace que la celda ocupe 2 columnas
+            </p>
+        </div>
+
+        <!-- SECCIÓN 3: TABLA CON ROWSPAN Y COLSPAN -->
+        <div class="seccion">
+            <h2>3️⃣ Celdas Combinadas</h2>
+            <p class="explicacion">
+                Podemos combinar celdas de dos formas:
+            </p>
+            <ul>
+                <li><strong>colspan="N"</strong> - Combina N columnas horizontalmente</li>
+                <li><strong>rowspan="N"</strong> - Combina N filas verticalmente</li>
+            </ul>
+
+            <div class="caja-ejemplo">
+                <h3>Ejemplo: Horario de Clases</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8:00 - 10:00</td>
+                            <td>Matemáticas</td>
+                            <td>Física</td>
+                            <td>Química</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 - 12:00</td>
+                            <td colspan="3" style="text-align: center; background-color: #fff3e0;">
+                                <strong>DESCANSO</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12:00 - 14:00</td>
+                            <td>Historia</td>
+                            <td>Inglés</td>
+                            <td>Programación</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top: 30px;">Ejemplo con Rowspan</h3>
+                <table>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Electrónica</td>
+                        <td>Laptop</td>
+                        <td>$2,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>Mouse</td>
+                        <td>$50,000</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Ropa</td>
+                        <td>Camiseta</td>
+                        <td>$40,000</td>
+                    </tr>
+                    <tr>
+                        <td>Pantalón</td>
+                        <td>$80,000</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 🎯 TAREA 2 -->
+            <div class="tarea">
+                <h3>🎯 TAREA 2: Crea una tabla de películas favoritas</h3>
+                <p>Crea una tabla con estas columnas: Género, Título, Año, Calificación</p>
+                <p>Usa <strong>rowspan</strong> para agrupar películas del mismo género</p>
+                <p>Ejemplo: Si tienes 2 películas de "Acción", la celda de género debe ocupar 2 filas</p>
+
+                <!--
+                    PISTA - CÓMO USAR ROWSPAN:
+
+                    rowspan="N" hace que una celda ocupe N filas verticalmente
+
+                    EJEMPLO VISUAL:
+                    ┌──────────┬──────────┬──────┬──────────────┐
+                    │ Género   │ Título   │ Año  │ Calificación │
+                    ├──────────┼──────────┼──────┼──────────────┤
+                    │ Acción   │ Avatar   │ 2009 │ ⭐⭐⭐⭐⭐     │
+                    │ (rowspan │──────────┼──────┼──────────────│
+                    │    =2)   │ Titanic  │ 1997 │ ⭐⭐⭐⭐⭐     │
+                    ├──────────┼──────────┼──────┼──────────────┤
+                    │ Comedia  │ Mi pobre│ 2013 │ ⭐⭐⭐⭐       │
+                    │          │ angelito │      │              │
+                    └──────────┴──────────┴──────┴──────────────┘
+
+                    CÓDIGO DEL EJEMPLO:
+
+                    <table>
+                        <tr>
+                            <th>Género</th>
+                            <th>Título</th>
+                            <th>Año</th>
+                            <th>Calificación</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Acción</td>
+                            <td>Avatar</td>
+                            <td>2009</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <!-- ¡FÍJATE! Esta fila NO tiene la celda de "Género" porque rowspan ya la ocupó -->
+                            <td>Titanic</td>
+                            <td>1997</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>Comedia</td>
+                            <td>Mi pobre angelito</td>
+                            <td>2013</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                    </table>
+
+                    IMPORTANTE:
+                    - En la primera fila de "Acción" pones: <td rowspan="2">Acción</td>
+                    - En la segunda fila de "Acción" NO pones la celda de género (ya está ocupada por rowspan)
+                    - Puedes usar estrellas ⭐ para la calificación o números del 1 al 5
+
+                    AHORA TÚ: Copia el ejemplo de arriba y cámbialo con tus películas favoritas:
+                -->
+
+                <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+
+
+
+            </div>
+        </div>
+
+        <!-- SECCIÓN 4: TABLA CON ESTILOS PERSONALIZADOS -->
+        <div class="seccion">
+            <h2>4️⃣ Tablas con Estilos Personalizados</h2>
+
+            <div class="caja-ejemplo">
+                <h3>Tabla Compacta</h3>
+                <table class="tabla-compacta">
+                    <tr>
+                        <th>ID</th>
+                        <th>Producto</th>
+                        <th>Stock</th>
+                    </tr>
+                    <tr>
+                        <td>001</td>
+                        <td>Laptop HP</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Mouse Logitech</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Teclado Mecánico</td>
+                        <td>30</td>
+                    </tr>
+                </table>
+
+                <h3 style="margin-top: 30px;">Tabla Colorida</h3>
+                <table class="tabla-colorida">
+                    <tr>
+                        <th>Fruta</th>
+                        <th>Color</th>
+                        <th>Precio/kg</th>
+                    </tr>
+                    <tr>
+                        <td>Manzana</td>
+                        <td>Roja</td>
+                        <td>$5,000</td>
+                    </tr>
+                    <tr>
+                        <td>Banana</td>
+                        <td>Amarilla</td>
+                        <td>$3,000</td>
+                    </tr>
+                    <tr>
+                        <td>Uva</td>
+                        <td>Verde/Morada</td>
+                        <td>$8,000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 5: TABLA INTERACTIVA CON JAVASCRIPT -->
+        <div class="seccion">
+            <h2>5️⃣ Tabla Interactiva</h2>
+            <p class="explicacion">
+                Podemos usar JavaScript para hacer tablas dinámicas
+            </p>
+
+            <div class="caja-ejemplo">
+                <h3>Agregar Filas Dinámicamente</h3>
+                <table id="tablaProductos">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla">
+                        <tr>
+                            <td>Laptop</td>
+                            <td>$2,000,000</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button onclick="agregarProducto()">➕ Agregar Producto</button>
+
+                <script>
+                    function agregarProducto() {
+                        let producto = prompt("Nombre del producto:");
+                        let precio = prompt("Precio:");
+                        let cantidad = prompt("Cantidad:");
+
+                        if (producto && precio && cantidad) {
+                            // Obtener el cuerpo de la tabla
+                            let tbody = document.getElementById("cuerpoTabla");
+
+                            // Crear una nueva fila
+                            let nuevaFila = document.createElement("tr");
+
+                            // Crear las celdas
+                            nuevaFila.innerHTML = `
+                                <td>${producto}</td>
+                                <td>$${precio}</td>
+                                <td>${cantidad}</td>
+                            `;
+
+                            // Agregar la fila a la tabla
+                            tbody.appendChild(nuevaFila);
+                        }
+                    }
+                </script>
+            </div>
+
+            <!-- 🎯 TAREA 3 -->
+            <div class="tarea">
+                <h3>🎯 TAREA 3: Crea tu propia tabla dinámica</h3>
+                <p>Crea una tabla de "Tareas Pendientes" donde puedas agregar nuevas tareas</p>
+                <p>Columnas: Tarea, Prioridad (Alta/Media/Baja), Fecha Límite</p>
+
+                <!--
+                    PISTA - COMBINA HTML + JAVASCRIPT:
+
+                    PARTE 1: Crear la tabla HTML
+                    PARTE 2: Crear la función JavaScript para agregar filas
+
+                    CÓDIGO COMPLETO:
+
+                    <table id="tablaTareas">
+                        <thead>
+                            <tr>
+                                <th>Tarea</th>
+                                <th>Prioridad</th>
+                                <th>Fecha Límite</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpoTablaTareas">
+                            <tr>
+                                <td>Hacer la tarea de matemáticas</td>
+                                <td>Alta</td>
+                                <td>2025-11-15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <button onclick="agregarTarea()">➕ Agregar Tarea</button>
+
+                    <script>
+                        function agregarTarea() {
+                            // PASO 1: Pedir los datos al usuario
+                            let tarea = prompt("¿Qué tarea tienes que hacer?");
+                            let prioridad = prompt("¿Qué prioridad? (Alta/Media/Baja)");
+                            let fecha = prompt("¿Fecha límite? (Ejemplo: 2025-11-30)");
+
+                            // PASO 2: Verificar que el usuario haya escrito algo
+                            if (tarea && prioridad && fecha) {
+                                // PASO 3: Obtener el cuerpo de la tabla
+                                let tbody = document.getElementById("cuerpoTablaTareas");
+
+                                // PASO 4: Crear una nueva fila
+                                let nuevaFila = document.createElement("tr");
+
+                                // PASO 5: Agregar las celdas con los datos
+                                nuevaFila.innerHTML = `
+                                    <td>${tarea}</td>
+                                    <td>${prioridad}</td>
+                                    <td>${fecha}</td>
+                                `;
+
+                                // PASO 6: Agregar la nueva fila a la tabla
+                                tbody.appendChild(nuevaFila);
+                            }
+                        }
+                    </script>
+
+                    EXPLICACIÓN:
+                    - getElementById("cuerpoTablaTareas") busca el <tbody> por su id
+                    - createElement("tr") crea una nueva fila
+                    - innerHTML agrega el contenido HTML de las celdas
+                    - ${tarea} inserta el valor de la variable (se llama template literal)
+                    - appendChild() agrega la nueva fila al final de la tabla
+
+                    AHORA TÚ: Copia TODO el código de arriba (HTML + JavaScript) y pégalo aquí debajo:
+                -->
+
+                <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+
+
+
+            </div>
+        </div>
+
+        <!-- BOTONES DE NAVEGACIÓN -->
+        <div style="text-align: center; margin-top: 40px; display: flex; gap: 20px; justify-content: center;">
+            <a href="actividad3.html" class="btn-volver">← Actividad Anterior</a>
+            <a href="actividad5.html" class="btn-siguiente">Siguiente Actividad: Formularios →</a>
+        </div>
+
+        <!-- RESUMEN -->
+        <div class="resumen">
+            <h3>✅ ¿Qué aprendiste en esta actividad?</h3>
+            <ul>
+                <li>Crear tablas básicas con &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</li>
+                <li>Estructurar tablas con &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</li>
+                <li>Combinar celdas con colspan y rowspan</li>
+                <li>Aplicar estilos CSS a tablas</li>
+                <li>Crear tablas dinámicas con JavaScript</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

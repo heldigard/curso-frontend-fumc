@@ -1,0 +1,8 @@
+# Esta carpeta contiene las soluciones para el profesor
+# NO debe subirse a GitHub para que los estudiantes no vean las respuestas
+
+# Ignorar todo en esta carpeta
+*
+
+# Excepto este archivo .gitignore
+!.gitignore

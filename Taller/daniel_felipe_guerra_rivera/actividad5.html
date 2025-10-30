@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5 - Formularios</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Estilos para formularios */
+        .formulario {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .campo-formulario {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button[type="submit"],
+        .btn-enviar {
+            background-color: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button[type="submit"]:hover,
+        .btn-enviar:hover {
+            background-color: #5568d3;
+        }
+
+        .resultado-formulario {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 4px solid #2196f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- NAVEGACIÓN -->
+        <a href="index.html" class="btn-volver">← Volver al Menú</a>
+
+        <!-- ENCABEZADO -->
+        <h1>📝 Actividad 5: Formularios HTML</h1>
+
+        <div class="descripcion">
+            <p><strong>Objetivo:</strong> Aprender a crear formularios para capturar información del usuario</p>
+            <p><strong>Instrucciones:</strong> Prueba cada formulario y completa las tareas</p>
+        </div>
+
+        <!-- SECCIÓN 1: INPUTS BÁSICOS -->
+        <div class="seccion">
+            <h2>1️⃣ Inputs Básicos</h2>
+            <p class="explicacion">
+                Los formularios usan la etiqueta &lt;form&gt; y diferentes tipos de inputs
+            </p>
+
+            <div class="caja-ejemplo">
+                <h3>Tipos de Input Comunes</h3>
+                <form class="formulario" onsubmit="return false;">
+
+                    <!-- INPUT TEXTO -->
+                    <div class="campo-formulario">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" placeholder="Ej: Juan Pérez">
+                    </div>
+
+                    <!-- INPUT EMAIL -->
+                    <div class="campo-formulario">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" placeholder="ejemplo@email.com">
+                        <small>Debe ser un email válido</small>
+                    </div>
+
+                    <!-- INPUT PASSWORD -->
+                    <div class="campo-formulario">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" placeholder="Mínimo 6 caracteres">
+                    </div>
+
+                    <!-- INPUT NUMBER -->
+                    <div class="campo-formulario">
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" min="1" max="120" placeholder="Ej: 25">
+                    </div>
+
+                    <!-- INPUT DATE -->
+                    <div class="campo-formulario">
+                        <label for="fecha">Fecha de Nacimiento:</label>
+                        <input type="date" id="fecha">
+                    </div>
+
+                    <button type="button" onclick="mostrarDatos1()">Ver Datos</button>
+                </form>
+
+                <div id="resultado1" class="resultado-formulario" style="display: none;"></div>
+
+                <script>
+                    function mostrarDatos1() {
+                        let nombre = document.getElementById("nombre").value;
+                        let email = document.getElementById("email").value;
+                        let edad = document.getElementById("edad").value;
+                        let fecha = document.getElementById("fecha").value;
+
+                        let resultado = document.getElementById("resultado1");
+                        resultado.style.display = "block";
+                        resultado.innerHTML = `
+                            <h4>Datos Ingresados:</h4>
+                            <p><strong>Nombre:</strong> ${nombre}</p>
+                            <p><strong>Email:</strong> ${email}</p>
+                            <p><strong>Edad:</strong> ${edad} años</p>
+                            <p><strong>Fecha de Nacimiento:</strong> ${fecha}</p>
+                        `;
+                    }
+                </script>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2: SELECT Y TEXTAREA -->
+        <div class="seccion">
+            <h2>2️⃣ Select y Textarea</h2>
+
+            <div class="caja-ejemplo">
+                <h3>Listas Desplegables y Áreas de Texto</h3>
+                <form class="formulario" onsubmit="return false;">
+
+                    <!-- SELECT -->
+                    <div class="campo-formulario">
+                        <label for="ciudad">Ciudad:</label>
+                        <select id="ciudad">
+                            <option value="">-- Selecciona una ciudad --</option>
+                            <option value="medellin">Medellín</option>
+                            <option value="bogota">Bogotá</option>
+                            <option value="cali">Cali</option>
+                            <option value="barranquilla">Barranquilla</option>
+                            <option value="cartagena">Cartagena</option>
+                        </select>
+                    </div>
+
+                    <!-- TEXTAREA -->
+                    <div class="campo-formulario">
+                        <label for="comentarios">Comentarios:</label>
+                        <textarea id="comentarios" rows="4" placeholder="Escribe tus comentarios aquí..."></textarea>
+                    </div>
+
+                    <button type="button" onclick="mostrarDatos2()">Ver Datos</button>
+                </form>
+
+                <div id="resultado2" class="resultado-formulario" style="display: none;"></div>
+
+                <script>
+                    function mostrarDatos2() {
+                        let ciudad = document.getElementById("ciudad").value;
+                        let comentarios = document.getElementById("comentarios").value;
+
+                        let resultado = document.getElementById("resultado2");
+                        resultado.style.display = "block";
+                        resultado.innerHTML = `
+                            <h4>Datos Ingresados:</h4>
+                            <p><strong>Ciudad:</strong> ${ciudad || "No seleccionada"}</p>
+                            <p><strong>Comentarios:</strong> ${comentarios || "Sin comentarios"}</p>
+                        `;
+                    }
+                </script>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3: RADIO BUTTONS Y CHECKBOXES -->
+        <div class="seccion">
+            <h2>3️⃣ Radio Buttons y Checkboxes</h2>
+
+            <div class="caja-ejemplo">
+                <h3>Opciones de Selección</h3>
+                <form class="formulario" onsubmit="return false;">
+
+                    <!-- RADIO BUTTONS (solo una opción) -->
+                    <div class="campo-formulario">
+                        <label>Género:</label>
+                        <div>
+                            <input type="radio" id="masculino" name="genero" value="masculino">
+                            <label for="masculino" style="display: inline; font-weight: normal;">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="femenino" name="genero" value="femenino">
+                            <label for="femenino" style="display: inline; font-weight: normal;">Femenino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="otro" name="genero" value="otro">
+                            <label for="otro" style="display: inline; font-weight: normal;">Otro</label>
+                        </div>
+                    </div>
+
+                    <!-- CHECKBOXES (múltiples opciones) -->
+                    <div class="campo-formulario">
+                        <label>Lenguajes de Programación que conoces:</label>
+                        <div>
+                            <input type="checkbox" id="javascript" name="lenguajes" value="JavaScript">
+                            <label for="javascript" style="display: inline; font-weight: normal;">JavaScript</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="python" name="lenguajes" value="Python">
+                            <label for="python" style="display: inline; font-weight: normal;">Python</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="java" name="lenguajes" value="Java">
+                            <label for="java" style="display: inline; font-weight: normal;">Java</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="csharp" name="lenguajes" value="C#">
+                            <label for="csharp" style="display: inline; font-weight: normal;">C#</label>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="mostrarDatos3()">Ver Datos</button>
+                </form>
+
+                <div id="resultado3" class="resultado-formulario" style="display: none;"></div>
+
+                <script>
+                    function mostrarDatos3() {
+                        // Obtener el radio seleccionado
+                        let genero = "";
+                        let radios = document.getElementsByName("genero");
+                        for (let radio of radios) {
+                            if (radio.checked) {
+                                genero = radio.value;
+                                break;
+                            }
+                        }
+
+                        // Obtener los checkboxes seleccionados
+                        let lenguajes = [];
+                        let checkboxes = document.getElementsByName("lenguajes");
+                        for (let checkbox of checkboxes) {
+                            if (checkbox.checked) {
+                                lenguajes.push(checkbox.value);
+                            }
+                        }
+
+                        let resultado = document.getElementById("resultado3");
+                        resultado.style.display = "block";
+                        resultado.innerHTML = `
+                            <h4>Datos Ingresados:</h4>
+                            <p><strong>Género:</strong> ${genero || "No seleccionado"}</p>
+                            <p><strong>Lenguajes:</strong> ${lenguajes.length > 0 ? lenguajes.join(", ") : "Ninguno seleccionado"}</p>
+                        `;
+                    }
+                </script>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 4: VALIDACIÓN DE FORMULARIOS -->
+        <div class="seccion">
+            <h2>4️⃣ Validación de Formularios</h2>
+
+            <div class="caja-ejemplo">
+                <h3>Formulario con Validación</h3>
+                <form class="formulario" onsubmit="return validarFormulario(event);">
+
+                    <div class="campo-formulario">
+                        <label for="nombreVal">Nombre (requerido):</label>
+                        <input type="text" id="nombreVal" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="emailVal">Email (requerido):</label>
+                        <input type="email" id="emailVal" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="edadVal">Edad (18-100):</label>
+                        <input type="number" id="edadVal" min="18" max="100" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="telefonoVal">Teléfono (10 dígitos):</label>
+                        <input type="text" id="telefonoVal" pattern="[0-9]{10}"
+                               placeholder="Ej: 3001234567" required>
+                        <small>Debe tener exactamente 10 números</small>
+                    </div>
+
+                    <button type="submit">Enviar Formulario</button>
+                </form>
+
+                <div id="resultadoVal" class="resultado-formulario" style="display: none;"></div>
+
+                <script>
+                    function validarFormulario(event) {
+                        event.preventDefault(); // Evita que se recargue la página
+
+                        let nombre = document.getElementById("nombreVal").value;
+                        let email = document.getElementById("emailVal").value;
+                        let edad = document.getElementById("edadVal").value;
+                        let telefono = document.getElementById("telefonoVal").value;
+
+                        // Validación adicional
+                        if (telefono.length !== 10) {
+                            alert("El teléfono debe tener exactamente 10 dígitos");
+                            return false;
+                        }
+
+                        let resultado = document.getElementById("resultadoVal");
+                        resultado.style.display = "block";
+                        resultado.innerHTML = `
+                            <h4>✅ Formulario Enviado Correctamente</h4>
+                            <p><strong>Nombre:</strong> ${nombre}</p>
+                            <p><strong>Email:</strong> ${email}</p>
+                            <p><strong>Edad:</strong> ${edad} años</p>
+                            <p><strong>Teléfono:</strong> ${telefono}</p>
+                        `;
+
+                        return false; // Evita el envío real del formulario
+                    }
+                </script>
+            </div>
+        </div>
+
+        <!-- 🎯 TAREA FINAL -->
+        <div class="seccion">
+            <h2>🎯 Tarea Final: Formulario de Registro</h2>
+
+            <div class="tarea">
+                <h3>Crea un formulario completo de registro con:</h3>
+                <ul>
+                    <li>Nombre completo (texto, requerido)</li>
+                    <li>Email (email, requerido)</li>
+                    <li>Contraseña (password, mínimo 6 caracteres, requerido)</li>
+                    <li>Edad (number, entre 18 y 100, requerido)</li>
+                    <li>Ciudad (select con al menos 3 opciones)</li>
+                    <li>Género (radio buttons)</li>
+                    <li>Intereses (checkboxes con al menos 4 opciones)</li>
+                    <li>Biografía (textarea)</li>
+                    <li>Botón de enviar</li>
+                </ul>
+                <p>Al enviar, debe mostrar todos los datos ingresados en un div de resultado.</p>
+
+                <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+                <!--
+                    PISTA - GUÍA PASO A PASO PARA COMPLETAR EL FORMULARIO:
+
+                    Aquí te doy TODO el código que necesitas. Solo tienes que:
+                    1. Leer cada sección
+                    2. Copiar el código
+                    3. Personalizarlo con tus datos
+
+                    ════════════════════════════════════════════════════════
+                    PARTE 1: CAMPOS DE TEXTO
+                    ════════════════════════════════════════════════════════
+                -->
+
+                <!-- Nombre completo -->
+                <div class="campo-formulario">
+                    <label for="nombreReg">Nombre Completo (requerido):</label>
+                    <input type="text" id="nombreReg" required placeholder="Ej: María García López">
+                </div>
+
+                <!-- Email -->
+                <div class="campo-formulario">
+                    <label for="emailReg">Email (requerido):</label>
+                    <input type="email" id="emailReg" required placeholder="ejemplo@email.com">
+                </div>
+
+                <!-- Contraseña -->
+                <div class="campo-formulario">
+                    <label for="passwordReg">Contraseña (mínimo 6 caracteres, requerido):</label>
+                    <input type="password" id="passwordReg" minlength="6" required placeholder="Mínimo 6 caracteres">
+                </div>
+
+                <!-- Edad -->
+                <div class="campo-formulario">
+                    <label for="edadReg">Edad (18-100, requerido):</label>
+                    <input type="number" id="edadReg" min="18" max="100" required>
+                </div>
+
+                <!--
+                    ════════════════════════════════════════════════════════
+                    PARTE 2: SELECT (CIUDAD)
+                    ════════════════════════════════════════════════════════
+                -->
+
+                <div class="campo-formulario">
+                    <label for="ciudadReg">Ciudad:</label>
+                    <select id="ciudadReg" required>
+                        <option value="">-- Selecciona tu ciudad --</option>
+                        <option value="medellin">Medellín</option>
+                        <option value="bogota">Bogotá</option>
+                        <option value="cali">Cali</option>
+                        <option value="barranquilla">Barranquilla</option>
+                        <option value="cartagena">Cartagena</option>
+                    </select>
+                </div>
+
+                <!--
+                    ════════════════════════════════════════════════════════
+                    PARTE 3: RADIO BUTTONS (GÉNERO)
+                    ════════════════════════════════════════════════════════
+                -->
+
+                <div class="campo-formulario">
+                    <label>Género:</label>
+                    <div>
+                        <input type="radio" id="mascReg" name="generoReg" value="masculino" required>
+                        <label for="mascReg" style="display: inline; font-weight: normal;">Masculino</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="femReg" name="generoReg" value="femenino" required>
+                        <label for="femReg" style="display: inline; font-weight: normal;">Femenino</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="otroReg" name="generoReg" value="otro" required>
+                        <label for="otroReg" style="display: inline; font-weight: normal;">Otro</label>
+                    </div>
+                </div>
+
+                <!--
+                    ════════════════════════════════════════════════════════
+                    PARTE 4: CHECKBOXES (INTERESES)
+                    ════════════════════════════════════════════════════════
+                -->
+
+                <div class="campo-formulario">
+                    <label>Intereses (selecciona los que te gusten):</label>
+                    <div>
+                        <input type="checkbox" id="deportesReg" name="interesesReg" value="Deportes">
+                        <label for="deportesReg" style="display: inline; font-weight: normal;">Deportes</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="musicaReg" name="interesesReg" value="Música">
+                        <label for="musicaReg" style="display: inline; font-weight: normal;">Música</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="lecturaReg" name="interesesReg" value="Lectura">
+                        <label for="lecturaReg" style="display: inline; font-weight: normal;">Lectura</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="viajesReg" name="interesesReg" value="Viajes">
+                        <label for="viajesReg" style="display: inline; font-weight: normal;">Viajes</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="tecnologiaReg" name="interesesReg" value="Tecnología">
+                        <label for="tecnologiaReg" style="display: inline; font-weight: normal;">Tecnología</label>
+                    </div>
+                </div>
+
+                <!--
+                    ════════════════════════════════════════════════════════
+                    PARTE 5: TEXTAREA (BIOGRAFÍA)
+                    ════════════════════════════════════════════════════════
+                -->
+
+                <div class="campo-formulario">
+                    <label for="biografiaReg">Biografía (cuéntanos sobre ti):</label>
+                    <textarea id="biografiaReg" rows="4" placeholder="Escribe una breve descripción sobre ti..."></textarea>
+                </div>
+
+
+
+                    <button type="submit">Registrarse</button>
+                </form>
+
+                <div id="resultadoRegistro" class="resultado-formulario" style="display: none;"></div>
+
+                <!--
+                    ════════════════════════════════════════════════════════
+                    PARTE 6: JAVASCRIPT - FUNCIÓN PARA PROCESAR EL FORMULARIO
+                    ════════════════════════════════════════════════════════
+
+                    Ahora necesitas completar la función que procesa todos estos datos
+                -->
+
+                <script>
+                    function enviarRegistro(event) {
+                        event.preventDefault(); // Evita que la página se recargue
+
+                        // 🎯 AHORA TÚ: Completa esta función siguiendo los pasos:
+
+                        // PASO 1: Obtener todos los valores de los campos de texto
+                        let nombre = document.getElementById("nombreReg").value;
+                        let email = document.getElementById("emailReg").value;
+                        let edad = document.getElementById("edadReg").value;
+                        let ciudad = document.getElementById("ciudadReg").value;
+                        let biografia = document.getElementById("biografiaReg").value;
+
+                        // PASO 2: Obtener el género seleccionado (radio button)
+                        let genero = "";
+                        let radios = document.getElementsByName("generoReg");
+                        for (let radio of radios) {
+                            if (radio.checked) {
+                                genero = radio.value;
+                                break;
+                            }
+                        }
+
+                        // PASO 3: Obtener los intereses seleccionados (checkboxes)
+                        let intereses = [];
+                        let checkboxes = document.getElementsByName("interesesReg");
+                        for (let checkbox of checkboxes) {
+                            if (checkbox.checked) {
+                                intereses.push(checkbox.value);
+                            }
+                        }
+
+                        // PASO 4: Mostrar todos los datos en el div de resultado
+                        let resultado = document.getElementById("resultadoRegistro");
+                        resultado.style.display = "block";
+                        resultado.innerHTML = `
+                            <h4>✅ ¡Registro Completado!</h4>
+                            <p><strong>Nombre:</strong> ${nombre}</p>
+                            <p><strong>Email:</strong> ${email}</p>
+                            <p><strong>Edad:</strong> ${edad} años</p>
+                            <p><strong>Ciudad:</strong> ${ciudad}</p>
+                            <p><strong>Género:</strong> ${genero}</p>
+                            <p><strong>Intereses:</strong> ${intereses.length > 0 ? intereses.join(", ") : "Ninguno seleccionado"}</p>
+                            <p><strong>Biografía:</strong> ${biografia || "No proporcionada"}</p>
+                        `;
+
+                        return false;
+                    }
+                </script>
+            </div>
+        </div>
+
+        <!-- BOTONES DE NAVEGACIÓN -->
+        <div style="text-align: center; margin-top: 40px; display: flex; gap: 20px; justify-content: center;">
+            <a href="actividad4.html" class="btn-volver">← Actividad Anterior</a>
+            <a href="actividad6.html" class="btn-siguiente">Siguiente Actividad: Bootstrap →</a>
+        </div>
+
+        <!-- RESUMEN -->
+        <div class="resumen">
+            <h3>✅ ¿Qué aprendiste en esta actividad?</h3>
+            <ul>
+                <li>Crear formularios con &lt;form&gt;</li>
+                <li>Usar diferentes tipos de inputs (text, email, password, number, date)</li>
+                <li>Trabajar con select (listas desplegables) y textarea</li>
+                <li>Usar radio buttons (una opción) y checkboxes (múltiples opciones)</li>
+                <li>Validar formularios con HTML5 y JavaScript</li>
+                <li>Capturar y procesar datos del usuario</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
