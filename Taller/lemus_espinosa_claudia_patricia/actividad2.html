@@ -99,6 +99,11 @@
 
            AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
         */
+        .mi-estilo {
+               background-color: rgb(186, 198, 247);
+               text-align: center;
+               padding: 15px;
+           }
 
 
 
@@ -119,7 +124,11 @@
 
            AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
         */
-
+        .texto-importante {
+               color: rgb(255, 0, 76);
+               font-size: 20px;
+               font-weight: bold;
+              }
 
 
         /* TAREA 3: Crea una clase llamada "tarjeta" */
@@ -143,7 +152,22 @@
 
            AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
         */
-
+        .tarjeta {
+               background-color: white;
+               border: 2px solid gray;
+               border-radius: 10px;
+               padding: 20px;
+               box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+           }
+        .mi-caja-especial {
+                background-color: rgb(209, 245, 202);
+                color: rgb(2, 142, 28);
+                padding: 20px;
+                margin: 15px;
+                border: 2px solid rgb(4, 118, 66);
+                border-radius: 10px;
+                text-align: center;
+        }
 
 
     </style>
@@ -195,7 +219,7 @@
 
                 AHORA TÚ: Agrega class="mi-estilo" al div de abajo:
             -->
-            <div>
+            <div class="mi-estilo">
                 <p>Este div debe tener fondo azul claro, texto centrado y padding.</p>
             </div>
         </div>
@@ -224,7 +248,7 @@
 
                 AHORA TÚ: Modifica la línea de abajo agregando la clase:
             -->
-            <p>Este texto debe ser rojo, grande y en negrita.</p>
+            <p class="texto-importante">Este texto debe ser rojo, grande y en negrita.</p>
         </div>
 
         <!-- SECCIÓN 3: MÁRGENES Y PADDING -->
@@ -299,12 +323,12 @@
             <!--
                 AHORA TÚ: Agrega class="tarjeta" al div de abajo:
             -->
-            <div>
-                <h3>Mi Tarjeta Personal</h3>
-                <p><strong>Nombre:</strong> [Tu nombre]</p>
-                <p><strong>Edad:</strong> [Tu edad]</p>
-                <p><strong>Ciudad:</strong> [Tu ciudad]</p>
-                <p><strong>Pasatiempo favorito:</strong> [Tu pasatiempo]</p>
+            <div class="tarjeta">
+                <h3 style="color: rgb(19, 156, 35);">Mi Tarjeta Personal</h3>
+                <p><strong>Nombre:</strong> Claudia Lemus</p>
+                <p><strong>Edad:</strong> 37 años</p>
+                <p><strong>Ciudad:</strong> Medellin</p>
+                <p><strong>Pasatiempo favorito:</strong> Bailar</p>
             </div>
 
             <!-- 🎯 TAREA 4: Crea tu propia tarjeta con estilos inline -->
@@ -325,9 +349,9 @@
 
                 AHORA TÚ: Copia el ejemplo de arriba y modifica el div de abajo:
             -->
-            <div>
-                <h3>Mi Comida Favorita</h3>
-                <p>[Escribe aquí tu comida favorita]</p>
+            <div style="background-color: #f0ccf6; padding: 25px; border:2px solid #8901a8; border-radius: 10px;text-align: center; margin-top: 20px;">
+                <h3 style="color:#4d015e">Mi Comida Favorita</h3>
+                <p>Mi comida favorita es el <em>Arroz</em>.</p>
             </div>
         </div>
 
@@ -378,7 +402,9 @@
 
                 AHORA TÚ: Elige una opción y escribe tu código aquí debajo:
             -->
-
+                <div class="mi-caja-especial">
+                    <p>¡Esta es mi caja personalizada!... Me encantó</p>
+                </div>
 
 
         </div>

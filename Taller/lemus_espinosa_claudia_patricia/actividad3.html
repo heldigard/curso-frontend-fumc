@@ -85,7 +85,7 @@
                         // EJEMPLO COMPLETO:
                         // alert("Hola, soy María González y tengo 22 años");
                         //
-                        // AHORA TÚ: Escribe tu alerta aquí debajo (borra esta línea y escribe tu código):
+                        alert("Hola, soy Clau Lemus y tengo 37 años");
 
                     }
                 </script>
@@ -147,6 +147,8 @@
                         // document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
                         //
                         // AHORA TÚ: Copia las 2 líneas del ejemplo y pégalas aquí debajo:
+                        let edad = prompt("¿Cuántos años tienes?");
+                        document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
 
 
                     }
@@ -210,6 +212,7 @@
 
                 <script>
                     function hacerResta() {
+                        
                         // 🎯 ESCRIBE TU CÓDIGO AQUÍ
                         // 1. Pide dos números con prompt()
                         // 2. Convierte a números con Number()
@@ -235,8 +238,16 @@
                         // document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
                         //
                         // AHORA TÚ: Copia los 5 pasos de arriba y pégalos aquí debajo:
+                        let num1 = prompt("Ingresa el primer número:");
+                        let num2 = prompt("Ingresa el segundo número:");
 
+                        num1 = Number(num1);
+                        num2 = Number(num2);
 
+                        let resta = num1 - num2;
+
+                        document.getElementById("resultadoResta").textContent = 
+                            num1 + " - " + num2 + " = " + resta;
                     }
                 </script>
             </div>
