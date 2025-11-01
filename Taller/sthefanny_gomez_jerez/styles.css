@@ -101,15 +101,15 @@ h3 {
    ============================================ */
 
 .tarea {
-    background-color: #fff3cd;
-    border-left: 5px solid #ffc107;
+    background-color: #e2cdff;
+    border-left: 5px solid #a374f4;
     padding: 20px;
     margin: 20px 0;
     border-radius: 5px;
 }
 
 .tarea h3 {
-    color: #856404;
+    color: #350485;
     margin-top: 0;
 }
 
