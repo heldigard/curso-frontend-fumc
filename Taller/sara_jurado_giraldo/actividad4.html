@@ -158,6 +158,29 @@
                 -->
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+                 <table>
+                    <tr>
+                         <th>Nombre</th>
+                         <th>Edad</th>
+                         <th>Pasatiempo</th>
+                    </tr>
+                    <tr>
+                        <td>Natalia M</td>
+                        <td>22</td>
+                        <td>Ver series</td>
+                    </tr>
+                     <tr>
+                         <td>Elias Avendaño</td>
+                         <td>31</td>
+                         <td> Ir al gym</td>
+                    </tr>
+                    <tr>
+                        <td>Santiago M</td>
+                        <td>28</td>
+                        <td> Comer </td>
+                    </tr>
+                </table>
+
 
 
 
@@ -352,6 +375,32 @@
                 -->
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+                 <table>
+    <tr>
+        <th>Género</th>
+        <th>Título</th>
+        <th>Año</th>
+        <th>Calificación</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Ciencia Ficción</td>
+        <td>Interestelar</td>
+        <td>2014</td>
+        <td>⭐⭐⭐⭐⭐</td>
+    </tr>
+    <tr>
+        <td>Matrix</td>
+        <td>1999</td>
+        <td>⭐⭐⭐⭐⭐</td>
+    </tr>
+    <tr>
+        <td>Comedia</td>
+        <td>La Gran Apuesta</td>
+        <td>2015</td>
+        <td>⭐⭐⭐⭐</td>
+    </tr>
+</table>
+
 
 
 
@@ -540,6 +589,55 @@
                 -->
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+
+                <table id="tablaTareas">
+    <thead>
+        <tr>
+            <th>Tarea</th>
+            <th>Prioridad</th>
+            <th>Fecha Límite</th>
+        </tr>
+    </thead>
+    <tbody id="cuerpoTablaTareas">
+        <tr>
+            <td>Hacer la tarea de matemáticas</td>
+            <td>Alta</td>
+            <td>2025-11-15</td>
+        </tr>
+    </tbody>
+</table>
+
+<button onclick="agregarTarea()">➕ Agregar Tarea</button>
+
+<script>
+    function agregarTarea() {
+        let tarea = prompt("¿Qué tarea tienes que hacer?");
+        let prioridad = prompt("¿Qué prioridad? (Alta/Media/Baja)");
+        let fecha = prompt("¿Fecha límite? (Ejemplo: 2025-11-30)");
+
+        
+        if (tarea && prioridad && fecha) {
+            
+            let tbody = document.getElementById("cuerpoTablaTareas");
+
+            
+            let nuevaFila = document.createElement("tr");
+
+            
+            nuevaFila.innerHTML = `
+                <td>${tarea}</td>
+                <td>${prioridad}</td>
+                <td>${fecha}</td>
+            `;
+
+            
+            tbody.appendChild(nuevaFila);
+        }
+    }
+</script>
+
+  
+                
 
 
 
