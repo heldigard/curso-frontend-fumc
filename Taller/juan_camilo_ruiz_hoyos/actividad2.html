@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+con-mar<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,6 @@
 
     <!-- ESTILOS INTERNOS PARA ESTA ACTIVIDAD -->
     <style>
-        /*
-        CSS (Cascading Style Sheets) se usa para darle estilo a las páginas web.
-        Los estilos se pueden aplicar de 3 formas:
-        1. Inline (dentro de la etiqueta HTML) - NO recomendado
-        2. Interno (dentro de <style> en el <head>) - Para páginas pequeñas
-        3. Externo (archivo .css separado) - RECOMENDADO
-        */
-
-        /* SELECTORES BÁSICOS */
-
-        /* Selector de clase - Se usa con un punto (.) */
         .caja-ejemplo {
             background-color: #e3f2fd;
             padding: 20px;
@@ -27,22 +17,19 @@
             border: 2px solid #2196f3;
         }
 
-        /* Selector de ID - Se usa con numeral (#) */
         #titulo-especial {
             color: #d32f2f;
             text-align: center;
             font-size: 28px;
         }
 
-        /* COLORES */
         .ejemplo-colores {
-            background-color: #fff3e0; /* Naranja claro */
-            color: #e65100; /* Naranja oscuro */
+            background-color: #fff3e0;
+            color: #e65100;
             padding: 15px;
             margin: 10px 0;
         }
 
-        /* FUENTES Y TAMAÑOS */
         .texto-grande {
             font-size: 24px;
             font-weight: bold;
@@ -53,19 +40,17 @@
             font-style: italic;
         }
 
-        /* MÁRGENES Y PADDING */
         .con-margen {
-            margin: 20px; /* Espacio FUERA de la caja */
-            background-color: #ffeb3b;
+            margin: 20px;
+            background-color: #b9b1ae;
         }
 
         .con-padding {
-            padding: 20px; /* Espacio DENTRO de la caja */
+            padding: 20px;
             background-color: #4caf50;
             color: white;
         }
 
-        /* BORDES */
         .con-borde {
             border: 3px solid #9c27b0;
             border-radius: 15px;
@@ -73,87 +58,41 @@
             margin: 10px 0;
         }
 
-        /* 🎯 ZONA DE PRÁCTICA - Aquí escribirás tus estilos */
+        .mi-estilo {
+            background-color: lightblue;
+            text-align: center;
+            padding: 15px;
+        }
 
-        /* TAREA 1: Crea una clase llamada "mi-estilo" */
-        /* Debe tener: fondo azul claro, texto centrado, padding de 15px */
-        /*
-           PISTA: Una clase CSS se escribe así:
+        .mi-caja-especial {
+            background-color: rgb(221, 230, 173);
+            color: rgb(0, 9, 139);
+            padding: 20px;
+            margin: 15px;
+            border: 2px solid rgb(1, 1, 2);
+            border-radius: 10px;
+            text-align: right;
+        }
 
-           .nombre-de-la-clase {
-               propiedad: valor;
-               otra-propiedad: otro-valor;
-           }
+        .texto-importante {
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
 
-           RECUERDA:
-           - El punto (.) antes del nombre indica que es una clase
-           - Cada propiedad termina con punto y coma (;)
-           - Los colores pueden ser: nombres (lightblue) o códigos (#add8e6)
-
-           EJEMPLO COMPLETO:
-           .mi-estilo {
-               background-color: lightblue;
-               text-align: center;
-               padding: 15px;
-           }
-
-           AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
-        */
-
-
-
-        /* TAREA 2: Crea una clase llamada "texto-importante" */
-        /* Debe tener: color rojo, tamaño de fuente 20px, negrita */
-        /*
-           PISTA: Necesitas estas propiedades:
-           - color: red;  (para el color rojo del texto)
-           - font-size: 20px;  (para el tamaño de la fuente)
-           - font-weight: bold;  (para poner el texto en negrita)
-
-           EJEMPLO COMPLETO:
-           .texto-importante {
-               color: red;
-               font-size: 20px;
-               font-weight: bold;
-           }
-
-           AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
-        */
-
-
-
-        /* TAREA 3: Crea una clase llamada "tarjeta" */
-        /* Debe tener: fondo blanco, borde gris, bordes redondeados, sombra */
-        /*
-           PISTA: Necesitas estas propiedades:
-           - background-color: white;  (fondo blanco)
-           - border: 2px solid gray;  (borde de 2px, sólido, gris)
-           - border-radius: 10px;  (esquinas redondeadas)
-           - padding: 20px;  (espacio interno)
-           - box-shadow: 0 2px 5px rgba(0,0,0,0.2);  (sombra)
-
-           EJEMPLO COMPLETO:
-           .tarjeta {
-               background-color: white;
-               border: 2px solid gray;
-               border-radius: 10px;
-               padding: 20px;
-               box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-           }
-
-           AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
-        */
-
-
-
+        .tarjeta {
+            background-color: white;
+            border: 2px solid gray;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <!-- NAVEGACIÓN -->
         <a href="index.html" class="btn-volver">← Volver al Menú</a>
-
-        <!-- ENCABEZADO -->
         <h1>🎨 Actividad 2: CSS Básico</h1>
 
         <div class="descripcion">
@@ -161,235 +100,89 @@
             <p><strong>Instrucciones:</strong> Lee los ejemplos y completa las tareas en la sección &lt;style&gt;</p>
         </div>
 
-        <!-- SECCIÓN 1: COLORES -->
         <div class="seccion">
             <h2>1️⃣ Colores en CSS</h2>
-            <p class="explicacion">
-                Los colores se pueden definir de varias formas:
-            </p>
-
             <div class="caja-ejemplo">
-                <p><strong>1. Nombres de colores:</strong> red, blue, green, yellow, etc.</p>
                 <p style="color: red;">Este texto es rojo usando "red"</p>
-
-                <p><strong>2. Hexadecimal:</strong> #RRGGBB (valores de 00 a FF)</p>
                 <p style="color: #2196f3;">Este texto es azul usando "#2196f3"</p>
-
-                <p><strong>3. RGB:</strong> rgb(rojo, verde, azul) - valores de 0 a 255</p>
                 <p style="color: rgb(76, 175, 80);">Este texto es verde usando "rgb(76, 175, 80)"</p>
             </div>
 
-            <!-- 🎯 TAREA 1: Aplica la clase "mi-estilo" que creaste arriba -->
-            <!--
-                PISTA: Para aplicar una clase a un elemento, usa el atributo class="nombre-clase"
-
-                ANTES (sin clase):
-                <div>
-                    <p>Este div debe tener fondo azul claro, texto centrado y padding.</p>
-                </div>
-
-                DESPUÉS (con clase):
-                <div class="mi-estilo">
-                    <p>Este div debe tener fondo azul claro, texto centrado y padding.</p>
-                </div>
-
-                AHORA TÚ: Agrega class="mi-estilo" al div de abajo:
-            -->
-            <div>
+            <div class="mi-estilo">
                 <p>Este div debe tener fondo azul claro, texto centrado y padding.</p>
             </div>
         </div>
 
-        <!-- SECCIÓN 2: FUENTES -->
         <div class="seccion">
             <h2>2️⃣ Fuentes y Tamaños</h2>
-
             <div class="caja-ejemplo">
                 <p class="texto-grande">Texto grande y en negrita (24px)</p>
                 <p>Texto normal (tamaño por defecto)</p>
                 <p class="texto-pequeno">Texto pequeño en cursiva (12px)</p>
             </div>
-
-            <p class="explicacion">Propiedades importantes:</p>
-            <ul>
-                <li><strong>font-size:</strong> tamaño de la fuente (px, em, rem)</li>
-                <li><strong>font-weight:</strong> grosor (normal, bold, 100-900)</li>
-                <li><strong>font-style:</strong> estilo (normal, italic)</li>
-                <li><strong>font-family:</strong> tipo de fuente (Arial, Times New Roman, etc.)</li>
-            </ul>
-
-            <!-- 🎯 TAREA 2: Aplica la clase "texto-importante" a este párrafo -->
-            <!--
-                RECUERDA: Solo agrega class="texto-importante" dentro de la etiqueta <p>
-
-                AHORA TÚ: Modifica la línea de abajo agregando la clase:
-            -->
-            <p>Este texto debe ser rojo, grande y en negrita.</p>
+            <div class="texto-importante">
+                <p>Este texto debe ser rojo, grande y en negrita.</p>
+            </div>
         </div>
 
-        <!-- SECCIÓN 3: MÁRGENES Y PADDING -->
         <div class="seccion">
             <h2>3️⃣ Márgenes y Padding</h2>
-
             <div class="caja-ejemplo">
-                <p><strong>Margin:</strong> Espacio FUERA del elemento (lo separa de otros elementos)</p>
                 <div class="con-margen">Este div tiene margen de 20px</div>
-
-                <p><strong>Padding:</strong> Espacio DENTRO del elemento (entre el borde y el contenido)</p>
                 <div class="con-padding">Este div tiene padding de 20px</div>
             </div>
-
-            <p class="explicacion">Puedes especificar márgenes individualmente:</p>
-            <ul>
-                <li>margin-top, margin-right, margin-bottom, margin-left</li>
-                <li>O usar el atajo: margin: arriba derecha abajo izquierda;</li>
-                <li>Lo mismo aplica para padding</li>
-            </ul>
         </div>
 
-        <!-- SECCIÓN 4: BORDES -->
         <div class="seccion">
             <h2>4️⃣ Bordes</h2>
-
             <div class="caja-ejemplo">
                 <div class="con-borde">
                     <p>Este div tiene un borde morado de 3px, sólido y con esquinas redondeadas</p>
                 </div>
             </div>
-
-            <p class="explicacion">Propiedades de bordes:</p>
-            <ul>
-                <li><strong>border:</strong> grosor estilo color (ej: 2px solid black)</li>
-                <li><strong>border-radius:</strong> redondea las esquinas</li>
-                <li><strong>border-top, border-right, etc.:</strong> bordes individuales</li>
-            </ul>
         </div>
 
-        <!-- SECCIÓN 5: ANCHO Y ALTO -->
         <div class="seccion">
             <h2>5️⃣ Ancho y Alto</h2>
-
             <div class="caja-ejemplo">
-                <div style="width: 200px; height: 100px; background-color: #ff9800; color: white;
-                            display: flex; align-items: center; justify-content: center;">
+                <div style="width: 200px; height: 100px; background-color: #ff9800; color: white; display: flex; align-items: center; justify-content: center;">
                     200px de ancho × 100px de alto
                 </div>
-
-                <div style="width: 50%; height: 80px; background-color: #00bcd4; color: white;
-                            margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 50%; height: 80px; background-color: #00bcd4; color: white; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
                     50% de ancho × 80px de alto
                 </div>
             </div>
-
-            <p class="explicacion">
-                El ancho y alto se pueden definir en:
-            </p>
-            <ul>
-                <li><strong>px (píxeles):</strong> Tamaño fijo</li>
-                <li><strong>% (porcentaje):</strong> Relativo al contenedor padre</li>
-                <li><strong>auto:</strong> Ajuste automático</li>
-            </ul>
         </div>
 
-        <!-- SECCIÓN 6: PRÁCTICA COMBINADA -->
         <div class="seccion">
             <h2>6️⃣ Práctica Combinada</h2>
-
-            <!-- 🎯 TAREA 3: Aplica la clase "tarjeta" que creaste arriba -->
-            <!--
-                AHORA TÚ: Agrega class="tarjeta" al div de abajo:
-            -->
+            <div class="tarjeta"></div>
             <div>
                 <h3>Mi Tarjeta Personal</h3>
-                <p><strong>Nombre:</strong> [Tu nombre]</p>
-                <p><strong>Edad:</strong> [Tu edad]</p>
-                <p><strong>Ciudad:</strong> [Tu ciudad]</p>
-                <p><strong>Pasatiempo favorito:</strong> [Tu pasatiempo]</p>
+                <p><strong>Nombre:</strong> juan camilo</p>
+                <p><strong>Edad:</strong> 41</p>
+                <p><strong>Ciudad:</strong> medellin</p>
+                <p><strong>Pasatiempo favorito:</strong>tocar la bateria</p>
             </div>
 
-            <!-- 🎯 TAREA 4: Crea tu propia tarjeta con estilos inline -->
-            <!-- Usa style="" para agregar: fondo de color, padding, borde y texto centrado -->
-            <!--
-                PISTA: Los estilos inline se escriben dentro del atributo style=""
-
-                EJEMPLO:
-                <div style="background-color: #ffe4e1; padding: 20px; border: 2px solid #ff69b4; text-align: center;">
-
-                PROPIEDADES QUE NECESITAS:
-                - background-color: un color que te guste (lightgreen, lightpink, lightyellow, etc.)
-                - padding: 20px (espacio interno)
-                - border: 2px solid blue (o el color que prefieras)
-                - text-align: center (texto centrado)
-
-                RECUERDA: Separa cada propiedad con punto y coma (;)
-
-                AHORA TÚ: Copia el ejemplo de arriba y modifica el div de abajo:
-            -->
-            <div>
+            <div style="background-color: #ffe4e1; padding: 20px; border: 2px solid #ff69b4; text-align: center;">
                 <h3>Mi Comida Favorita</h3>
-                <p>[Escribe aquí tu comida favorita]</p>
+                <p>arroz con pollo</p>
             </div>
         </div>
 
-        <!-- SECCIÓN 7: DESAFÍO FINAL -->
         <div class="seccion">
             <h2>7️⃣ Desafío Final</h2>
-            <p class="explicacion">
-                Crea una caja con las siguientes características:
-            </p>
-            <ul>
-                <li>Fondo de color (el que prefieras)</li>
-                <li>Texto de color diferente al fondo</li>
-                <li>Padding de 20px</li>
-                <li>Margen de 15px</li>
-                <li>Borde de 2px sólido</li>
-                <li>Bordes redondeados (border-radius)</li>
-                <li>Texto centrado</li>
-            </ul>
-
-            <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
-            <!-- Puedes usar estilos inline o crear una nueva clase en el <style> -->
-            <!--
-                OPCIÓN 1 - Usar estilos inline (MÁS FÁCIL):
-                Copia este ejemplo y cambia los colores como quieras:
-
-                <div style="background-color: lightblue; color: darkblue; padding: 20px; margin: 15px; border: 2px solid blue; border-radius: 10px; text-align: center;">
-                    <p>¡Esta es mi caja personalizada!</p>
-                </div>
-
-                OPCIÓN 2 - Crear una clase en el <style> (MÁS PROFESIONAL):
-                1. Ve arriba a la sección <style>
-                2. Crea una nueva clase así:
-
-                .mi-caja-especial {
-                    background-color: lightblue;
-                    color: darkblue;
-                    padding: 20px;
-                    margin: 15px;
-                    border: 2px solid blue;
-                    border-radius: 10px;
-                    text-align: center;
-                }
-
-                3. Luego úsala aquí:
-                <div class="mi-caja-especial">
-                    <p>¡Esta es mi caja personalizada!</p>
-                </div>
-
-                AHORA TÚ: Elige una opción y escribe tu código aquí debajo:
-            -->
-
-
-
+            <div class="mi-caja-especial">
+                <p>¡Esta es mi caja personalizada!</p>
+            </div>
         </div>
 
-        <!-- BOTONES DE NAVEGACIÓN -->
         <div style="text-align: center; margin-top: 40px; display: flex; gap: 20px; justify-content: center;">
             <a href="actividad1.html" class="btn-volver">← Actividad Anterior</a>
             <a href="actividad3.html" class="btn-siguiente">Siguiente Actividad: JavaScript →</a>
         </div>
 
-        <!-- RESUMEN -->
         <div class="resumen">
             <h3>✅ ¿Qué aprendiste en esta actividad?</h3>
             <ul>
@@ -403,4 +196,5 @@
         </div>
     </div>
 </body>
+
 </html>
