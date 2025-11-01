@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,8 +37,10 @@
 
         /* COLORES */
         .ejemplo-colores {
-            background-color: #fff3e0; /* Naranja claro */
-            color: #e65100; /* Naranja oscuro */
+            background-color: #fff3e0;
+            /* Naranja claro */
+            color: #e65100;
+            /* Naranja oscuro */
             padding: 15px;
             margin: 10px 0;
         }
@@ -55,12 +58,14 @@
 
         /* MÁRGENES Y PADDING */
         .con-margen {
-            margin: 20px; /* Espacio FUERA de la caja */
-            background-color: #ffeb3b;
+            margin: 20px;
+            /* Espacio FUERA de la caja */
+            background-color: #b9b1ae;
         }
 
         .con-padding {
-            padding: 20px; /* Espacio DENTRO de la caja */
+            padding: 20px;
+            /* Espacio DENTRO de la caja */
             background-color: #4caf50;
             color: white;
         }
@@ -100,6 +105,22 @@
            AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
         */
 
+        .mi-estilo {
+            background-color: lightblue;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .mi-caja-especial {
+            background-color: rgb(221, 230, 173);
+            color: rgb(0, 9, 139);
+            padding: 20px;
+            margin: 15px;
+            border: 2px solid rgb(1, 1, 2);
+            border-radius: 10px;
+            text-align: right;
+        }
+
 
 
         /* TAREA 2: Crea una clase llamada "texto-importante" */
@@ -120,6 +141,11 @@
            AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
         */
 
+        .texto-importante {
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
 
 
         /* TAREA 3: Crea una clase llamada "tarjeta" */
@@ -143,11 +169,16 @@
 
            AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
         */
-
-
-
+        .tarjeta {
+            background-color: white;
+            border: 2px solid gray;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- NAVEGACIÓN -->
@@ -195,7 +226,7 @@
 
                 AHORA TÚ: Agrega class="mi-estilo" al div de abajo:
             -->
-            <div>
+            <div class="mi-estilo">
                 <p>Este div debe tener fondo azul claro, texto centrado y padding.</p>
             </div>
         </div>
@@ -224,7 +255,9 @@
 
                 AHORA TÚ: Modifica la línea de abajo agregando la clase:
             -->
-            <p>Este texto debe ser rojo, grande y en negrita.</p>
+            <div class="texto-importante">Propiedades importantes: ejercicio
+                <p>Este texto debe ser rojo, grande y en negrita.</p>
+            </div>
         </div>
 
         <!-- SECCIÓN 3: MÁRGENES Y PADDING -->
@@ -232,6 +265,26 @@
             <h2>3️⃣ Márgenes y Padding</h2>
 
             <div class="caja-ejemplo">
+                <p><strong>Margin:</strong> Espacio FUERA del elemento (lo separa de otros elementos)</p>
+                <div class="con-margen">Este div tiene margen de 20px</div>
+
+                <p><strong>Padding:</strong> Espacio DENTRO del elemento (entre el borde y el contenido)</p>
+                <div class="con-padding">Este div tiene padding de 20px</div>
+            </div>
+
+            <p class="explicacion">Puedes especificar márgenes individualmente:</p>
+            <ul>
+                <li>margin-top, margin-right, margin-bottom, margin-left</li>
+                <li>O usar el atajo: margin: arriba derecha abajo izquierda;</li>
+                <li>Lo mismo aplica para padding</li>
+            </ul>
+        </div>
+
+
+        <div class="seccion">
+            <h2>3️⃣ EJERCICIO: Márgenes y Padding</h2>
+
+            <div class="caja-ejercicio">
                 <p><strong>Margin:</strong> Espacio FUERA del elemento (lo separa de otros elementos)</p>
                 <div class="con-margen">Este div tiene margen de 20px</div>
 
@@ -299,12 +352,13 @@
             <!--
                 AHORA TÚ: Agrega class="tarjeta" al div de abajo:
             -->
+            <div class="tarjeta"></div>
             <div>
                 <h3>Mi Tarjeta Personal</h3>
-                <p><strong>Nombre:</strong> [Tu nombre]</p>
-                <p><strong>Edad:</strong> [Tu edad]</p>
-                <p><strong>Ciudad:</strong> [Tu ciudad]</p>
-                <p><strong>Pasatiempo favorito:</strong> [Tu pasatiempo]</p>
+                <p><strong>Nombre:</strong>wiener andrés valencia</p>
+                <p><strong>Edad:</strong>chorrocientos</p>
+                <p><strong>Ciudad:</strong>tangamandapio</p>
+                <p><strong>Pasatiempo favorito:</strong>introspeccion</p>
             </div>
 
             <!-- 🎯 TAREA 4: Crea tu propia tarjeta con estilos inline -->
@@ -325,9 +379,9 @@
 
                 AHORA TÚ: Copia el ejemplo de arriba y modifica el div de abajo:
             -->
-            <div>
+            <div style="background-color: #ffe4e1; padding: 20px; border: 2px solid #ff69b4; text-align: center;">
                 <h3>Mi Comida Favorita</h3>
-                <p>[Escribe aquí tu comida favorita]</p>
+                <p>guacamole</p>
             </div>
         </div>
 
@@ -378,7 +432,9 @@
 
                 AHORA TÚ: Elige una opción y escribe tu código aquí debajo:
             -->
-
+            <div class="mi-caja-especial">
+                <p>¡Esta es mi caja personalizada!</p>
+            </div>
 
 
         </div>
@@ -403,4 +459,5 @@
         </div>
     </div>
 </body>
+
 </html>
