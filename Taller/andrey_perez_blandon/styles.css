@@ -11,8 +11,9 @@
 body {
     font-family: 'JetBrains Mono', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: rgb(236, 219, 220);
+    color: #4a3b33; /* texto ligeramente cálido */
+    /* Fondo crema suave como color central */
+    background-color: #f6efe6; /* crema claro */
 }
 
 /* ============================================
@@ -23,7 +24,8 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 30px 20px;
-    background-color: rgb(236, 219, 220);
+    /* contenedor con tono crema ligeramente más cálido */
+    background-color: #fbf6f0;
     min-height: 100vh;
 }
 
@@ -32,33 +34,35 @@ body {
    ============================================ */
 
 :root .theme-light {
-    --h1-color: #e53935;
-    --h1-gradient: var(--h1-color), #f44336, #f06292;
-    --h2-color: #fb8c00;
-    --h2-gradient: var(--h2-color), #ff9800, #ffb300;
-    --h3-color: #fbc02d;
-    --h3-gradient: var(--h3-color), #ffc107, #ffca28;
-    --h4-color: #7cb342;
-    --h4-gradient: var(--h4-color), #9ccc65, #c0ca33;
-    --h5-color: #1e88e5;
-    --h5-gradient: var(--h5-color), #03a9f4, #26c6da;
-    --h6-color: #8e24aa;
-    --h6-gradient: var(--h6-color), #9c27b0, #9575cd;
+    /* Paleta basada en crema/beige con acentos anaranjados suaves */
+    --h1-color: #b45a20; /* terracota suave */
+    --h1-gradient: var(--h1-color), #d8863f, #f0b27a;
+    --h2-color: #d07a2b; /* naranja cálido */
+    --h2-gradient: var(--h2-color), #e89a50, #f2caa3;
+    --h3-color: #e0a86b; /* naranja pálido */
+    --h3-gradient: var(--h3-color), #f3cfa6, #f7e6d6;
+    --h4-color: #c28b58; /* marrón anaranjado */
+    --h4-gradient: var(--h4-color), #e0ac78, #f5e1c9;
+    --h5-color: #b0723a;
+    --h5-gradient: var(--h5-color), #ca8f5a, #efd8bf;
+    --h6-color: #9a5a2a;
+    --h6-gradient: var(--h6-color), #b97b47, #e9cfae;
 }
 
 :root .theme-dark {
-    --h1-color: #ef5350;
-    --h1-gradient: var(--h1-color), #e57373, #f06292;
-    --h2-color: #ffa726;
-    --h2-gradient: var(--h2-color), #ffb74d, #ffcc80;
-    --h3-color: #ffd54f;
-    --h3-gradient: var(--h3-color), #ffd54f, #ffe082;
-    --h4-color: #a5d6a7;
-    --h4-gradient: var(--h4-color), #aed581, #e6ee9c;
-    --h5-color: #90caf9;
-    --h5-gradient: var(--h5-color), #80deea, #80cbc4;
-    --h6-color: #ce93d8;
-    --h6-gradient: var(--h6-color), #b39ddb, #f8bbd0;
+    /* versión oscura manteniendo la armonía crema/anaranjada */
+    --h1-color: #d06935;
+    --h1-gradient: var(--h1-color), #c1572b, #9a4b28;
+    --h2-color: #b55a2a;
+    --h2-gradient: var(--h2-color), #a05524, #7f4620;
+    --h3-color: #a66640;
+    --h3-gradient: var(--h3-color), #8f5736, #6f4330;
+    --h4-color: #8b5233;
+    --h4-gradient: var(--h4-color), #7a4a2e, #5e3c28;
+    --h5-color: #7a4428;
+    --h5-gradient: var(--h5-color), #6b3b22, #4f2f1b;
+    --h6-color: #60351f;
+    --h6-gradient: var(--h6-color), #4f2c19, #3a2113;
 }
 
 
@@ -111,8 +115,9 @@ h6 {
    ============================================ */
 
 .descripcion {
-    background: linear-gradient(135deg, #eacda3 25%, #d1bebe 75%);
-    color: #333;
+    /* descripción con degradado crema hacia naranja suave */
+    background: linear-gradient(135deg, #f6ead9 20%, #f0d9c0 60%);
+    color: #4a3b33;
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 35px;
@@ -142,8 +147,9 @@ h6 {
 }
 
 .caja-ejemplo {
-    background: linear-gradient(135deg, #c29e3c 25%, #7a6d59 75%);
-    color: #333;
+    /* caja con ligero patrón atigrado (simulado con degradado) */
+    background: linear-gradient(135deg, #f0c89a 18%, #e8b17a 45%, #d79a5b 75%);
+    color: #3d2f28;
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 35px;
@@ -154,8 +160,8 @@ h6 {
    ============================================ */
 
 .tarea {
-    background-color: #fff3cd;
-    border-left: 5px solid #ffc107;
+    background-color: #fff7eb; /* suave, cercano a crema */
+    border-left: 5px solid #e7a45a; /* acento anaranjado */
     padding: 25px;
     margin: 20px 0;
     border-radius: 5px;
@@ -171,8 +177,8 @@ h6 {
    ============================================ */
 
 .resumen {
-    background-color: #d4edda;
-    border-left: 5px solid #28a745;
+    background-color: #f3efe8;
+    border-left: 5px solid #b86b2e;
     padding: 20px;
     margin: 30px 0;
     border-radius: 5px;
@@ -208,28 +214,28 @@ h6 {
 }
 
 .btn-volver {
-    background-color: #3d361e;
-    color: white;
+    background-color: #5a4637; /* marrón cálido */
+    color: #fffaf7;
 }
 
 .btn-volver:hover {
-    background-color: #5a6268;
+    background-color: #6a5446;
     transform: translateX(-5px);
 }
 
 .btn-siguiente {
-    background-color: #f3d5a262;
-    color: rgb(255, 255, 255);
+    background-color: linear-gradient(90deg, #e89a50, #d77a3a);
+    color: #ffffff;
 }
 
 .btn-siguiente:hover {
-    background-color: #f3d5a262;
+    filter: brightness(0.95);
     transform: translateX(5px);
 }
 
 button {
-    background-color: #f3d5a262;
-    color: white;
+    background: linear-gradient(180deg, #f2c69d, #e79b56);
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -239,7 +245,7 @@ button {
 }
 
 button:hover {
-    background-color: #7f6b32;
+    background: linear-gradient(180deg, #e79b56, #c7682e);
 }
 
 button:active {
@@ -251,11 +257,11 @@ button:active {
    ============================================ */
 
 code {
-    background-color: #f4f4f4;
+    background-color: #f6f0e7;
     padding: 2px 6px;
     border-radius: 3px;
     font-family: 'Courier New', monospace;
-    color: #e83e8c;
+    color: #b96b32;
 }
 
 small {
