@@ -101,15 +101,15 @@ h3 {
    ============================================ */
 
 .tarea {
-    background-color: #fff3cd;
-    border-left: 5px solid #ffc107;
+    background-color: #e2cdff;
+    border-left: 5px solid #a374f4;
     padding: 20px;
     margin: 20px 0;
     border-radius: 5px;
 }
 
 .tarea h3 {
-    color: #856404;
+    color: #350485;
     margin-top: 0;
 }
 
@@ -243,15 +243,24 @@ img {
    ============================================ */
 
 a {
-    color: #667eea;
-    text-decoration: none;
+  display: inline-block;
+  padding: 10px 25px;
+  color: white;
+  background: linear-gradient(90deg, #6b46c1, #805ad5); /* degradado morado elegante */
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 10px rgba(128, 90, 213, 0.5); /* brillo violeta suave */
+  transition: all 0.3s ease;
 }
 
 a:hover {
-    color: #764ba2;
-    text-decoration: underline;
+  background: linear-gradient(90deg, #805ad5, #6b46c1); /* invierte el degradado */
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.8); /* resalta más el glow */
+  transform: scale(1.05);
 }
-
 /* ============================================
    RESPONSIVE - MÓVILES
    ============================================ */
