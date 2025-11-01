@@ -88,7 +88,49 @@
                         // AHORA TÚ: Escribe tu alerta aquí debajo (borra esta línea y escribe tu código):
 
                     }
+                </script>class="seccion">
+            <h2>1️⃣ Mostrar Mensajes</h2>
+            <p class="explicacion">
+                JavaScript puede mostrar mensajes de diferentes formas:
+            </p>
+
+            <div class="caja-ejemplo">
+                <!-- ALERTA SIMPLE -->
+                <h3>Alert - Alerta Simple</h3>
+                <button onclick="mostrarAlerta()">Mostrar Alerta</button>
+
+                <script>
+                    function mostrarAlerta() {
+                        alert("holiiiii, vamos a graduarnos");
+                    }
                 </script>
+
+                <!-- MENSAJE EN CONSOLA -->
+                <h3 style="margin-top: 20px;">Console.log - Mensaje en Consola</h3>
+                <button onclick="mostrarEnConsola()">Ver en Consola (F12)</button>
+                <p style="font-size: 12px; color: #666;">
+                    💡 Presiona F12 para abrir las herramientas de desarrollador y ver la consola
+                </p>
+
+                <script>
+                    function mostrarEnConsola() {
+                        console.log("Este mensaje aparece en la consola");
+                        console.log("La consola es muy útil para depurar código");
+                        alert("Revisa la consola (F12 → Console)");
+                    }
+                </script>
+
+                <!-- MENSAJE EN LA PÁGINA -->
+                <h3 style="margin-top: 20px;">Mostrar en la Página</h3>
+                <button onclick="mostrarEnPagina()">Mostrar Mensaje</button>
+                <p id="mensaje1" style="color: #2196f3; font-weight: bold; margin-top: 10px;"></p>
+
+                <script>
+                    function mostrarEnPagina() {
+                        document.getElementById("mensaje1").textContent = "¡Mensaje mostrado con JavaScript!";
+                    }
+                </script>
+            </div>
             </div>
         </div>
 
@@ -151,8 +193,29 @@
 
                     }
                 </script>
+            </div>   
+            <div class="seccion">
+            <h2>2️⃣ Pedir Información al Usuario</h2>
+
+            <div class="caja-ejemplo">
+                <h3>Prompt - Pedir Nombre</h3>
+                <button onclick="pedirNombre()">Pedir mi Nombre</button>
+                <p id="saludoPersonalizado" style="color: #4caf50; font-weight: bold; margin-top: 10px;"></p>
+
+                <script>
+                    function pedirNombre() {
+                        // prompt() muestra una ventana para que el usuario escriba algo
+                        let nombre = prompt("¿Cuál es tu nombre?");
+
+                        // Verificamos que el usuario haya escrito algo
+                        if (nombre) {
+                            document.getElementById("saludoPersonalizado").textContent =
+                                "¡Hola " + nombre + "! ¡Bienvenido/a!";
+                        }
+                    }
+                </script>
             </div>
-        </div>
+    
 
         <!-- SECCIÓN 3: OPERACIONES MATEMÁTICAS -->
         <div class="seccion">
