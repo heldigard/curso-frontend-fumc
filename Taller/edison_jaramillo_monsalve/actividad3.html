@@ -72,11 +72,11 @@
 
                 <script>
                     function miAlerta() {
-                        // 🎯 ESCRIBE TU CÓDIGO AQUÍ
-                        // Usa: alert("Tu mensaje aquí");
+                        // 🎯 EDISON JARAMILLO
+                        // Usa: alert(PIIILAAAS);
                         //
                         // PISTA: Una alerta se escribe así:
-                        // alert("Hola, soy Juan y tengo 25 años");
+                        // alert("Hola, soy edison jaramillo y tengo 34 años");
                         //
                         // RECUERDA:
                         // - El texto va entre comillas " "
@@ -88,9 +88,50 @@
                         // AHORA TÚ: Escribe tu alerta aquí debajo (borra esta línea y escribe tu código):
 
                     }
+                </script>            
+             <div class="seccion">
+            <h2>1️⃣ Mostrar Mensajes</h2>
+            <p class="explicacion">
+                JavaScript puede mostrar mensajes de diferentes formas:
+            </p>
+
+            <div class="caja-ejemplo">
+                <!-- ALERTA SIMPLE -->
+                <h3>Alert - Alerta Simple</h3>
+                <button onclick="mostrarAlerta()">Mostrar Alerta</button>
+
+                <script>
+                    function mostrarAlerta() {
+                        alert("hola edison jaramillo y tengo 34 años");
+                    }
+                </script>
+
+                <!-- MENSAJE EN CONSOLA -->
+                <h3 style="margin-top: 20px;">Console.log - Mensaje en Consola</h3>
+                <button onclick="mostrarEnConsola()">Ver en Consola (F12)</button>
+                <p style="font-size: 12px; color: #666;">
+                    💡 Presiona F12 para abrir las herramientas de desarrollador y ver la consola
+                </p>
+
+                <script>
+                    function mostrarEnConsola() {
+                        console.log("Este mensaje aparece en la consola");
+                        console.log("La consola es muy útil para depurar código");
+                        alert("Revisa la consola (F12 → Console)");
+                    }
+                </script>
+
+                <!-- MENSAJE EN LA PÁGINA -->
+                <h3 style="margin-top: 20px;">Mostrar en la Página</h3>
+                <button onclick="mostrarEnPagina()">Mostrar Mensaje</button>
+                <p id="mensaje1" style="color: #2196f3; font-weight: bold; margin-top: 10px;"></p>
+
+                <script>
+                    function mostrarEnPagina() {
+                        document.getElementById("mensaje1").textContent = "¡Mensaje mostrado con JavaScript!";
+                    }
                 </script>
             </div>
-        </div>
 
         <!-- SECCIÓN 2: PEDIR INFORMACIÓN AL USUARIO -->
         <div class="seccion">
@@ -147,9 +188,9 @@
                         // document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
                         //
                         // AHORA TÚ: Copia las 2 líneas del ejemplo y pégalas aquí debajo:
+                        let edad = prompt("¿Cuántos años tienes?");
+                        document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
 
-
-                    }
                 </script>
             </div>
         </div>
