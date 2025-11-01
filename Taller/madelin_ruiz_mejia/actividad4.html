@@ -159,6 +159,35 @@
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
 
+                <table>
+                        <tr>
+                           <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Pasatiempo</th>
+                        </tr>
+                        <tr>
+                            <td>Jorge</td>
+                            <td>45</td>
+                            <td>Jugar basquetbol </td>
+                        </tr>
+                        <tr>
+                            <td>Diana</td>
+                            <td>40</td>
+                            <td>Escuchar musica</td>
+                        </tr>
+                        <tr>
+                            <td>Daniel</td>
+                            <td>9</td>
+                            <td>Montar bicicleta</td>
+                        </tr>
+                        <tr>
+                            <td>Madelin</td>
+                            <td>18</td>
+                            <td>Dibujar
+                        
+                        </tr>
+                    </table>
+
 
 
             </div>
@@ -349,9 +378,42 @@
                     - Puedes usar estrellas ⭐ para la calificación o números del 1 al 5
 
                     AHORA TÚ: Copia el ejemplo de arriba y cámbialo con tus películas favoritas:
-                -->
+                --!>
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+
+                <table>
+                        <tr>
+                            <th>Género</th>
+                            <th>Título</th>
+                            <th>Año</th>
+                            <th>Calificación</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Acción</td>
+                            <td>Kung Fu Panda</td>
+                            <td>2008</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <!-- ¡FÍJATE! Esta fila NO tiene la celda de "Género" porque rowspan ya la ocupó -->
+                            <td>ratatouille</td>
+                            <td>2007</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Comedia</td>
+                            <td>Mi pobre angelito</td>
+                            <td>2013</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                         <tr>
+                           
+                            <td>Son como niños</td>
+                            <td>2010</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                    </table>
 
 
 
@@ -541,6 +603,40 @@
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
 
+                <table id="tablaTareas">
+                        <thead>
+                            <tr>
+                                <th>Tarea</th>
+                                <th>Prioridad</th>
+                                <th>Fecha Límite</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpoTablaTareas">
+                        
+                        </tbody>
+                    </table>
+
+                    <button onclick="agregarTarea()">➕ Agregar Tarea</button>
+
+                     <script>
+                        function agregarTarea() {
+
+                            let tarea = prompt("¿Qué tarea tienes que hacer?");
+                            let prioridad = prompt("¿Qué prioridad? (Alta/Media/Baja)");
+                            let fecha = prompt("¿Fecha límite? (Ejemplo: 2025-11-30)");
+                             if (tarea && prioridad && fecha) {
+                            let tbody = document.getElementById("cuerpoTablaTareas");
+                            let nuevaFila = document.createElement("tr");
+                            nuevaFila.innerHTML = `
+                                    <td>${tarea}</td>
+                                    <td>${prioridad}</td>
+                                    <td>${fecha}</td>
+                                `;
+
+                        tbody.appendChild(nuevaFila);
+                            }
+                        }
+                    </script>
 
 
             </div>
