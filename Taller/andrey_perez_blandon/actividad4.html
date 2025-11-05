@@ -20,18 +20,19 @@
             text-align: left;
         }
 
+        /* Encabezados de tabla - armonizados con la paleta terracota */
         th {
-            background-color: #667eea;
+            background-color: #b45a20; /* terracota suave */
             color: white;
             font-weight: bold;
         }
 
         tr:nth-child(even) {
-            background-color: #f2f2f2; /* Filas alternas con fondo gris */
+            background-color: #f7f1ec; /* filas alternas con tono crema */
         }
 
         tr:hover {
-            background-color: #e3f2fd; /* Color al pasar el mouse */
+            background-color: rgba(232, 145, 90, 0.08); /* suave acento naranja al pasar */
         }
 
         .tabla-compacta td {
@@ -46,6 +47,60 @@
         .tabla-colorida tr:nth-child(odd) {
             background-color: #fff3e0;
         }
+
+        body { background-color: #f6efe6; }
+
+        .seccion {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(180deg, #fbf6f0 0%, #f6ead9 100%);
+            border: 1px solid rgba(184,107,46,0.08);
+            border-radius: 10px;
+        }
+
+        .caja-ejemplo {
+            background: linear-gradient(135deg, #f0c89a 18%, #e8b17a 45%, #d79a5b 75%);
+            color: #3d2f28;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(215,145,90,0.06);
+            margin-bottom: 20px;
+        }
+
+        .tarea {
+            background-color: #fff7eb;
+            border-left: 5px solid #e7a45a;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            color: #4a3b33;
+        }
+
+        .resumen {
+            background-color: #f3efe8;
+            border-left: 5px solid #b86b2e;
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 10px 14px;
+            text-decoration: none;
+            background-color: #5a4637;
+            color: #fffaf7;
+            border-radius: 6px;
+        }
+
+        .btn-siguiente {
+            display: inline-block;
+            padding: 10px 14px;
+            text-decoration: none;
+            background: linear-gradient(90deg,#e89a50,#d77a3a);
+            color: #fff;
+            border-radius: 6px;
+        }
     </style>
 </head>
 <body class="theme-light">
@@ -54,7 +109,7 @@
         <a href="index.html" class="btn-volver">← Volver al Menú</a>
 
         <!-- ENCABEZADO -->
-        <h1>📊 Actividad 4: Tablas HTML</h1>
+        <h1 style="margin-bottom: 15px;">📊 Actividad 4: Tablas HTML</h1>
 
         <div class="descripcion">
             <p><strong>Objetivo:</strong> Aprender a crear y diseñar tablas en HTML</p>
@@ -159,7 +214,28 @@
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
 
-
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Pasatiempo</th>
+                    </tr>
+                    <tr>
+                        <td>Ana Gómez</td>
+                        <td>23</td>
+                        <td>Leer libros</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Pérez</td>
+                        <td>25</td>
+                        <td>Jugar fútbol</td>
+                    </tr>
+                    <tr>
+                        <td>Lucía Martínez</td>
+                        <td>21</td>
+                        <td>Tocar guitarra</td>
+                    </tr>
+                </table>
 
             </div>
         </div>
@@ -353,7 +429,31 @@
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
 
-
+                <table>
+                    <tr>
+                        <th>Género</th>
+                        <th>Título</th>
+                        <th>Año</th>
+                        <th>Calificación</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Acción</td>
+                        <td>Mad Max: Fury Road</td>
+                        <td>2015</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>John Wick</td>
+                        <td>2014</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Comedia</td>
+                        <td>La Gran Aventura</td>
+                        <td>2018</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                </table>
 
             </div>
         </div>
@@ -541,7 +641,45 @@
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
 
+                <table id="tablaTareas">
+                    <thead>
+                        <tr>
+                            <th>Tarea</th>
+                            <th>Prioridad</th>
+                            <th>Fecha Límite</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTablaTareas">
+                        <tr>
+                            <td>Estudiar para examen</td>
+                            <td>Alta</td>
+                            <td>2025-11-20</td>
+                        </tr>
+                    </tbody>
+                </table>
 
+                <div style="margin-top:12px;">
+                    <button onclick="agregarTarea()">➕ Agregar Tarea</button>
+                </div>
+
+                <script>
+                    function agregarTarea() {
+                        let tarea = prompt("¿Qué tarea tienes que hacer?");
+                        let prioridad = prompt("¿Qué prioridad? (Alta/Media/Baja)");
+                        let fecha = prompt("¿Fecha límite? (Ejemplo: 2025-11-30)");
+
+                        if (tarea && prioridad && fecha) {
+                            let tbody = document.getElementById("cuerpoTablaTareas");
+                            let nuevaFila = document.createElement("tr");
+                            nuevaFila.innerHTML = `
+                                <td>${tarea}</td>
+                                <td>${prioridad}</td>
+                                <td>${fecha}</td>
+                            `;
+                            tbody.appendChild(nuevaFila);
+                        }
+                    }
+                </script>
 
             </div>
         </div>

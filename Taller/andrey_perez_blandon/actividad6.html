@@ -15,9 +15,8 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
+        /* Armonización con styles.css: crema / terracota / acentos anaranjados */
+        body { background-color: #f6efe6; }
 
         .hero-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -27,15 +26,45 @@
         }
 
         .demo-box {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(180deg, #fffaf7 0%, #fbf6f0 100%);
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(163,110,70,0.06);
             margin-bottom: 30px;
+            border: 1px solid rgba(184,107,46,0.06);
+            color: #3d2f28;
+        }
+
+        .caja-ejemplo {
+            background: linear-gradient(135deg, #f0c89a 18%, #e8b17a 45%, #d79a5b 75%);
+            color: #3d2f28;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+        }
+
+        .alert-warning {
+            background-color: #fff7eb;
+            border-left: 6px solid #e7a45a;
+            color: #4a3b33;
+            border-radius: 8px;
+        }
+
+        form { background-color: #fff; padding: 16px; border-radius: 8px; border: 1px solid #efe0c8; }
+
+        .navbar-dark.bg-dark { background: linear-gradient(90deg,#3b2b24,#5a4637); }
+
+        footer.bg-dark { background: linear-gradient(90deg,#3b2b24,#5a4637); color: #fff; }
+
+        .alert-success {
+            background: linear-gradient(180deg, #eaf6e9, #f3efe8);
+            border-left: 6px solid #7bbf8a;
+            color: #155724;
+            border-radius: 10px;
         }
     </style>
 </head>
-<body>
+<body class="theme-light">
     <!-- BARRA DE NAVEGACIÓN CON BOOTSTRAP -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
