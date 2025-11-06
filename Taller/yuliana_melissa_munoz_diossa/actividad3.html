@@ -72,65 +72,9 @@
 
                 <script>
                     function miAlerta() {
-                        // 🎯 ESCRIBE TU CÓDIGO AQUÍ
-                        // Usa: alert("Tu mensaje aquí");
-                        //
-                        // PISTA: Una alerta se escribe así:
-                        // alert("Hola, soy Juan y tengo 25 años");
-                        //
-                        // RECUERDA:
-                        // - El texto va entre comillas " "
-                        // - Termina con punto y coma ;
-                        //
-                        // EJEMPLO COMPLETO:
-                        // alert("Hola, soy María González y tengo 22 años");
-                        //
-                        // AHORA TÚ: Escribe tu alerta aquí debajo (borra esta línea y escribe tu código):
-
-                    }
-                </script>class="seccion">
-            <h2>1️⃣ Mostrar Mensajes</h2>
-            <p class="explicacion">
-                JavaScript puede mostrar mensajes de diferentes formas:
-            </p>
-
-            <div class="caja-ejemplo">
-                <!-- ALERTA SIMPLE -->
-                <h3>Alert - Alerta Simple</h3>
-                <button onclick="mostrarAlerta()">Mostrar Alerta</button>
-
-                <script>
-                    function mostrarAlerta() {
-                        alert("holiiiii, vamos a graduarnos");
+                        alert("Hola, soy Yuliana y tengo 23 años");
                     }
                 </script>
-
-                <!-- MENSAJE EN CONSOLA -->
-                <h3 style="margin-top: 20px;">Console.log - Mensaje en Consola</h3>
-                <button onclick="mostrarEnConsola()">Ver en Consola (F12)</button>
-                <p style="font-size: 12px; color: #666;">
-                    💡 Presiona F12 para abrir las herramientas de desarrollador y ver la consola
-                </p>
-
-                <script>
-                    function mostrarEnConsola() {
-                        console.log("Este mensaje aparece en la consola");
-                        console.log("La consola es muy útil para depurar código");
-                        alert("Revisa la consola (F12 → Console)");
-                    }
-                </script>
-
-                <!-- MENSAJE EN LA PÁGINA -->
-                <h3 style="margin-top: 20px;">Mostrar en la Página</h3>
-                <button onclick="mostrarEnPagina()">Mostrar Mensaje</button>
-                <p id="mensaje1" style="color: #2196f3; font-weight: bold; margin-top: 10px;"></p>
-
-                <script>
-                    function mostrarEnPagina() {
-                        document.getElementById("mensaje1").textContent = "¡Mensaje mostrado con JavaScript!";
-                    }
-                </script>
-            </div>
             </div>
         </div>
 
@@ -166,51 +110,12 @@
 
                 <script>
                     function pedirEdad() {
-                        // 🎯 ESCRIBE TU CÓDIGO AQUÍ
-                        // 1. Usa prompt() para pedir la edad
-                        // 2. Muestra un mensaje como: "Tienes XX años"
-                        // 3. Usa document.getElementById("mensajeEdad").textContent para mostrarlo
-                        //
-                        // PISTA - PASO A PASO:
-                        //
-                        // PASO 1: Pedir la edad al usuario
-                        // let edad = prompt("¿Cuántos años tienes?");
-                        //
-                        // PASO 2: Mostrar el mensaje en la página
-                        // document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
-                        //
-                        // RECUERDA:
-                        // - let es para crear una variable (como una caja donde guardas datos)
-                        // - El signo + une textos (concatenar)
-                        // - "Tienes " + edad + " años" crea un texto completo
-                        //
-                        // EJEMPLO COMPLETO:
-                        // let edad = prompt("¿Cuántos años tienes?");
-                        // document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
-                        //
-                        // AHORA TÚ: Copia las 2 líneas del ejemplo y pégalas aquí debajo:
-
-
-                    }
-                </script>
-            </div>   
-            <div class="seccion">
-            <h2>2️⃣ Pedir Información al Usuario</h2>
-
-            <div class="caja-ejemplo">
-                <h3>Prompt - Pedir Nombre</h3>
-                <button onclick="pedirNombre()">Pedir mi Nombre</button>
-                <p id="saludoPersonalizado" style="color: #4caf50; font-weight: bold; margin-top: 10px;"></p>
-
-                <script>
-                    function pedirNombre() {
-                        // prompt() muestra una ventana para que el usuario escriba algo
-                        let nombre = prompt("¿Cuál es tu nombre?");
+                        let edad = prompt("¿Cuál es tu edad?");
 
                         // Verificamos que el usuario haya escrito algo
-                        if (nombre) {
-                            document.getElementById("saludoPersonalizado").textContent =
-                                "¡Hola " + nombre + "! ¡Bienvenido/a!";
+                        if (edad) {
+                            document.getElementById("mensajeEdad").textContent =
+                                "Tienes " + edad + " años";
                         }
                     }
                 </script>
@@ -273,33 +178,12 @@
 
                 <script>
                     function hacerResta() {
-                        // 🎯 ESCRIBE TU CÓDIGO AQUÍ
-                        // 1. Pide dos números con prompt()
-                        // 2. Convierte a números con Number()
-                        // 3. Haz la resta
-                        // 4. Muestra el resultado en "resultadoResta"
-                        //
-                        // PISTA - SIGUE ESTOS PASOS:
-                        //
-                        // PASO 1: Pedir el primer número
-                        // let num1 = prompt("Ingresa el primer número:");
-                        //
-                        // PASO 2: Pedir el segundo número
-                        // let num2 = prompt("Ingresa el segundo número:");
-                        //
-                        // PASO 3: Convertir a números (IMPORTANTE)
-                        // num1 = Number(num1);
-                        // num2 = Number(num2);
-                        //
-                        // PASO 4: Hacer la resta
-                        // let resta = num1 - num2;
-                        //
-                        // PASO 5: Mostrar el resultado
-                        // document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
-                        //
-                        // AHORA TÚ: Copia los 5 pasos de arriba y pégalos aquí debajo:
-
-
+                        let num1 = prompt("Ingresa el primer número:");
+                        let num2 = prompt("Ingresa el segundo número:");
+                        num1 = Number(num1);
+                        num2 = Number(num2);
+                        let resta = num1 - num2;
+                        document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
                     }
                 </script>
             </div>
@@ -313,25 +197,12 @@
 
                 <script>
                     function hacerDivision() {
-                        // 🎯 ESCRIBE TU CÓDIGO AQUÍ
-                        // Igual que la resta, pero usa el operador /
-                        //
-                        // PISTA: Es MUY SIMILAR a la resta, solo cambia:
-                        // - En lugar de: let resta = num1 - num2;
-                        // - Usa: let division = num1 / num2;
-                        // - El símbolo / significa división
-                        //
-                        // PASOS COMPLETOS:
-                        // let num1 = prompt("Ingresa el primer número:");
-                        // let num2 = prompt("Ingresa el segundo número:");
-                        // num1 = Number(num1);
-                        // num2 = Number(num2);
-                        // let division = num1 / num2;
-                        // document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
-                        //
-                        // AHORA TÚ: Copia los pasos de arriba y pégalos aquí debajo:
-
-
+                        let num1 = prompt("Ingresa el primer número:");
+                        let num2 = prompt("Ingresa el segundo número:");
+                        num1 = Number(num1);
+                        num2 = Number(num2);
+                        let division = num1 / num2;
+                        document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
                     }
                 </script>
             </div>
@@ -379,27 +250,8 @@
                     let cuenta = 0; // Variable para guardar el conteo
 
                     function incrementarContador() {
-                        // 🎯 ESCRIBE TU CÓDIGO AQUÍ
-                        // 1. Incrementa la variable cuenta (cuenta = cuenta + 1)
-                        // 2. Muestra el nuevo valor en el elemento "contador"
-                        //
-                        // PISTA - PASO A PASO:
-                        //
-                        // PASO 1: Aumentar el contador en 1
-                        // cuenta = cuenta + 1;
-                        // (También puedes escribir: cuenta++; es lo mismo)
-                        //
-                        // PASO 2: Mostrar el nuevo número en la página
-                        // document.getElementById("contador").textContent = cuenta;
-                        //
-                        // EXPLICACIÓN:
-                        // - cuenta = cuenta + 1; significa: "toma el valor actual de cuenta, súmale 1, y guárdalo de nuevo en cuenta"
-                        // - Si cuenta era 0, ahora será 1
-                        // - Si cuenta era 1, ahora será 2, y así sucesivamente
-                        //
-                        // AHORA TÚ: Copia las 2 líneas del ejemplo y pégalas aquí debajo:
-
-
+                        cuenta++;
+                        document.getElementById("contador").textContent = cuenta;
                     }
                 </script>
             </div>
@@ -441,41 +293,16 @@
 
                 <script>
                     function verificarParImpar() {
-                        // 🎯 ESCRIBE TU CÓDIGO AQUÍ
-                        // 1. Pide un número con prompt()
-                        // 2. Usa el operador % (módulo) para ver si es par
-                        //    Si numero % 2 == 0, es par
-                        //    Si no, es impar
-                        // 3. Muestra el resultado en "mensajeParImpar"
-                        //
-                        // PISTA - PASO A PASO:
-                        //
-                        // PASO 1: Pedir un número
-                        // let numero = prompt("Ingresa un número:");
-                        // numero = Number(numero);
-                        //
-                        // PASO 2: Obtener el elemento donde mostraremos el resultado
-                        // let mensaje = document.getElementById("mensajeParImpar");
-                        //
-                        // PASO 3: Verificar si es par o impar usando if/else
-                        // if (numero % 2 == 0) {
-                        //     mensaje.textContent = "El número " + numero + " es PAR";
-                        //     mensaje.style.color = "#4caf50";
-                        // } else {
-                        //     mensaje.textContent = "El número " + numero + " es IMPAR";
-                        //     mensaje.style.color = "#f44336";
-                        // }
-                        //
-                        // EXPLICACIÓN DEL OPERADOR %:
-                        // - El % (módulo) da el RESTO de una división
-                        // - 10 % 2 = 0 (porque 10 dividido 2 da 5, resto 0) → PAR
-                        // - 11 % 2 = 1 (porque 11 dividido 2 da 5, resto 1) → IMPAR
-                        // - Si el resto es 0, el número es par
-                        // - Si el resto es 1, el número es impar
-                        //
-                        // AHORA TÚ: Copia todo el código de arriba (PASO 1, 2 y 3) y pégalo aquí debajo:
-
-
+                        let numero = prompt("Ingresa un número:");
+                        numero = Number(numero);
+                        let mensaje = document.getElementById("mensajeParImpar");
+                        if (numero % 2 == 0) {
+                            mensaje.textContent = "El número " + numero + " es PAR";
+                            mensaje.style.color = "#4caf50";
+                        } else {
+                            mensaje.textContent = "El número " + numero + " es IMPAR";
+                            mensaje.style.color = "#f44336";
+                        }
                     }
                 </script>
             </div>
