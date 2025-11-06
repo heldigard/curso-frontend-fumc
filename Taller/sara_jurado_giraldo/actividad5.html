@@ -505,57 +505,9 @@
                     ════════════════════════════════════════════════════════
 
                     Ahora necesitas completar la función que procesa todos estos datos
-                -->
-
-                <script>
-                    function enviarRegistro(event) {
-                        event.preventDefault(); // Evita que la página se recargue
-
-                        // 🎯 AHORA TÚ: Completa esta función siguiendo los pasos:
-
-                        // PASO 1: Obtener todos los valores de los campos de texto
-                        let nombre = document.getElementById("nombreReg").value;
-                        let email = document.getElementById("emailReg").value;
-                        let edad = document.getElementById("edadReg").value;
-                        let ciudad = document.getElementById("ciudadReg").value;
-                        let biografia = document.getElementById("biografiaReg").value;
-
-                        // PASO 2: Obtener el género seleccionado (radio button)
-                        let genero = "";
-                        let radios = document.getElementsByName("generoReg");
-                        for (let radio of radios) {
-                            if (radio.checked) {
-                                genero = radio.value;
-                                break;
-                            }
-                        }
-
-                        // PASO 3: Obtener los intereses seleccionados (checkboxes)
-                        let intereses = [];
-                        let checkboxes = document.getElementsByName("interesesReg");
-                        for (let checkbox of checkboxes) {
-                            if (checkbox.checked) {
-                                intereses.push(checkbox.value);
-                            }
-                        }
-
-                        // PASO 4: Mostrar todos los datos en el div de resultado
-                        let resultado = document.getElementById("resultadoRegistro");
-                        resultado.style.display = "block";
-                        resultado.innerHTML = `
-                            <h4>✅ ¡Registro Completado!</h4>
-                            <p><strong>Nombre:</strong> ${nombre}</p>
-                            <p><strong>Email:</strong> ${email}</p>
-                            <p><strong>Edad:</strong> ${edad} años</p>
-                            <p><strong>Ciudad:</strong> ${ciudad}</p>
-                            <p><strong>Género:</strong> ${genero}</p>
-                            <p><strong>Intereses:</strong> ${intereses.length > 0 ? intereses.join(", ") : "Ninguno seleccionado"}</p>
-                            <p><strong>Biografía:</strong> ${biografia || "No proporcionada"}</p>
-                        `;
-
-                        return false;
-                    }
-                </script>
+                -->  
+                    
+                
             </div>
         </div>
 

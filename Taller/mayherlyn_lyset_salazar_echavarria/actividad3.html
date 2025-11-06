@@ -86,6 +86,7 @@
                         // alert("Hola, soy María González y tengo 22 años");
                         //
                         // AHORA TÚ: Escribe tu alerta aquí debajo (borra esta línea y escribe tu código):
+                        alert("Hola, soy Mayherlyn Lyset Salazar Echavarria y tengo 36 años");
 
                     }
                 </script>
@@ -147,9 +148,22 @@
                         // document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
                         //
                         // AHORA TÚ: Copia las 2 líneas del ejemplo y pégalas aquí debajo:
+                            let edad = prompt("¿Cuántos años tienes?");
+                            // Si usuario cancela o deja vacío
+                            if (edad === null || edad.trim() === "") {
+                                document.getElementById("mensajeEdad").textContent = "No ingresaste la edad.";
+                             return;
+                        }
 
+                            // Convertimos a número y validamos
+                        edad = Number(edad);
+                        if (isNaN(edad)) {
+                            document.getElementById("mensajeEdad").textContent = "Por favor ingresa un número válido.";
+                            return;
+                        }
 
-                    }
+    document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
+        }
                 </script>
             </div>
         </div>
@@ -235,11 +249,28 @@
                         // document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
                         //
                         // AHORA TÚ: Copia los 5 pasos de arriba y pégalos aquí debajo:
+                        let num1 = prompt("Ingresa el primer número:");
+                        let num2 = prompt("Ingresa el segundo número:");
 
+                        if (num1 === null || num2 === null || num1.trim() === "" || num2.trim() === "") {
+                            document.getElementById("resultadoResta").textContent = "Faltan números.";
+                            return;
+                        }
 
+                        num1 = Number(num1);
+                        num2 = Number(num2);
+
+                        if (isNaN(num1) || isNaN(num2)) {
+                            document.getElementById("resultadoResta").textContent = "Por favor ingresa números válidos.";
+                            return;
+                        }
+
+                        let resta = num1 - num2;
+                        document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
                     }
-                </script>
-            </div>
+
+                                    </script>
+                                </div>
 
             <!-- 🎯 TAREA 4 -->
             <div class="tarea">
@@ -267,9 +298,31 @@
                         // document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
                         //
                         // AHORA TÚ: Copia los pasos de arriba y pégalos aquí debajo:
+    let num1 = prompt("Ingresa el primer número:");
+    let num2 = prompt("Ingresa el segundo número:");
 
+    if (num1 === null || num2 === null || num1.trim() === "" || num2.trim() === "") {
+        document.getElementById("resultadoDivision").textContent = "Faltan números.";
+        return;
+    }
 
-                    }
+    num1 = Number(num1);
+    num2 = Number(num2);
+
+    if (isNaN(num1) || isNaN(num2)) {
+        document.getElementById("resultadoDivision").textContent = "Por favor ingresa números válidos.";
+        return;
+    }
+
+    if (num2 === 0) {
+        document.getElementById("resultadoDivision").textContent = "No se puede dividir entre 0.";
+        return;
+    }
+
+    let division = num1 / num2;
+    document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
+}
+                 
                 </script>
             </div>
         </div>
@@ -335,9 +388,10 @@
                         // - Si cuenta era 1, ahora será 2, y así sucesivamente
                         //
                         // AHORA TÚ: Copia las 2 líneas del ejemplo y pégalas aquí debajo:
+    cuenta = cuenta + 1; // o simplemente: cuenta++;
+    document.getElementById("contador").textContent = cuenta;
+}
 
-
-                    }
                 </script>
             </div>
         </div>
@@ -411,12 +465,33 @@
                         // - Si el resto es 1, el número es impar
                         //
                         // AHORA TÚ: Copia todo el código de arriba (PASO 1, 2 y 3) y pégalo aquí debajo:
+                        let numero = prompt("Ingresa un número:");
+                        if (numero === null || numero.trim() === "") {
+                            document.getElementById("mensajeParImpar").textContent = "No ingresaste un número.";
+                            return;
+                        }
 
+                        numero = Number(numero);
+                        let mensaje = document.getElementById("mensajeParImpar");
 
+                        if (isNaN(numero)) {
+                            mensaje.textContent = "Por favor ingresa un número válido.";
+                            mensaje.style.color = "#000";
+                            return;
+                        }
+
+                        if (numero % 2 === 0) {
+                            mensaje.textContent = "El número " + numero + " es PAR";
+                            mensaje.style.color = "#4caf50";
+                        } else {
+                            mensaje.textContent = "El número " + numero + " es IMPAR";
+                            mensaje.style.color = "#f44336";
+                        }
                     }
-                </script>
-            </div>
-        </div>
+
+                                    </script>
+                                </div>
+                            </div>
 
         <!-- BOTONES DE NAVEGACIÓN -->
         <div style="text-align: center; margin-top: 40px; display: flex; gap: 20px; justify-content: center;">

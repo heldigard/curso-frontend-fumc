@@ -6,11 +6,11 @@
     <title>Actividad 1 - HTML Básico</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="theme-light">
     <div class="container">
         <!-- NAVEGACIÓN: Volver al menú principal -->
         <a href="index.html" class="btn-volver">← Volver al Menú</a>
-
+        <hr style="margin-top: 20px; margin-bottom: 20px;">
         <!-- ENCABEZADO PRINCIPAL -->
         <h1>📝 Actividad 1: HTML Básico</h1>
 
@@ -22,23 +22,29 @@
 
         <!-- SECCIÓN 1: ENCABEZADOS -->
         <div class="seccion">
-            <h2>1️⃣ Encabezados (h1, h2, h3, h4, h5, h6)</h2>
+            <h2>1️. | Encabezados (H1, H2, H3, H4, H5, H6)</h2>
             <p class="explicacion">
-                Los encabezados van del h1 (más grande) al h6 (más pequeño).
+                Los encabezados van del H1 (más grande) al H6 (más pequeño).
                 Se usan para organizar el contenido en secciones.
             </p>
 
             <!-- Ejemplo de encabezados -->
-            <h1>Este es un encabezado h1</h1>
-            <h2>Este es un encabezado h2</h2>
-            <h3>Este es un encabezado h3</h3>
-            <h4>Este es un encabezado h4</h4>
-            <h5>Este es un encabezado h5</h5>
-            <h6>Este es un encabezado h6</h6>
+            <h1>Este es un encabezado H1</h1>
+            <br>
+            <h2>Este es un encabezado H2</h2>
+            <br>
+            <h3>Este es un encabezado H3</h3>
+            <br>
+            <h4>Este es un encabezado H4</h4>
+            <br>
+            <h5>Este es un encabezado H5</h5>
+            <br>
+            <h6>Este es un encabezado H6</h6>
+            <br>
 
-            <!-- 🎯 TAREA 1: Crea un encabezado h2 con tu nombre completo -->
+            <!-- 🎯 TAREA 1: Crea un encabezado H2 con tu nombre completo -->
             <!--
-                PISTA: Un encabezado h2 se escribe así:
+                PISTA: Un encabezado H2 se escribe así:
                 <h2>Tu texto aquí</h2>
 
                 EJEMPLO:
@@ -46,21 +52,20 @@
 
                 AHORA TÚ: Escribe tu código aquí debajo (reemplaza el texto con tu nombre real):
             -->
-            <h2>Tu Nombre Completo Aquí</h2>
+            <h2>Andrey Pérez Blandón | El Tralalero</h2>
 
 
         </div>
 
         <!-- SECCIÓN 2: PÁRRAFOS -->
         <div class="seccion">
-            <h2>2️⃣ Párrafos (p)</h2>
+            <h2>2️. | Párrafos (P)</h2>
             <p class="explicacion">
                 La etiqueta &lt;p&gt; se usa para crear párrafos de texto.
             </p>
-
             <!-- Ejemplo de párrafo -->
             <p>Este es un párrafo de ejemplo. Puede contener mucho texto y se ajusta automáticamente al ancho de la página.</p>
-
+            <br>
             <p>Este es otro párrafo. Los párrafos se separan automáticamente con espacios.</p>
 
             <!-- 🎯 TAREA 2: Escribe un párrafo sobre tus pasatiempos favoritos -->
@@ -73,17 +78,18 @@
 
                 AHORA TÚ: Escribe tu código aquí debajo:
             -->
-            <p>Escribe aquí sobre tus pasatiempos favoritos...</p>
+            <br>
+            <p>Aprender, escuchar música, leer.</p>
 
 
         </div>
 
         <!-- SECCIÓN 3: LISTAS -->
         <div class="seccion">
-            <h2>3️⃣ Listas</h2>
+            <h2>3. | Listas</h2>
 
             <!-- LISTA NO ORDENADA (viñetas) -->
-            <h3>Lista No Ordenada (ul)</h3>
+            <h3>Lista No Ordenada (UL)</h3>
             <p class="explicacion">Se usa cuando el orden NO importa (usa viñetas).</p>
 
             <ul>
@@ -93,7 +99,7 @@
             </ul>
 
             <!-- LISTA ORDENADA (números) -->
-            <h3>Lista Ordenada (ol)</h3>
+            <h3>Lista Ordenada (OL)</h3>
             <p class="explicacion">Se usa cuando el orden SÍ importa (usa números).</p>
 
             <ol>
@@ -101,37 +107,12 @@
                 <li>Desayunar</li>
                 <li>Estudiar</li>
             </ol>
-
-            <!-- 🎯 TAREA 3: Crea una lista NO ordenada con tus 3 comidas favoritas -->
-            <!--
-                PISTA: Una lista NO ordenada (con viñetas) se escribe así:
-
-                <ul>
-                    <li>Primera comida</li>
-                    <li>Segunda comida</li>
-                    <li>Tercera comida</li>
-                </ul>
-
-                RECUERDA:
-                - <ul> abre la lista (ul = unordered list = lista no ordenada)
-                - <li> es cada elemento de la lista (li = list item = elemento de lista)
-                - </ul> cierra la lista
-
-                EJEMPLO:
-                <ul>
-                    <li>Pizza</li>
-                    <li>Hamburguesa</li>
-                    <li>Pasta</li>
-                </ul>
-
-                AHORA TÚ: Escribe tu código aquí debajo:
-            -->
-            <ul>
-                <li>Tu primera comida favorita</li>
-                <li>Tu segunda comida favorita</li>
-                <li>Tu tercera comida favorita</li>
-            </ul>
-
+        <h4>Comidas Favoritas</h4>
+            <ol>
+                <li>Huevos con Salchicha y Salsa de Tomate</li>
+                <li>Huevo con Salsa de Tomate</li>
+                <li>Huevo con Tomate y Cebolla</li>
+            </ol>
 
             <!-- 🎯 TAREA 4: Crea una lista ORDENADA con los pasos para hacer un café -->
             <!--
@@ -158,9 +139,11 @@
 
                 AHORA TÚ: Escribe tu código aquí debajo (mínimo 4 pasos):
             -->
+            
+            <h4>Pasos para hacer un café:</h4>
             <ol>
-                <li>Primer paso para hacer café</li>
-                <li>Segundo paso</li>
+                <li>Primer paso para hacer café: no sé hacer café</li>
+                <li>Intentaré pensar cómo hacer café</li>
                 <li>Tercer paso</li>
                 <li>Cuarto paso</li>
             </ol>
@@ -169,7 +152,7 @@
 
         <!-- SECCIÓN 4: IMÁGENES -->
         <div class="seccion">
-            <h2>4️⃣ Imágenes (img)</h2>
+            <h2>4. | Imágenes (IMG)</h2>
             <p class="explicacion">
                 La etiqueta &lt;img&gt; se usa para mostrar imágenes.
                 <strong>Importante:</strong> Tiene dos atributos principales:
@@ -181,8 +164,10 @@
 
             <!-- Ejemplo de imagen desde internet -->
             <img src="https://via.placeholder.com/400x200/667eea/ffffff?text=Imagen+de+Ejemplo"
-                 alt="Imagen de ejemplo">
-
+                alt="Imagen de ejemplo">
+            <br>
+            <img src="https://cataas.com/cat?width=400&height=300" alt="Gato">
+            
             <!-- 🎯 TAREA 5: Agrega una imagen de un gato usando esta URL: -->
             <!-- URL: https://cataas.com/cat?width=400&height=300 -->
             <!-- No olvides agregar un alt descriptivo -->
@@ -207,7 +192,7 @@
 
         <!-- SECCIÓN 5: ENLACES -->
         <div class="seccion">
-            <h2>5️⃣ Enlaces (a)</h2>
+            <h2>5. | Enlaces (a)</h2>
             <p class="explicacion">
                 La etiqueta &lt;a&gt; se usa para crear enlaces (links).
                 El atributo <strong>href</strong> indica a dónde lleva el enlace.
@@ -241,7 +226,7 @@
                 AHORA TÚ: Escribe tu código aquí debajo (elige tu página web favorita):
             -->
             <p>
-                Mi página web favorita es <a href="https://www.google.com" target="_blank">Google</a>
+                Mi página web favorita es <a href="https://obsidian.md/" target="_blank">Obsidian</a>
             </p>
 
 
@@ -249,7 +234,7 @@
 
         <!-- SECCIÓN 6: NEGRITA Y CURSIVA -->
         <div class="seccion">
-            <h2>6️⃣ Formato de Texto</h2>
+            <h2>6. | Formato de Texto</h2>
 
             <p class="explicacion">Podemos dar formato al texto con estas etiquetas:</p>
 
@@ -265,7 +250,7 @@
 
             <!-- COMBINADO -->
             <p>
-                También podemos <strong><em>combinar ambas</em></strong>
+                También podemos <strong><em>combinar ambas.</em></strong>
             </p>
 
             <!-- 🎯 TAREA 7: Escribe una frase donde uses negrita Y cursiva -->
@@ -286,6 +271,9 @@
 
                 AHORA TÚ: Escribe tu código aquí debajo (inventa tu propia frase):
             -->
+            <br>
+            <p>Esta es una frase <strong>importante</strong> con un toque de <em>énfasis</em> y <strong><em>ambas cosas</em></strong>.</p>
+            <br>
             <p>
                 Escribe tu frase usando <strong>negrita</strong> y <em>cursiva</em>, o <strong><em>ambas</em></strong>.
             </p>
@@ -295,15 +283,22 @@
 
         <!-- SECCIÓN 7: DIVISORES (div) -->
         <div class="seccion">
-            <h2>7️⃣ Divisores (div)</h2>
+            <h2>7. | Divisores (DIV)</h2>
             <p class="explicacion">
                 La etiqueta &lt;div&gt; se usa para agrupar contenido.
                 Es muy útil para organizar y aplicar estilos.
             </p>
 
-            <div style="background-color: #f0f0f0; padding: 15px; border-radius: 5px;">
+            <div style="background-color: #fbf6f0; padding: 15px; border-radius: 5px;">
                 <h3>Esto es un div</h3>
                 <p>Todo este contenido está dentro de un div con fondo gris.</p>
+            </div>
+            <br>
+            <div style="background-color: #fbf6f0; padding: 15px; border-radius: 5px;">
+                <h3>Andrey Pérez Blandón</h3>
+                <p><strong>Edad:</strong> 15 años</p>
+                <p><strong>Ciudad:</strong> Medellín</p>
+                <p><strong>Hobby:</strong> Estudiar el Tralalerismo</p>
             </div>
 
             <!-- 🎯 TAREA 8: Crea un div con tu información personal -->
@@ -316,10 +311,10 @@
                 </div>
 
                 RECUERDA LO QUE NECESITAS:
-                - Un encabezado h3 con tu nombre
-                - Un párrafo <p> con tu edad
-                - Un párrafo <p> con tu ciudad
-                - Todo esto dentro de un <div>
+                - Un encabezado H3 con tu nombre
+                - Un párrafo <P> con tu edad
+                - Un párrafo <P> con tu ciudad
+                - Todo esto dentro de un <DIV>
 
                 EJEMPLO COMPLETO:
                 <div style="background-color: #f0f0f0; padding: 15px; border-radius: 5px;">
@@ -332,11 +327,7 @@
 
                 AHORA TÚ: Copia el ejemplo de arriba y cambia los datos por los tuyos:
             -->
-            <div style="background-color: #f0f0f0; padding: 15px; border-radius: 5px;">
-                <h3>Tu Nombre Aquí</h3>
-                <p><strong>Edad:</strong> Tu edad aquí</p>
-                <p><strong>Ciudad:</strong> Tu ciudad aquí</p>
-            </div>
+
 
 
         </div>
@@ -350,15 +341,15 @@
 
         <!-- RESUMEN DE LO APRENDIDO -->
         <div class="resumen">
-            <h3>✅ ¿Qué aprendiste en esta actividad?</h3>
+            <h3>✅ | ¿Qué aprendiste en esta actividad?</h3>
             <ul>
-                <li>Usar encabezados (h1 a h6) para organizar contenido</li>
-                <li>Crear párrafos con la etiqueta &lt;p&gt;</li>
-                <li>Hacer listas ordenadas (ol) y no ordenadas (ul)</li>
-                <li>Insertar imágenes con &lt;img&gt;</li>
-                <li>Crear enlaces con &lt;a&gt;</li>
+                <li>Usar encabezados (H1 a H6) para organizar contenido</li>
+                <li>Crear párrafos con la etiqueta &lt;P&gt;</li>
+                <li>Hacer listas ordenadas (OL) y no ordenadas (UL)</li>
+                <li>Insertar imágenes con &lt;IMG&gt;</li>
+                <li>Crear enlaces con &lt;A&gt;</li>
                 <li>Dar formato al texto (negrita y cursiva)</li>
-                <li>Agrupar contenido con &lt;div&gt;</li>
+                <li>Agrupar contenido con &lt;DIV&gt;</li>
             </ul>
         </div>
     </div>

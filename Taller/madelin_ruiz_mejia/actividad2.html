@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,8 +37,10 @@
 
         /* COLORES */
         .ejemplo-colores {
-            background-color: #fff3e0; /* Naranja claro */
-            color: #e65100; /* Naranja oscuro */
+            background-color: #fff3e0;
+            /* Naranja claro */
+            color: #e65100;
+            /* Naranja oscuro */
             padding: 15px;
             margin: 10px 0;
         }
@@ -55,12 +58,14 @@
 
         /* MÁRGENES Y PADDING */
         .con-margen {
-            margin: 20px; /* Espacio FUERA de la caja */
+            margin: 20px;
+            /* Espacio FUERA de la caja */
             background-color: #ffeb3b;
         }
 
         .con-padding {
-            padding: 20px; /* Espacio DENTRO de la caja */
+            padding: 20px;
+            /* Espacio DENTRO de la caja */
             background-color: #4caf50;
             color: white;
         }
@@ -100,7 +105,11 @@
            AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
         */
 
-
+        .mi-estilo {
+            background-color: rgb(53, 187, 232);
+            text-align: center;
+            padding: 20px;
+        }
 
         /* TAREA 2: Crea una clase llamada "texto-importante" */
         /* Debe tener: color rojo, tamaño de fuente 20px, negrita */
@@ -120,7 +129,11 @@
            AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
         */
 
-
+        .texto-importante {
+            color: red;
+            font-size: 25px;
+            font-weight: bold;
+        }
 
         /* TAREA 3: Crea una clase llamada "tarjeta" */
         /* Debe tener: fondo blanco, borde gris, bordes redondeados, sombra */
@@ -143,11 +156,26 @@
 
            AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
         */
+        .tarjeta {
+            background-color: white;
+            border: 2px solid gray;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+        }
 
-
-
+        .mi-caja-especial {
+            background-color: rgb(222, 142, 233);
+            color: rgb(150, 18, 190);
+            padding: 20px;
+            margin: 15px;
+            border: 2px solid rgb(238, 0, 255);
+            border-radius: 10px;
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- NAVEGACIÓN -->
@@ -195,7 +223,7 @@
 
                 AHORA TÚ: Agrega class="mi-estilo" al div de abajo:
             -->
-            <div>
+            <div class="mi-estilo">
                 <p>Este div debe tener fondo azul claro, texto centrado y padding.</p>
             </div>
         </div>
@@ -224,11 +252,11 @@
 
                 AHORA TÚ: Modifica la línea de abajo agregando la clase:
             -->
-            <p>Este texto debe ser rojo, grande y en negrita.</p>
+            <p class="texto-importante">Este texto debe ser rojo, grande y en negrita.</p>
         </div>
 
         <!-- SECCIÓN 3: MÁRGENES Y PADDING -->
-        <div class="seccion">
+        <div class="tarjeta">
             <h2>3️⃣ Márgenes y Padding</h2>
 
             <div class="caja-ejemplo">
@@ -301,10 +329,10 @@
             -->
             <div>
                 <h3>Mi Tarjeta Personal</h3>
-                <p><strong>Nombre:</strong> [Tu nombre]</p>
-                <p><strong>Edad:</strong> [Tu edad]</p>
-                <p><strong>Ciudad:</strong> [Tu ciudad]</p>
-                <p><strong>Pasatiempo favorito:</strong> [Tu pasatiempo]</p>
+                <p><strong>Nombre:</strong> Madelin Ruiz Mejia </p>
+                <p><strong>Edad:</strong> 18 </p>
+                <p><strong>Ciudad:</strong> Medellin</p>
+                <p><strong>Pasatiempo favorito:</strong> Dormir </p>
             </div>
 
             <!-- 🎯 TAREA 4: Crea tu propia tarjeta con estilos inline -->
@@ -325,9 +353,10 @@
 
                 AHORA TÚ: Copia el ejemplo de arriba y modifica el div de abajo:
             -->
+            <div style="background-color: #ea78d9; padding: 8px; border: 5px solid #c800ff; text-align: center;"></div>
             <div>
                 <h3>Mi Comida Favorita</h3>
-                <p>[Escribe aquí tu comida favorita]</p>
+                <p>Salchipapas</p>
             </div>
         </div>
 
@@ -378,9 +407,10 @@
 
                 AHORA TÚ: Elige una opción y escribe tu código aquí debajo:
             -->
-
-
-
+<div style="background-color: rgb(117, 243, 240); color: rgb(0, 0, 0); padding: 20px; margin: 15px; border: 2px solid rgb(25, 177, 177); border-radius: 10px; text-align: center;">
+                    <p>¡Esta es mi caja personalizada!</p>
+                </div>
+        
         </div>
 
         <!-- BOTONES DE NAVEGACIÓN -->
@@ -403,4 +433,5 @@
         </div>
     </div>
 </body>
+
 </html>

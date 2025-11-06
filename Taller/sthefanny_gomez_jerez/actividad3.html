@@ -86,7 +86,7 @@
                         // alert("Hola, soy María González y tengo 22 años");
                         //
                         // AHORA TÚ: Escribe tu alerta aquí debajo (borra esta línea y escribe tu código):
-
+                        alert("¡Hola! Soy Sthefa Gomez");
                     }
                 </script>
             </div>
@@ -99,7 +99,7 @@
             <div class="caja-ejemplo">
                 <h3>Prompt - Pedir Nombre</h3>
                 <button onclick="pedirNombre()">Pedir mi Nombre</button>
-                <p id="saludoPersonalizado" style="color: #4caf50; font-weight: bold; margin-top: 10px;"></p>
+                <p id="saludoPersonalizado" style="color: #3e22a3; font-weight: bold; margin-top: 10px;"></p>
 
                 <script>
                     function pedirNombre() {
@@ -120,8 +120,8 @@
                 <h3>🎯 TAREA 2: Pedir edad y mostrar mensaje</h3>
                 <p>Pide la edad del usuario y muestra un mensaje personalizado</p>
                 <button onclick="pedirEdad()">Pedir Edad</button>
-                <p id="mensajeEdad" style="color: #ff9800; font-weight: bold; margin-top: 10px;"></p>
-
+                <p id="mensajeEdad" style="color: #3f007a; font-weight: bold; margin-top: 10px;"></p>
+                
                 <script>
                     function pedirEdad() {
                         // 🎯 ESCRIBE TU CÓDIGO AQUÍ
@@ -147,8 +147,8 @@
                         // document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
                         //
                         // AHORA TÚ: Copia las 2 líneas del ejemplo y pégalas aquí debajo:
-
-
+                        let edad = prompt("¿Cuántos años tienes?");
+                        document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
                     }
                 </script>
             </div>
@@ -206,7 +206,7 @@
                 <h3>🎯 TAREA 3: Crea una resta</h3>
                 <p>Pide dos números al usuario y muestra la resta</p>
                 <button onclick="hacerResta()">Restar dos números</button>
-                <p id="resultadoResta" style="color: #f44336; font-weight: bold; margin-top: 10px;"></p>
+                <p id="resultadoResta" style="color: #4c20ab; font-weight: bold; margin-top: 10px;"></p>
 
                 <script>
                     function hacerResta() {
@@ -235,8 +235,12 @@
                         // document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
                         //
                         // AHORA TÚ: Copia los 5 pasos de arriba y pégalos aquí debajo:
-
-
+                        let num1 = prompt("Ingresa el primer número:");
+                        let num2 = prompt("Ingresa el segundo número:");
+                         num1 = Number(num1);
+                         num2 = Number(num2);
+                        let resta = num1 - num2;
+                        document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
                     }
                 </script>
             </div>
@@ -246,7 +250,7 @@
                 <h3>🎯 TAREA 4: Crea una división</h3>
                 <p>Pide dos números al usuario y muestra la división</p>
                 <button onclick="hacerDivision()">Dividir dos números</button>
-                <p id="resultadoDivision" style="color: #9c27b0; font-weight: bold; margin-top: 10px;"></p>
+                <p id="resultadoDivision" style="color: #5727b0; font-weight: bold; margin-top: 10px;"></p>
 
                 <script>
                     function hacerDivision() {
@@ -267,7 +271,13 @@
                         // document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
                         //
                         // AHORA TÚ: Copia los pasos de arriba y pégalos aquí debajo:
-
+                         let num1 = prompt("Ingresa el primer número:");
+                         let num2 = prompt("Ingresa el segundo número:");
+                         num1 = Number(num1);
+                         num2 = Number(num2);
+                         let division = num1 / num2;
+                         document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
+                        
 
                     }
                 </script>
@@ -335,8 +345,8 @@
                         // - Si cuenta era 1, ahora será 2, y así sucesivamente
                         //
                         // AHORA TÚ: Copia las 2 líneas del ejemplo y pégalas aquí debajo:
-
-
+                        cuenta = cuenta + 1
+                        document.getElementById("contador").textContent = cuenta;
                     }
                 </script>
             </div>
@@ -374,7 +384,7 @@
                 <h3>🎯 TAREA 6: Par o Impar</h3>
                 <p>Pide un número y di si es par o impar</p>
                 <button onclick="verificarParImpar()">Verificar Número</button>
-                <p id="mensajeParImpar" style="font-weight: bold; margin-top: 10px;"></p>
+                <p id="mensaje" style="font-weight: bold; margin-top: 10px;"></p>
 
                 <script>
                     function verificarParImpar() {
@@ -411,8 +421,15 @@
                         // - Si el resto es 1, el número es impar
                         //
                         // AHORA TÚ: Copia todo el código de arriba (PASO 1, 2 y 3) y pégalo aquí debajo:
-
-
+                        let numero = prompt("Ingresa un número:");
+                        numero = Number(numero);
+                        if (numero % 2 == 0) {
+                            mensaje.textContent = "El número " + numero + " es PAR";
+                            mensaje.style.color = "#4caf50";
+                        } else {
+                            mensaje.textContent = "El número " + numero + " es IMPAR";
+                            mensaje.style.color = "#f44336";
+                        }
                     }
                 </script>
             </div>
