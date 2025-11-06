@@ -71,7 +71,7 @@
                 <button onclick="miAlerta()">Mi Alerta</button>
 
                 <script>
-                    function miAlerta() {
+                    function miAlerta() {alert("Hola, soy Mariana y tengo 23 años")
                         // 🎯 ESCRIBE TU CÓDIGO AQUÍ
                         // Usa: alert("Tu mensaje aquí");
                         //
@@ -120,35 +120,18 @@
                 <h3>🎯 TAREA 2: Pedir edad y mostrar mensaje</h3>
                 <p>Pide la edad del usuario y muestra un mensaje personalizado</p>
                 <button onclick="pedirEdad()">Pedir Edad</button>
-                <p id="mensajeEdad" style="color: #ff9800; font-weight: bold; margin-top: 10px;"></p>
+                <p id="mensajeEdad" style="color: #ff9800; font-weight: bold; margin-top: 10px;">!qué genial¡</p>
 
                 <script>
                     function pedirEdad() {
-                        // 🎯 ESCRIBE TU CÓDIGO AQUÍ
-                        // 1. Usa prompt() para pedir la edad
-                        // 2. Muestra un mensaje como: "Tienes XX años"
-                        // 3. Usa document.getElementById("mensajeEdad").textContent para mostrarlo
-                        //
-                        // PISTA - PASO A PASO:
-                        //
-                        // PASO 1: Pedir la edad al usuario
-                        // let edad = prompt("¿Cuántos años tienes?");
-                        //
-                        // PASO 2: Mostrar el mensaje en la página
-                        // document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
-                        //
-                        // RECUERDA:
-                        // - let es para crear una variable (como una caja donde guardas datos)
-                        // - El signo + une textos (concatenar)
-                        // - "Tienes " + edad + " años" crea un texto completo
-                        //
-                        // EJEMPLO COMPLETO:
-                        // let edad = prompt("¿Cuántos años tienes?");
-                        // document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
-                        //
-                        // AHORA TÚ: Copia las 2 líneas del ejemplo y pégalas aquí debajo:
-
-
+                        // Pedir la edad al usuario
+                        let edad = prompt("¿Cuántos años tienes?");
+                        // Si el usuario cancela o no escribe nada
+                        if (edad === null|| edad.trim() === ""){
+                            document.getElementById("mensajeEdad").textContent = "No ingresaste tu edad";
+                        }
+                        // Mostrar la edad en la página
+                        document.getElementById("mensajeEdad").textContet = "Tienes" + edad + "años, !qué genial¡"
                     }
                 </script>
             </div>
@@ -219,20 +202,20 @@
                         // PISTA - SIGUE ESTOS PASOS:
                         //
                         // PASO 1: Pedir el primer número
-                        // let num1 = prompt("Ingresa el primer número:");
+                        let num1 = prompt("Ingresa el primer número:");
                         //
                         // PASO 2: Pedir el segundo número
-                        // let num2 = prompt("Ingresa el segundo número:");
+                        let num2 = prompt("Ingresa el segundo número:");
                         //
                         // PASO 3: Convertir a números (IMPORTANTE)
-                        // num1 = Number(num1);
-                        // num2 = Number(num2);
+                        num1 = Number(num1);
+                        num2 = Number(num2);
                         //
                         // PASO 4: Hacer la resta
-                        // let resta = num1 - num2;
+                        let resta = num1 - num2;
                         //
                         // PASO 5: Mostrar el resultado
-                        // document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
+                        document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
                         //
                         // AHORA TÚ: Copia los 5 pasos de arriba y pégalos aquí debajo:
 
@@ -259,12 +242,12 @@
                         // - El símbolo / significa división
                         //
                         // PASOS COMPLETOS:
-                        // let num1 = prompt("Ingresa el primer número:");
-                        // let num2 = prompt("Ingresa el segundo número:");
-                        // num1 = Number(num1);
-                        // num2 = Number(num2);
-                        // let division = num1 / num2;
-                        // document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
+                        let num1 = prompt("Ingresa el primer número:");
+                        let num2 = prompt("Ingresa el segundo número:");
+                        num1 = Number(num1);
+                        num2 = Number(num2);
+                        let division = num1 / num2;
+                        document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
                         //
                         // AHORA TÚ: Copia los pasos de arriba y pégalos aquí debajo:
 
@@ -323,11 +306,11 @@
                         // PISTA - PASO A PASO:
                         //
                         // PASO 1: Aumentar el contador en 1
-                        // cuenta = cuenta + 1;
+                        cuenta = cuenta + 1;
                         // (También puedes escribir: cuenta++; es lo mismo)
                         //
                         // PASO 2: Mostrar el nuevo número en la página
-                        // document.getElementById("contador").textContent = cuenta;
+                        document.getElementById("contador").textContent = cuenta;
                         //
                         // EXPLICACIÓN:
                         // - cuenta = cuenta + 1; significa: "toma el valor actual de cuenta, súmale 1, y guárdalo de nuevo en cuenta"
@@ -388,20 +371,20 @@
                         // PISTA - PASO A PASO:
                         //
                         // PASO 1: Pedir un número
-                        // let numero = prompt("Ingresa un número:");
-                        // numero = Number(numero);
+                        let numero = prompt("Ingresa un número:");
+                        numero = Number(numero);
                         //
                         // PASO 2: Obtener el elemento donde mostraremos el resultado
-                        // let mensaje = document.getElementById("mensajeParImpar");
+                        let mensaje = document.getElementById("mensajeParImpar");
                         //
                         // PASO 3: Verificar si es par o impar usando if/else
-                        // if (numero % 2 == 0) {
-                        //     mensaje.textContent = "El número " + numero + " es PAR";
-                        //     mensaje.style.color = "#4caf50";
-                        // } else {
-                        //     mensaje.textContent = "El número " + numero + " es IMPAR";
-                        //     mensaje.style.color = "#f44336";
-                        // }
+                        if (numero % 2 == 0) {
+                            mensaje.textContent = "El número " + numero + " es PAR";
+                            mensaje.style.color = "#4caf50";
+                        } else {
+                            mensaje.textContent = "El número " + numero + " es IMPAR";
+                            mensaje.style.color = "#f44336";
+                        }
                         //
                         // EXPLICACIÓN DEL OPERADOR %:
                         // - El % (módulo) da el RESTO de una división

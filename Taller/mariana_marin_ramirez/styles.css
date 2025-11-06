@@ -12,7 +12,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f5f5f5;
+    background-color: #666666;
 }
 
 /* ============================================
@@ -23,7 +23,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 30px 20px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     min-height: 100vh;
 }
 
@@ -32,22 +32,22 @@ body {
    ============================================ */
 
 h1 {
-    color: #667eea;
+    color: #8bd4f1;
     margin-bottom: 20px;
     font-size: 36px;
-    border-bottom: 3px solid #667eea;
+    border-bottom: 3px solid #42c4c4;
     padding-bottom: 10px;
 }
 
 h2 {
-    color: #764ba2;
+    color: #80b9ad;
     margin-top: 30px;
     margin-bottom: 15px;
     font-size: 28px;
 }
 
 h3 {
-    color: #555;
+    color: #6d6c6c;
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 22px;
@@ -58,7 +58,7 @@ h3 {
    ============================================ */
 
 .descripcion {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #66eaea 0%, #4ba293 100%);
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -72,7 +72,7 @@ h3 {
 .explicacion {
     background-color: #f8f9fa;
     padding: 15px;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #0a878b;
     margin: 15px 0;
     border-radius: 5px;
 }
@@ -101,15 +101,15 @@ h3 {
    ============================================ */
 
 .tarea {
-    background-color: #fff3cd;
-    border-left: 5px solid #ffc107;
+    background-color: #cdfdff;
+    border-left: 5px solid #0e98a1;
     padding: 20px;
     margin: 20px 0;
     border-radius: 5px;
 }
 
 .tarea h3 {
-    color: #856404;
+    color: #057777;
     margin-top: 0;
 }
 
@@ -119,7 +119,7 @@ h3 {
 
 .resumen {
     background-color: #d4edda;
-    border-left: 5px solid #28a745;
+    border-left: 5px solid #28a77d;
     padding: 20px;
     margin: 30px 0;
     border-radius: 5px;
@@ -155,7 +155,7 @@ h3 {
 }
 
 .btn-volver {
-    background-color: #6c757d;
+    background-color: #88a1b6;
     color: white;
 }
 
@@ -165,12 +165,12 @@ h3 {
 }
 
 .btn-siguiente {
-    background-color: #667eea;
+    background-color: #66a4ea;
     color: white;
 }
 
 .btn-siguiente:hover {
-    background-color: #5568d3;
+    background-color: #a4abd3;
     transform: translateX(5px);
 }
 
@@ -186,7 +186,7 @@ button {
 }
 
 button:hover {
-    background-color: #5568d3;
+    background-color: #55d3b8;
 }
 
 button:active {
@@ -243,12 +243,12 @@ img {
    ============================================ */
 
 a {
-    color: #667eea;
+    color: #66e1ea;
     text-decoration: none;
 }
 
 a:hover {
-    color: #764ba2;
+    color: #4b95a2;
     text-decoration: underline;
 }
 
