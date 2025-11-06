@@ -184,7 +184,20 @@
             </div>
             
             <!-- 🎯 ESCRIBE TU VERSIÓN AQUÍ DEBAJO -->
-            
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <div class="bg-info text-white p-3 text-center">Mi Columna 1</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-secondary text-white p-3 text-center">Mi Columna 2</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-dark text-white p-3 text-center">Mi Columna 3</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-light text-dark p-3 text-center">Mi Columna 4</div>
+                </div>
+            </div>
             
             
         </div>
@@ -281,7 +294,17 @@
             </div>
             
             <!-- 🎯 ESCRIBE TUS BOTONES AQUÍ DEBAJO -->
-            
+            <div class="mt-3">
+                <button class="btn btn-warning btn-lg">
+                    <i class="bi bi-star-fill"></i> Favorito
+                </button>
+                <button class="btn btn-info text-white">
+                    <i class="bi bi-pencil-square"></i> Editar
+                </button>
+                <button class="btn btn-dark btn-sm">
+                    <i class="bi bi-upload"></i> Subir Archivo
+                </button>
+            </div>
             
             
         </div>
@@ -403,7 +426,43 @@
             </div>
             
             <!-- 🎯 ESCRIBE TUS TARJETAS AQUÍ DEBAJO -->
-            
+            <div class="row mt-3">
+                <!-- Tarjeta 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://picsum.photos/400/200?random=1" class="card-img-top" alt="Película 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Interestelar</h5>
+                            <p class="card-text">Un equipo de exploradores viaja a través de un agujero de gusano en el espacio en un intento de asegurar la supervivencia de la humanidad.</p>
+                            <a href="#" class="btn btn-info text-white">Ver Trailer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://picsum.photos/400/200?random=2" class="card-img-top" alt="Serie 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Breaking Bad</h5>
+                            <p class="card-text">Un profesor de química de secundaria con cáncer terminal se asocia con un exalumno para producir y vender metanfetamina.</p>
+                            <a href="#" class="btn btn-warning">Ver Resumen</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://picsum.photos/400/200?random=3" class="card-img-top" alt="Libro 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Cien Años de Soledad</h5>
+                            <p class="card-text">La historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo.</p>
+                            <a href="#" class="btn btn-secondary">Leer Reseña</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             
         </div>
@@ -533,7 +592,104 @@
             <p><strong>💡 Puedes crear un nuevo archivo HTML o usar el espacio de abajo</strong></p>
             
             <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
-            
+            <div class="border p-3 mt-4 rounded">
+                <!-- Navbar del Portfolio -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 rounded">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Mi Portfolio</a>
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Sección Hero -->
+                <div class="p-5 mb-4 bg-light rounded-3 text-center">
+                    <h1 class="display-5 fw-bold">Carlos David Muñoz Galeano</h1>
+                    <p class="fs-4">Desarrollador de Software</p>
+                </div>
+
+                <!-- Sección Sobre Mí -->
+                <div id="sobre-mi" class="row align-items-center mb-4">
+                    <div class="col-md-4 text-center">
+                        <img src="https://i.pravatar.cc/300" class="img-fluid rounded-circle" alt="Mi foto">
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Sobre Mí</h2>
+                        <p>Apasionado por la tecnología y el desarrollo de soluciones innovadoras. Con experiencia en la creación de aplicaciones web robustas y escalables. Siempre buscando aprender nuevas tecnologías y mejorar mis habilidades para enfrentar nuevos desafíos.</p>
+                    </div>
+                </div>
+
+                <!-- Sección Habilidades -->
+                <div id="habilidades" class="mb-4">
+                    <h2 class="text-center mb-4">Habilidades</h2>
+                    <div class="row">
+                        <div class="col-md-4"><div class="card text-center p-3"><i class="bi bi-filetype-html fs-1 text-primary"></i><div class="card-body"><h5 class="card-title">HTML</h5></div></div></div>
+                        <div class="col-md-4"><div class="card text-center p-3"><i class="bi bi-filetype-css fs-1 text-success"></i><div class="card-body"><h5 class="card-title">CSS</h5></div></div></div>
+                        <div class="col-md-4"><div class="card text-center p-3"><i class="bi bi-filetype-js fs-1 text-warning"></i><div class="card-body"><h5 class="card-title">JavaScript</h5></div></div></div>
+                    </div>
+                </div>
+
+                <!-- Sección Proyectos -->
+                <div id="proyectos" class="mb-4">
+                    <h2 class="text-center mb-4">Proyectos</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://picsum.photos/400/200?random=4" class="card-img-top" alt="Proyecto 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Proyecto 1</h5>
+                                    <p class="card-text">Descripción breve de mi primer proyecto increíble.</p>
+                                    <a href="#" class="btn btn-primary">Ver Proyecto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://picsum.photos/400/200?random=5" class="card-img-top" alt="Proyecto 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Proyecto 2</h5>
+                                    <p class="card-text">Descripción breve de mi segundo proyecto asombroso.</p>
+                                    <a href="#" class="btn btn-primary">Ver Proyecto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://picsum.photos/400/200?random=6" class="card-img-top" alt="Proyecto 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Proyecto 3</h5>
+                                    <p class="card-text">Descripción breve de mi tercer proyecto fantástico.</p>
+                                    <a href="#" class="btn btn-primary">Ver Proyecto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección Contacto -->
+                <div id="contacto" class="mb-4">
+                    <h2 class="text-center mb-4">Contacto</h2>
+                    <form>
+                        <div class="mb-3"><input type="text" class="form-control" placeholder="Tu Nombre"></div>
+                        <div class="mb-3"><input type="email" class="form-control" placeholder="Tu Email"></div>
+                        <div class="mb-3"><textarea class="form-control" rows="3" placeholder="Tu Mensaje"></textarea></div>
+                        <button type="submit" class="btn btn-success w-100">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Footer del Portfolio -->
+                <footer class="text-center text-muted mt-4">
+                    <a href="#" class="text-dark me-3"><i class="bi bi-github fs-3"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="bi bi-linkedin fs-3"></i></a>
+                    <a href="#" class="text-dark"><i class="bi bi-twitter fs-3"></i></a>
+                </footer>
+            </div>
             
             
         </div>
