@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 6 - Bootstrap</title>
-    
+
     <!-- 🎨 BOOTSTRAP CSS - Librería de estilos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- 🎯 ICONOS DE BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    
+
     <!-- Nuestros estilos personalizados -->
     <link rel="stylesheet" href="styles.css">
-    
+
     <style>
         body {
             background-color: #f8f9fa;
         }
-        
+
         .hero-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 60px 0;
             margin-bottom: 40px;
         }
-        
+
         .demo-box {
             background-color: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
         }
     </style>
 </head>
+
 <body>
     <!-- BARRA DE NAVEGACIÓN CON BOOTSTRAP -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -80,7 +82,7 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <div class="container">
-        
+
         <!-- INTRODUCCIÓN -->
         <div class="demo-box">
             <h2>¿Qué es Bootstrap?</h2>
@@ -89,7 +91,7 @@
                 <strong>Bootstrap</strong> es una librería de CSS que nos da componentes y estilos ya hechos.
                 En lugar de escribir todo el CSS desde cero, usamos las <strong>clases de Bootstrap</strong>.
             </div>
-            
+
             <h3>Ventajas:</h3>
             <ul class="list-group">
                 <li class="list-group-item">✅ Ahorra tiempo - No escribes CSS desde cero</li>
@@ -103,7 +105,7 @@
         <div class="demo-box">
             <h2>1️⃣ Sistema de Grillas (Grid System)</h2>
             <p>Bootstrap divide la página en <strong>12 columnas</strong>. Puedes combinarlas como quieras.</p>
-            
+
             <h4>Ejemplo: 3 Columnas Iguales</h4>
             <div class="row">
                 <div class="col-md-4">
@@ -136,7 +138,7 @@
                 <h4>🎯 TAREA 1: Crea tu propio grid</h4>
                 <p>Crea una fila con 4 columnas iguales (cada una debe ser col-md-3)</p>
                 <p>Cada columna debe tener un color diferente</p>
-                
+
                 <!-- 
                     PISTA: RECUERDA QUE BOOTSTRAP USA 12 COLUMNAS
                     
@@ -162,7 +164,7 @@
                     
                     EJEMPLO COMPLETO:
                 -->
-                
+
                 <div class="row">
                     <div class="col-md-3">
                         <div class="bg-primary text-white p-3 text-center">Columna 1</div>
@@ -177,55 +179,65 @@
                         <div class="bg-warning text-dark p-3 text-center">Columna 4</div>
                     </div>
                 </div>
-                
+
                 <!-- 
                     AHORA TÚ: Copia el ejemplo de arriba y cámbialo con los colores que prefieras
                 -->
             </div>
-            
+
             <!-- 🎯 ESCRIBE TU VERSIÓN AQUÍ DEBAJO -->
-            
-            
-            
-        </div>
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <div class="bg-info text-white p-3 text-center">Columna A</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-secondary text-white p-3 text-center">Columna B</div>
+                </div>
+                <div class="col-md-3">
+                    <div style="background-color: #e83e8c; color: white;" class="p-3 text-center">Columna C</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-dark text-white p-3 text-center">Columna D</div>
+                </div>
+            </div>
 
-        <!-- SECCIÓN 2: BOTONES -->
-        <div class="demo-box">
-            <h2>2️⃣ Botones con Estilos</h2>
-            <p>Bootstrap tiene botones con diferentes colores y tamaños.</p>
-            
-            <h4>Colores de Botones:</h4>
-            <button class="btn btn-primary">Primary</button>
-            <button class="btn btn-secondary">Secondary</button>
-            <button class="btn btn-success">Success</button>
-            <button class="btn btn-danger">Danger</button>
-            <button class="btn btn-warning">Warning</button>
-            <button class="btn btn-info">Info</button>
-            <button class="btn btn-dark">Dark</button>
-            <button class="btn btn-light">Light</button>
+            <!-- SECCIÓN 2: BOTONES -->
+            <div class="demo-box">
+                <h2>2️⃣ Botones con Estilos</h2>
+                <p>Bootstrap tiene botones con diferentes colores y tamaños.</p>
 
-            <h4 class="mt-4">Tamaños de Botones:</h4>
-            <button class="btn btn-primary btn-lg">Grande</button>
-            <button class="btn btn-primary">Normal</button>
-            <button class="btn btn-primary btn-sm">Pequeño</button>
+                <h4>Colores de Botones:</h4>
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-danger">Danger</button>
+                <button class="btn btn-warning">Warning</button>
+                <button class="btn btn-info">Info</button>
+                <button class="btn btn-dark">Dark</button>
+                <button class="btn btn-light">Light</button>
 
-            <h4 class="mt-4">Botones con Iconos:</h4>
-            <button class="btn btn-success">
-                <i class="bi bi-check-circle"></i> Guardar
-            </button>
-            <button class="btn btn-danger">
-                <i class="bi bi-trash"></i> Eliminar
-            </button>
-            <button class="btn btn-primary">
-                <i class="bi bi-download"></i> Descargar
-            </button>
+                <h4 class="mt-4">Tamaños de Botones:</h4>
+                <button class="btn btn-primary btn-lg">Grande</button>
+                <button class="btn btn-primary">Normal</button>
+                <button class="btn btn-primary btn-sm">Pequeño</button>
 
-            <!-- 🎯 TAREA 2 -->
-            <div class="alert alert-warning mt-3">
-                <h4>🎯 TAREA 2: Crea tus propios botones</h4>
-                <p>Crea 3 botones con diferentes colores, tamaños e iconos</p>
-                
-                <!-- 
+                <h4 class="mt-4">Botones con Iconos:</h4>
+                <button class="btn btn-success">
+                    <i class="bi bi-check-circle"></i> Guardar
+                </button>
+                <button class="btn btn-danger">
+                    <i class="bi bi-trash"></i> Eliminar
+                </button>
+                <button class="btn btn-primary">
+                    <i class="bi bi-download"></i> Descargar
+                </button>
+
+                <!-- 🎯 TAREA 2 -->
+                <div class="alert alert-warning mt-3">
+                    <h4>🎯 TAREA 2: Crea tus propios botones</h4>
+                    <p>Crea 3 botones con diferentes colores, tamaños e iconos</p>
+
+                    <!-- 
                     PISTA: ESTRUCTURA DE UN BOTÓN EN BOOTSTRAP
                     
                     <button class="btn btn-COLOR btn-TAMAÑO">
@@ -258,81 +270,92 @@
                     
                     EJEMPLOS:
                 -->
-                
-                <button class="btn btn-success btn-lg">
-                    <i class="bi bi-heart"></i> Me Gusta
-                </button>
-                
-                <button class="btn btn-danger">
-                    <i class="bi bi-trash"></i> Eliminar
-                </button>
-                
-                <button class="btn btn-primary btn-sm">
-                    <i class="bi bi-download"></i> Descargar
-                </button>
-                
-                <!-- 
+
+                    <button class="btn btn-success btn-lg">
+                        <i class="bi bi-heart"></i> Me Gusta
+                    </button>
+
+                    <button class="btn btn-danger">
+                        <i class="bi bi-trash"></i> Eliminar
+                    </button>
+
+                    <button class="btn btn-primary btn-sm">
+                        <i class="bi bi-download"></i> Descargar
+                    </button>
+
+                    <!-- 
                     AHORA TÚ: Copia los ejemplos de arriba y crea tus propios 3 botones con diferentes:
                     - Colores (cambia btn-success, btn-danger, etc.)
                     - Tamaños (cambia btn-lg, btn-sm, o deja normal)
                     - Iconos (cambia bi-heart, bi-trash, etc.)
                     - Textos (cambia "Me Gusta", "Eliminar", etc.)
                 -->
-            </div>
-            
-            <!-- 🎯 ESCRIBE TUS BOTONES AQUÍ DEBAJO -->
-            
-            
-            
-        </div>
-
-        <!-- SECCIÓN 3: CARDS (TARJETAS) -->
-        <div class="demo-box">
-            <h2>3️⃣ Cards (Tarjetas)</h2>
-            <p>Las tarjetas son contenedores flexibles y extensibles.</p>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/400x200/667eea/ffffff?text=Imagen+1" class="card-img-top" alt="Imagen 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Tarjeta 1</h5>
-                            <p class="card-text">Esta es una tarjeta de ejemplo con imagen, título y texto.</p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/400x200/4caf50/ffffff?text=Imagen+2" class="card-img-top" alt="Imagen 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Tarjeta 2</h5>
-                            <p class="card-text">Puedes combinar cards con el sistema de grillas.</p>
-                            <a href="#" class="btn btn-success">Ver más</a>
-                        </div>
-                    </div>
-                </div>
+                <!-- 🎯 ESCRIBE TUS BOTONES AQUÍ DEBAJO -->
+                <button class="btn btn-warning btn-lg">
+                    <i class="bi bi-star"></i> Favoritos
+                </button>
 
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/400x200/f44336/ffffff?text=Imagen+3" class="card-img-top" alt="Imagen 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Tarjeta 3</h5>
-                            <p class="card-text">Las tarjetas son muy versátiles y útiles.</p>
-                            <a href="#" class="btn btn-danger">Ver más</a>
-                        </div>
-                    </div>
-                </div>
+                <button class="btn btn-dark">
+                    <i class="bi bi-upload"></i> Subir Archivo
+                </button>
+
+                <button class="btn btn-info btn-sm text-white">
+                    <i class="bi bi-pencil"></i> Editar Perfil
+                </button>
             </div>
 
-            <!-- 🎯 TAREA 3 -->
-            <div class="alert alert-warning mt-3">
-                <h4>🎯 TAREA 3: Crea tus propias tarjetas</h4>
-                <p>Crea 3 tarjetas con información sobre tus películas, series o libros favoritos</p>
-                <p>Incluye: imagen, título, descripción y un botón</p>
-                
-                <!-- 
+            <!-- SECCIÓN 3: CARDS (TARJETAS) -->
+            <div class="demo-box">
+                <h2>3️⃣ Cards (Tarjetas)</h2>
+                <p>Las tarjetas son contenedores flexibles y extensibles.</p>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/400x200/667eea/ffffff?text=Imagen+1"
+                                class="card-img-top" alt="Imagen 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Tarjeta 1</h5>
+                                <p class="card-text">Esta es una tarjeta de ejemplo con imagen, título y texto.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/400x200/4caf50/ffffff?text=Imagen+2"
+                                class="card-img-top" alt="Imagen 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Tarjeta 2</h5>
+                                <p class="card-text">Puedes combinar cards con el sistema de grillas.</p>
+                                <a href="#" class="btn btn-success">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/400x200/f44336/ffffff?text=Imagen+3"
+                                class="card-img-top" alt="Imagen 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Tarjeta 3</h5>
+                                <p class="card-text">Las tarjetas son muy versátiles y útiles.</p>
+                                <a href="#" class="btn btn-danger">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 🎯 TAREA 3 -->
+                <div class="alert alert-warning mt-3">
+                    <h4>🎯 TAREA 3: Crea tus propias tarjetas</h4>
+                    <p>Crea 3 tarjetas con información sobre tus películas, series o libros favoritos</p>
+                    <p>Incluye: imagen, título, descripción y un botón</p>
+
+                    <!-- 
                     PISTA: ESTRUCTURA DE UNA CARD EN BOOTSTRAP
                     
                     NECESITAS:
@@ -342,46 +365,46 @@
                     
                     ESTRUCTURA COMPLETA:
                 -->
-                
-                <div class="row">
-                    <!-- TARJETA 1 -->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="URL_DE_TU_IMAGEN" class="card-img-top" alt="Descripción">
-                            <div class="card-body">
-                                <h5 class="card-title">Título de tu Película/Serie/Libro</h5>
-                                <p class="card-text">Escribe una breve descripción aquí.</p>
-                                <a href="#" class="btn btn-primary">Ver más</a>
+
+                    <div class="row">
+                        <!-- TARJETA 1 -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="URL_DE_TU_IMAGEN" class="card-img-top" alt="Descripción">
+                                <div class="card-body">
+                                    <h5 class="card-title">Título de tu Película/Serie/Libro</h5>
+                                    <p class="card-text">Escribe una breve descripción aquí.</p>
+                                    <a href="#" class="btn btn-primary">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TARJETA 2 -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="URL_DE_TU_IMAGEN" class="card-img-top" alt="Descripción">
+                                <div class="card-body">
+                                    <h5 class="card-title">Título de tu Película/Serie/Libro</h5>
+                                    <p class="card-text">Escribe una breve descripción aquí.</p>
+                                    <a href="#" class="btn btn-success">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TARJETA 3 -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="URL_DE_TU_IMAGEN" class="card-img-top" alt="Descripción">
+                                <div class="card-body">
+                                    <h5 class="card-title">Título de tu Película/Serie/Libro</h5>
+                                    <p class="card-text">Escribe una breve descripción aquí.</p>
+                                    <a href="#" class="btn btn-danger">Ver más</a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- TARJETA 2 -->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="URL_DE_TU_IMAGEN" class="card-img-top" alt="Descripción">
-                            <div class="card-body">
-                                <h5 class="card-title">Título de tu Película/Serie/Libro</h5>
-                                <p class="card-text">Escribe una breve descripción aquí.</p>
-                                <a href="#" class="btn btn-success">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- TARJETA 3 -->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="URL_DE_TU_IMAGEN" class="card-img-top" alt="Descripción">
-                            <div class="card-body">
-                                <h5 class="card-title">Título de tu Película/Serie/Libro</h5>
-                                <p class="card-text">Escribe una breve descripción aquí.</p>
-                                <a href="#" class="btn btn-danger">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 
+                    <!-- 
                     DÓNDE CONSEGUIR IMÁGENES:
                     - Para películas/series: busca en Google Images, copia la URL de la imagen
                     - Placeholder (imagen de prueba): https://via.placeholder.com/400x200
@@ -400,216 +423,259 @@
                     - Imágenes (puedes usar placeholder mientras)
                     - Diferentes colores de botones
                 -->
-            </div>
-            
-            <!-- 🎯 ESCRIBE TUS TARJETAS AQUÍ DEBAJO -->
-            
-            
-            
-        </div>
-
-        <!-- SECCIÓN 4: ALERTS (ALERTAS) -->
-        <div class="demo-box">
-            <h2>4️⃣ Alerts (Alertas)</h2>
-            <p>Las alertas muestran mensajes importantes al usuario.</p>
-
-            <div class="alert alert-primary">
-                <i class="bi bi-info-circle"></i> Esta es una alerta informativa
-            </div>
-            <div class="alert alert-success">
-                <i class="bi bi-check-circle"></i> ¡Operación exitosa!
-            </div>
-            <div class="alert alert-warning">
-                <i class="bi bi-exclamation-triangle"></i> Advertencia: Revisa esto
-            </div>
-            <div class="alert alert-danger">
-                <i class="bi bi-x-circle"></i> Error: Algo salió mal
-            </div>
-        </div>
-
-        <!-- SECCIÓN 5: FORMULARIOS CON BOOTSTRAP -->
-        <div class="demo-box">
-            <h2>5️⃣ Formularios con Bootstrap</h2>
-            
-            <form>
-                <div class="mb-3">
-                    <label for="nombreBoot" class="form-label">Nombre Completo</label>
-                    <input type="text" class="form-control" id="nombreBoot" placeholder="Ej: Juan Pérez">
                 </div>
 
-                <div class="mb-3">
-                    <label for="emailBoot" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="emailBoot" placeholder="ejemplo@email.com">
-                </div>
+                <!-- 🎯 ESCRIBE TUS TARJETAS AQUÍ DEBAJO -->
+                <!-- 🎬 TAREA 3: Cards (Tarjetas) -->
+                <h3><span class="badge bg-primary">3</span> Cards (Tarjetas)</h3>
+                <p>Las tarjetas son contenedores flexibles y extensibles.</p>
 
-                <div class="mb-3">
-                    <label for="mensajeBoot" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="mensajeBoot" rows="3"></textarea>
-                </div>
+                <div class="row">
+                    <!-- Tarjeta 1 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x150.png?text=Matilda" class="card-img-top"
+                                alt="Matilda">
+                            <div class="card-body">
+                                <h5 class="card-title">Matilda</h5>
+                                <p class="card-text">Una niña con una mente brillante y poderes extraordinarios desafía
+                                    la injusticia con ingenio y valentía.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="mb-3">
-                    <label for="paisBoot" class="form-label">País</label>
-                    <select class="form-select" id="paisBoot">
-                        <option selected>-- Selecciona --</option>
-                        <option value="co">Colombia</option>
-                        <option value="mx">México</option>
-                        <option value="ar">Argentina</option>
-                    </select>
-                </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x150.png?text=Tierra+de+osos" class="card-img-top"
+                                alt="Tierra de osos">
+                            <div class="card-body">
+                                <h5 class="card-title">Tierra de osos</h5>
+                                <p class="card-text">Una historia sobre hermandad, transformación y respeto por la
+                                    naturaleza y los lazos familiares.</p>
+                                <a href="#" class="btn btn-success">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="terminosBoot">
-                    <label class="form-check-label" for="terminosBoot">
-                        Acepto los términos y condiciones
-                    </label>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </div>
-
-        <!-- SECCIÓN 6: TABLA BOOTSTRAP -->
-        <div class="demo-box">
-            <h2>6️⃣ Tablas con Bootstrap</h2>
-            
-            <table class="table table-striped table-hover">
-                <thead class="table-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                        <th>Stock</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Laptop HP</td>
-                        <td>$2,000,000</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Mouse Logitech</td>
-                        <td>$50,000</td>
-                        <td>50</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Teclado Mecánico</td>
-                        <td>$300,000</td>
-                        <td>30</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <p><strong>Clases útiles:</strong></p>
-            <ul>
-                <li><code>table-striped</code> - Filas alternadas con color</li>
-                <li><code>table-hover</code> - Efecto hover al pasar el mouse</li>
-                <li><code>table-dark</code> - Tabla oscura</li>
-                <li><code>table-bordered</code> - Bordes en todas las celdas</li>
-            </ul>
-        </div>
-
-        <!-- 🎯 PROYECTO FINAL -->
-        <div class="demo-box">
-            <h2>🎯 Proyecto Final: Crea tu Portfolio</h2>
-            
-            <div class="alert alert-info">
-                <h4>Instrucciones:</h4>
-                <p>Crea una página de portfolio personal usando Bootstrap que incluya:</p>
-                <ul>
-                    <li>Una barra de navegación (navbar)</li>
-                    <li>Una sección hero con tu nombre y profesión</li>
-                    <li>Una sección "Sobre mí" con tu foto y descripción</li>
-                    <li>Una sección de "Habilidades" con tarjetas (cards)</li>
-                    <li>Una sección de "Proyectos" con 3 tarjetas de proyectos</li>
-                    <li>Una sección de "Contacto" con un formulario</li>
-                    <li>Un footer con tus redes sociales</li>
-                </ul>
-            </div>
-
-            <p><strong>💡 Puedes crear un nuevo archivo HTML o usar el espacio de abajo</strong></p>
-            
-            <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
-            
-            
-            
-        </div>
-
-        <!-- RECURSOS ÚTILES -->
-        <div class="demo-box">
-            <h2>📚 Recursos Útiles</h2>
-            
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <i class="bi bi-book"></i> Documentación Oficial
-                            </h5>
-                            <p class="card-text">La mejor fuente para aprender Bootstrap</p>
-                            <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" 
-                               target="_blank" class="btn btn-primary">
-                                Visitar
-                            </a>
+                    <!-- Tarjeta 3 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x150.png?text=Harry+Potter" class="card-img-top"
+                                alt="Harry Potter">
+                            <div class="card-body">
+                                <h5 class="card-title">Harry Potter</h5>
+                                <p class="card-text">El joven mago descubre su destino enfrentando desafíos en el
+                                    colegio Hogwarts de Magia y Hechicería.</p>
+                                <a href="#" class="btn btn-danger">Ver más</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <i class="bi bi-palette"></i> Bootstrap Icons
-                            </h5>
-                            <p class="card-text">Miles de iconos gratuitos para usar</p>
-                            <a href="https://icons.getbootstrap.com/" 
-                               target="_blank" class="btn btn-primary">
-                                Visitar
-                            </a>
+                <!-- SECCIÓN 4: ALERTS (ALERTAS) -->
+                <div class="demo-box">
+                    <h2>4️⃣ Alerts (Alertas)</h2>
+                    <p>Las alertas muestran mensajes importantes al usuario.</p>
+
+                    <div class="alert alert-primary">
+                        <i class="bi bi-info-circle"></i> Esta es una alerta informativa
+                    </div>
+                    <div class="alert alert-success">
+                        <i class="bi bi-check-circle"></i> ¡Operación exitosa!
+                    </div>
+                    <div class="alert alert-warning">
+                        <i class="bi bi-exclamation-triangle"></i> Advertencia: Revisa esto
+                    </div>
+                    <div class="alert alert-danger">
+                        <i class="bi bi-x-circle"></i> Error: Algo salió mal
+                    </div>
+                </div>
+
+                <!-- SECCIÓN 5: FORMULARIOS CON BOOTSTRAP -->
+                <div class="demo-box">
+                    <h2>5️⃣ Formularios con Bootstrap</h2>
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombreBoot" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombreBoot" placeholder="Ej: Juan Pérez">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="emailBoot" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="emailBoot" placeholder="ejemplo@email.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensajeBoot" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensajeBoot" rows="3"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="paisBoot" class="form-label">País</label>
+                            <select class="form-select" id="paisBoot">
+                                <option selected>-- Selecciona --</option>
+                                <option value="co">Colombia</option>
+                                <option value="mx">México</option>
+                                <option value="ar">Argentina</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="terminosBoot">
+                            <label class="form-check-label" for="terminosBoot">
+                                Acepto los términos y condiciones
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+
+                <!-- SECCIÓN 6: TABLA BOOTSTRAP -->
+                <div class="demo-box">
+                    <h2>6️⃣ Tablas con Bootstrap</h2>
+
+                    <table class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Laptop HP</td>
+                                <td>$2,000,000</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Mouse Logitech</td>
+                                <td>$50,000</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Teclado Mecánico</td>
+                                <td>$300,000</td>
+                                <td>30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><strong>Clases útiles:</strong></p>
+                    <ul>
+                        <li><code>table-striped</code> - Filas alternadas con color</li>
+                        <li><code>table-hover</code> - Efecto hover al pasar el mouse</li>
+                        <li><code>table-dark</code> - Tabla oscura</li>
+                        <li><code>table-bordered</code> - Bordes en todas las celdas</li>
+                    </ul>
+                </div>
+
+                <!-- 🎯 PROYECTO FINAL -->
+                <div class="demo-box">
+                    <h2>🎯 Proyecto Final: Crea tu Portfolio</h2>
+
+                    <div class="alert alert-info">
+                        <h4>Instrucciones:</h4>
+                        <p>Crea una página de portfolio personal usando Bootstrap que incluya:</p>
+                        <ul>
+                            <li>Una barra de navegación (navbar)</li>
+                            <li>Una sección hero con tu nombre y profesión</li>
+                            <li>Una sección "Sobre mí" con tu foto y descripción</li>
+                            <li>Una sección de "Habilidades" con tarjetas (cards)</li>
+                            <li>Una sección de "Proyectos" con 3 tarjetas de proyectos</li>
+                            <li>Una sección de "Contacto" con un formulario</li>
+                            <li>Un footer con tus redes sociales</li>
+                        </ul>
+                    </div>
+
+                    <p><strong>💡 Puedes crear un nuevo archivo HTML o usar el espacio de abajo</strong></p>
+
+                    <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+
+
+
+                </div>
+
+                <!-- RECURSOS ÚTILES -->
+                <div class="demo-box">
+                    <h2>📚 Recursos Útiles</h2>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="bi bi-book"></i> Documentación Oficial
+                                    </h5>
+                                    <p class="card-text">La mejor fuente para aprender Bootstrap</p>
+                                    <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                                        target="_blank" class="btn btn-primary">
+                                        Visitar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="bi bi-palette"></i> Bootstrap Icons
+                                    </h5>
+                                    <p class="card-text">Miles de iconos gratuitos para usar</p>
+                                    <a href="https://icons.getbootstrap.com/" target="_blank" class="btn btn-primary">
+                                        Visitar
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- NAVEGACIÓN -->
+                <div class="text-center my-5">
+                    <a href="actividad5.html" class="btn btn-secondary btn-lg">
+                        <i class="bi bi-arrow-left"></i> Actividad Anterior
+                    </a>
+                    <a href="index.html" class="btn btn-primary btn-lg ms-3">
+                        <i class="bi bi-house"></i> Volver al Menú
+                    </a>
+                </div>
+
+                <!-- RESUMEN -->
+                <div class="alert alert-success">
+                    <h3>✅ ¿Qué aprendiste en esta actividad?</h3>
+                    <ul>
+                        <li>Usar el sistema de grillas (grid system) de Bootstrap</li>
+                        <li>Crear botones con diferentes estilos y tamaños</li>
+                        <li>Usar cards (tarjetas) para organizar contenido</li>
+                        <li>Mostrar alertas con diferentes colores</li>
+                        <li>Crear formularios bonitos con Bootstrap</li>
+                        <li>Diseñar tablas estilizadas</li>
+                        <li>Usar iconos de Bootstrap Icons</li>
+                    </ul>
+                </div>
+
             </div>
-        </div>
 
-        <!-- NAVEGACIÓN -->
-        <div class="text-center my-5">
-            <a href="actividad5.html" class="btn btn-secondary btn-lg">
-                <i class="bi bi-arrow-left"></i> Actividad Anterior
-            </a>
-            <a href="index.html" class="btn btn-primary btn-lg ms-3">
-                <i class="bi bi-house"></i> Volver al Menú
-            </a>
-        </div>
+            <!-- FOOTER -->
+            <footer class="bg-dark text-white text-center py-4 mt-5">
+                <div class="container">
+                    <p class="mb-0">🎓 Taller Frontend FUMC - 2025</p>
+                    <p class="mb-0">¡Felicidades por completar todas las actividades!</p>
+                </div>
+            </footer>
 
-        <!-- RESUMEN -->
-        <div class="alert alert-success">
-            <h3>✅ ¿Qué aprendiste en esta actividad?</h3>
-            <ul>
-                <li>Usar el sistema de grillas (grid system) de Bootstrap</li>
-                <li>Crear botones con diferentes estilos y tamaños</li>
-                <li>Usar cards (tarjetas) para organizar contenido</li>
-                <li>Mostrar alertas con diferentes colores</li>
-                <li>Crear formularios bonitos con Bootstrap</li>
-                <li>Diseñar tablas estilizadas</li>
-                <li>Usar iconos de Bootstrap Icons</li>
-            </ul>
-        </div>
-
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-        <div class="container">
-            <p class="mb-0">🎓 Taller Frontend FUMC - 2025</p>
-            <p class="mb-0">¡Felicidades por completar todas las actividades!</p>
-        </div>
-    </footer>
-
-    <!-- 📜 BOOTSTRAP JS - Para componentes interactivos -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- 📜 BOOTSTRAP JS - Para componentes interactivos -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
