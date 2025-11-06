@@ -358,206 +358,163 @@
         <div class="seccion">
             <h2>🎯 Tarea Final: Formulario de Registro</h2>
 
-            <div class="tarea">
-                <h3>Crea un formulario completo de registro con:</h3>
-                <ul>
-                    <li>Nombre completo (texto, requerido)</li>
-                    <li>Email (email, requerido)</li>
-                    <li>Contraseña (password, mínimo 6 caracteres, requerido)</li>
-                    <li>Edad (number, entre 18 y 100, requerido)</li>
-                    <li>Ciudad (select con al menos 3 opciones)</li>
-                    <li>Género (radio buttons)</li>
-                    <li>Intereses (checkboxes con al menos 4 opciones)</li>
-                    <li>Biografía (textarea)</li>
-                    <li>Botón de enviar</li>
-                </ul>
-                <p>Al enviar, debe mostrar todos los datos ingresados en un div de resultado.</p>
+           <div class="tarea">
+    <h3>Crea un formulario completo de registro con:</h3>
+    <ul>
+        <li>Nombre completo (texto, requerido)</li>
+        <li>Email (email, requerido)</li>
+        <li>Contraseña (password, mínimo 6 caracteres, requerido)</li>
+        <li>Edad (number, entre 18 y 100, requerido)</li>
+        <li>Ciudad (select con al menos 3 opciones)</li>
+        <li>Género (radio buttons)</li>
+        <li>Intereses (checkboxes con al menos 4 opciones)</li>
+        <li>Biografía (textarea)</li>
+        <li>Botón de enviar</li>
+    </ul>
+    <p>Al enviar, debe mostrar todos los datos ingresados en un div de resultado.</p>
 
-                <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
-                <!--
-                    PISTA - GUÍA PASO A PASO PARA COMPLETAR EL FORMULARIO:
+    <!-- 🎯 FORMULARIO COMPLETO -->
+    <form id="formRegistro" onsubmit="enviarRegistro(event)">
+        <!-- Nombre completo -->
+        <div class="campo-formulario">
+            <label for="nombreReg">Nombre Completo (requerido):</label>
+            <input type="text" id="nombreReg" required placeholder="Ej: María García López">
+        </div>
 
-                    Aquí te doy TODO el código que necesitas. Solo tienes que:
-                    1. Leer cada sección
-                    2. Copiar el código
-                    3. Personalizarlo con tus datos
+        <!-- Email -->
+        <div class="campo-formulario">
+            <label for="emailReg">Email (requerido):</label>
+            <input type="email" id="emailReg" required placeholder="ejemplo@email.com">
+        </div>
 
-                    ════════════════════════════════════════════════════════
-                    PARTE 1: CAMPOS DE TEXTO
-                    ════════════════════════════════════════════════════════
-                -->
+        <!-- Contraseña -->
+        <div class="campo-formulario">
+            <label for="passwordReg">Contraseña (mínimo 6 caracteres, requerido):</label>
+            <input type="password" id="passwordReg" minlength="6" required placeholder="Mínimo 6 caracteres">
+        </div>
 
-                <!-- Nombre completo -->
-                <div class="campo-formulario">
-                    <label for="nombreReg">Nombre Completo (requerido):</label>
-                    <input type="text" id="nombreReg" required placeholder="Ej: María García López">
-                </div>
+        <!-- Edad -->
+        <div class="campo-formulario">
+            <label for="edadReg">Edad (18-100, requerido):</label>
+            <input type="number" id="edadReg" min="18" max="100" required>
+        </div>
 
-                <!-- Email -->
-                <div class="campo-formulario">
-                    <label for="emailReg">Email (requerido):</label>
-                    <input type="email" id="emailReg" required placeholder="ejemplo@email.com">
-                </div>
+        <!-- Ciudad -->
+        <div class="campo-formulario">
+            <label for="ciudadReg">Ciudad:</label>
+            <select id="ciudadReg" required>
+                <option value="">-- Selecciona tu ciudad --</option>
+                <option value="Medellín">Medellín</option>
+                <option value="Bogotá">Bogotá</option>
+                <option value="Cali">Cali</option>
+                <option value="Barranquilla">Barranquilla</option>
+                <option value="Cartagena">Cartagena</option>
+            </select>
+        </div>
 
-                <!-- Contraseña -->
-                <div class="campo-formulario">
-                    <label for="passwordReg">Contraseña (mínimo 6 caracteres, requerido):</label>
-                    <input type="password" id="passwordReg" minlength="6" required placeholder="Mínimo 6 caracteres">
-                </div>
-
-                <!-- Edad -->
-                <div class="campo-formulario">
-                    <label for="edadReg">Edad (18-100, requerido):</label>
-                    <input type="number" id="edadReg" min="18" max="100" required>
-                </div>
-
-                <!--
-                    ════════════════════════════════════════════════════════
-                    PARTE 2: SELECT (CIUDAD)
-                    ════════════════════════════════════════════════════════
-                -->
-
-                <div class="campo-formulario">
-                    <label for="ciudadReg">Ciudad:</label>
-                    <select id="ciudadReg" required>
-                        <option value="">-- Selecciona tu ciudad --</option>
-                        <option value="medellin">Medellín</option>
-                        <option value="bogota">Bogotá</option>
-                        <option value="cali">Cali</option>
-                        <option value="barranquilla">Barranquilla</option>
-                        <option value="cartagena">Cartagena</option>
-                    </select>
-                </div>
-
-                <!--
-                    ════════════════════════════════════════════════════════
-                    PARTE 3: RADIO BUTTONS (GÉNERO)
-                    ════════════════════════════════════════════════════════
-                -->
-
-                <div class="campo-formulario">
-                    <label>Género:</label>
-                    <div>
-                        <input type="radio" id="mascReg" name="generoReg" value="masculino" required>
-                        <label for="mascReg" style="display: inline; font-weight: normal;">Masculino</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="femReg" name="generoReg" value="femenino" required>
-                        <label for="femReg" style="display: inline; font-weight: normal;">Femenino</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="otroReg" name="generoReg" value="otro" required>
-                        <label for="otroReg" style="display: inline; font-weight: normal;">Otro</label>
-                    </div>
-                </div>
-
-                <!--
-                    ════════════════════════════════════════════════════════
-                    PARTE 4: CHECKBOXES (INTERESES)
-                    ════════════════════════════════════════════════════════
-                -->
-
-                <div class="campo-formulario">
-                    <label>Intereses (selecciona los que te gusten):</label>
-                    <div>
-                        <input type="checkbox" id="deportesReg" name="interesesReg" value="Deportes">
-                        <label for="deportesReg" style="display: inline; font-weight: normal;">Deportes</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="musicaReg" name="interesesReg" value="Música">
-                        <label for="musicaReg" style="display: inline; font-weight: normal;">Música</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="lecturaReg" name="interesesReg" value="Lectura">
-                        <label for="lecturaReg" style="display: inline; font-weight: normal;">Lectura</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="viajesReg" name="interesesReg" value="Viajes">
-                        <label for="viajesReg" style="display: inline; font-weight: normal;">Viajes</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="tecnologiaReg" name="interesesReg" value="Tecnología">
-                        <label for="tecnologiaReg" style="display: inline; font-weight: normal;">Tecnología</label>
-                    </div>
-                </div>
-
-                <!--
-                    ════════════════════════════════════════════════════════
-                    PARTE 5: TEXTAREA (BIOGRAFÍA)
-                    ════════════════════════════════════════════════════════
-                -->
-
-                <div class="campo-formulario">
-                    <label for="biografiaReg">Biografía (cuéntanos sobre ti):</label>
-                    <textarea id="biografiaReg" rows="4" placeholder="Escribe una breve descripción sobre ti..."></textarea>
-                </div>
-
-
-
-                    <button type="submit">Registrarse</button>
-                </form>
-
-                <div id="resultadoRegistro" class="resultado-formulario" style="display: none;"></div>
-
-                <!--
-                    ════════════════════════════════════════════════════════
-                    PARTE 6: JAVASCRIPT - FUNCIÓN PARA PROCESAR EL FORMULARIO
-                    ════════════════════════════════════════════════════════
-
-                    Ahora necesitas completar la función que procesa todos estos datos
-                -->
-
-                <script>
-                    function enviarRegistro(event) {
-                        event.preventDefault(); // Evita que la página se recargue
-
-                        // 🎯 AHORA TÚ: Completa esta función siguiendo los pasos:
-
-                        // PASO 1: Obtener todos los valores de los campos de texto
-                        let nombre = document.getElementById("nombreReg").value;
-                        let email = document.getElementById("emailReg").value;
-                        let edad = document.getElementById("edadReg").value;
-                        let ciudad = document.getElementById("ciudadReg").value;
-                        let biografia = document.getElementById("biografiaReg").value;
-
-                        // PASO 2: Obtener el género seleccionado (radio button)
-                        let genero = "";
-                        let radios = document.getElementsByName("generoReg");
-                        for (let radio of radios) {
-                            if (radio.checked) {
-                                genero = radio.value;
-                                break;
-                            }
-                        }
-
-                        // PASO 3: Obtener los intereses seleccionados (checkboxes)
-                        let intereses = [];
-                        let checkboxes = document.getElementsByName("interesesReg");
-                        for (let checkbox of checkboxes) {
-                            if (checkbox.checked) {
-                                intereses.push(checkbox.value);
-                            }
-                        }
-
-                        // PASO 4: Mostrar todos los datos en el div de resultado
-                        let resultado = document.getElementById("resultadoRegistro");
-                        resultado.style.display = "block";
-                        resultado.innerHTML = `
-                            <h4>✅ ¡Registro Completado!</h4>
-                            <p><strong>Nombre:</strong> ${nombre}</p>
-                            <p><strong>Email:</strong> ${email}</p>
-                            <p><strong>Edad:</strong> ${edad} años</p>
-                            <p><strong>Ciudad:</strong> ${ciudad}</p>
-                            <p><strong>Género:</strong> ${genero}</p>
-                            <p><strong>Intereses:</strong> ${intereses.length > 0 ? intereses.join(", ") : "Ninguno seleccionado"}</p>
-                            <p><strong>Biografía:</strong> ${biografia || "No proporcionada"}</p>
-                        `;
-
-                        return false;
-                    }
-                </script>
+        <!-- Género -->
+        <div class="campo-formulario">
+            <label>Género:</label>
+            <div>
+                <input type="radio" id="mascReg" name="generoReg" value="Masculino" required>
+                <label for="mascReg">Masculino</label>
+            </div>
+            <div>
+                <input type="radio" id="femReg" name="generoReg" value="Femenino" required>
+                <label for="femReg">Femenino</label>
+            </div>
+            <div>
+                <input type="radio" id="otroReg" name="generoReg" value="Otro" required>
+                <label for="otroReg">Otro</label>
             </div>
         </div>
+
+        <!-- Intereses -->
+        <div class="campo-formulario">
+            <label>Intereses:</label>
+            <div>
+                <input type="checkbox" id="deportesReg" name="interesesReg" value="Deportes">
+                <label for="deportesReg">Deportes</label>
+            </div>
+            <div>
+                <input type="checkbox" id="musicaReg" name="interesesReg" value="Música">
+                <label for="musicaReg">Música</label>
+            </div>
+            <div>
+                <input type="checkbox" id="lecturaReg" name="interesesReg" value="Lectura">
+                <label for="lecturaReg">Lectura</label>
+            </div>
+            <div>
+                <input type="checkbox" id="viajesReg" name="interesesReg" value="Viajes">
+                <label for="viajesReg">Viajes</label>
+            </div>
+            <div>
+                <input type="checkbox" id="tecnologiaReg" name="interesesReg" value="Tecnología">
+                <label for="tecnologiaReg">Tecnología</label>
+            </div>
+        </div>
+
+        <!-- Biografía -->
+        <div class="campo-formulario">
+            <label for="biografiaReg">Biografía:</label>
+            <textarea id="biografiaReg" rows="4" placeholder="Escribe una breve descripción sobre ti..."></textarea>
+        </div>
+
+        <!-- Botón -->
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <!-- Resultado -->
+    <div id="resultadoRegistro" class="resultado-formulario" style="display: none;"></div>
+
+    <!-- Script -->
+    <script>
+        function enviarRegistro(event) {
+            event.preventDefault();
+
+            // Obtener valores
+            let nombre = document.getElementById("nombreReg").value;
+            let email = document.getElementById("emailReg").value;
+            let edad = document.getElementById("edadReg").value;
+            let ciudad = document.getElementById("ciudadReg").value;
+            let biografia = document.getElementById("biografiaReg").value;
+
+            // Género
+            let genero = "";
+            let radios = document.getElementsByName("generoReg");
+            for (let radio of radios) {
+                if (radio.checked) {
+                    genero = radio.value;
+                    break;
+                }
+            }
+
+            // Intereses
+            let intereses = [];
+            let checkboxes = document.getElementsByName("interesesReg");
+            for (let checkbox of checkboxes) {
+                if (checkbox.checked) {
+                    intereses.push(checkbox.value);
+                }
+            }
+
+            // Mostrar resultado
+            let resultado = document.getElementById("resultadoRegistro");
+            resultado.style.display = "block";
+            resultado.innerHTML = `
+                <h4>✅ ¡Registro Completado!</h4>
+                <p><strong>Nombre:</strong> ${nombre}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Edad:</strong> ${edad} años</p>
+                <p><strong>Ciudad:</strong> ${ciudad}</p>
+                <p><strong>Género:</strong> ${genero}</p>
+                <p><strong>Intereses:</strong> ${intereses.length > 0 ? intereses.join(", ") : "Ninguno seleccionado"}</p>
+                <p><strong>Biografía:</strong> ${biografia || "No proporcionada"}</p>
+            `;
+        }
+    </script>
+</div>
+
 
         <!-- BOTONES DE NAVEGACIÓN -->
         <div style="text-align: center; margin-top: 40px; display: flex; gap: 20px; justify-content: center;">
