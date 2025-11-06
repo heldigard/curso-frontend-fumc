@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,6 +75,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- NAVEGACIÓN -->
@@ -313,8 +315,7 @@
 
                     <div class="campo-formulario">
                         <label for="telefonoVal">Teléfono (10 dígitos):</label>
-                        <input type="text" id="telefonoVal" pattern="[0-9]{10}"
-                               placeholder="Ej: 3001234567" required>
+                        <input type="text" id="telefonoVal" pattern="[0-9]{10}" placeholder="Ej: 3001234567" required>
                         <small>Debe tener exactamente 10 números</small>
                     </div>
 
@@ -386,111 +387,113 @@
                     PARTE 1: CAMPOS DE TEXTO
                     ════════════════════════════════════════════════════════
                 -->
+                <form class="formulario" onsubmit="return enviarRegistro(event);">
 
-                <!-- Nombre completo -->
-                <div class="campo-formulario">
-                    <label for="nombreReg">Nombre Completo (requerido):</label>
-                    <input type="text" id="nombreReg" required placeholder="Ej: María García López">
-                </div>
+                    <!-- Nombre completo -->
+                    <div class="campo-formulario">
+                        <label for="nombreReg">Nombre Completo (requerido):</label>
+                        <input type="text" id="nombreReg" required placeholder="Ej: María García López">
+                    </div>
 
-                <!-- Email -->
-                <div class="campo-formulario">
-                    <label for="emailReg">Email (requerido):</label>
-                    <input type="email" id="emailReg" required placeholder="ejemplo@email.com">
-                </div>
+                    <!-- Email -->
+                    <div class="campo-formulario">
+                        <label for="emailReg">Email (requerido):</label>
+                        <input type="email" id="emailReg" required placeholder="ejemplo@email.com">
+                    </div>
 
-                <!-- Contraseña -->
-                <div class="campo-formulario">
-                    <label for="passwordReg">Contraseña (mínimo 6 caracteres, requerido):</label>
-                    <input type="password" id="passwordReg" minlength="6" required placeholder="Mínimo 6 caracteres">
-                </div>
+                    <!-- Contraseña -->
+                    <div class="campo-formulario">
+                        <label for="passwordReg">Contraseña (mínimo 6 caracteres, requerido):</label>
+                        <input type="password" id="passwordReg" minlength="6" required
+                            placeholder="Mínimo 6 caracteres">
+                    </div>
 
-                <!-- Edad -->
-                <div class="campo-formulario">
-                    <label for="edadReg">Edad (18-100, requerido):</label>
-                    <input type="number" id="edadReg" min="18" max="100" required>
-                </div>
-
-                <!--
+                    <!-- Edad -->
+                    <div class="campo-formulario">
+                        <label for="edadReg">Edad (18-100, requerido):</label>
+                        <input type="number" id="edadReg" min="18" max="100" required>
+                    </div>
+                    <!--
                     ════════════════════════════════════════════════════════
                     PARTE 2: SELECT (CIUDAD)
                     ════════════════════════════════════════════════════════
                 -->
 
-                <div class="campo-formulario">
-                    <label for="ciudadReg">Ciudad:</label>
-                    <select id="ciudadReg" required>
-                        <option value="">-- Selecciona tu ciudad --</option>
-                        <option value="medellin">Medellín</option>
-                        <option value="bogota">Bogotá</option>
-                        <option value="cali">Cali</option>
-                        <option value="barranquilla">Barranquilla</option>
-                        <option value="cartagena">Cartagena</option>
-                    </select>
-                </div>
+                    <div class="campo-formulario">
+                        <label for="ciudadReg">Ciudad:</label>
+                        <select id="ciudadReg" required>
+                            <option value="">-- Selecciona tu ciudad --</option>
+                            <option value="medellin">Medellín</option>
+                            <option value="bogota">Bogotá</option>
+                            <option value="cali">Cali</option>
+                            <option value="barranquilla">Barranquilla</option>
+                            <option value="cartagena">Cartagena</option>
+                        </select>
+                    </div>
 
-                <!--
+                    <!--
                     ════════════════════════════════════════════════════════
                     PARTE 3: RADIO BUTTONS (GÉNERO)
                     ════════════════════════════════════════════════════════
                 -->
 
-                <div class="campo-formulario">
-                    <label>Género:</label>
-                    <div>
-                        <input type="radio" id="mascReg" name="generoReg" value="masculino" required>
-                        <label for="mascReg" style="display: inline; font-weight: normal;">Masculino</label>
+                    <div class="campo-formulario">
+                        <label>Género:</label>
+                        <div>
+                            <input type="radio" id="mascReg" name="generoReg" value="masculino" required>
+                            <label for="mascReg" style="display: inline; font-weight: normal;">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="femReg" name="generoReg" value="femenino" required>
+                            <label for="femReg" style="display: inline; font-weight: normal;">Femenino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="otroReg" name="generoReg" value="otro" required>
+                            <label for="otroReg" style="display: inline; font-weight: normal;">Otro</label>
+                        </div>
                     </div>
-                    <div>
-                        <input type="radio" id="femReg" name="generoReg" value="femenino" required>
-                        <label for="femReg" style="display: inline; font-weight: normal;">Femenino</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="otroReg" name="generoReg" value="otro" required>
-                        <label for="otroReg" style="display: inline; font-weight: normal;">Otro</label>
-                    </div>
-                </div>
 
-                <!--
+                    <!--
                     ════════════════════════════════════════════════════════
                     PARTE 4: CHECKBOXES (INTERESES)
                     ════════════════════════════════════════════════════════
                 -->
 
-                <div class="campo-formulario">
-                    <label>Intereses (selecciona los que te gusten):</label>
-                    <div>
-                        <input type="checkbox" id="deportesReg" name="interesesReg" value="Deportes">
-                        <label for="deportesReg" style="display: inline; font-weight: normal;">Deportes</label>
+                    <div class="campo-formulario">
+                        <label>Intereses (selecciona los que te gusten):</label>
+                        <div>
+                            <input type="checkbox" id="deportesReg" name="interesesReg" value="Deportes">
+                            <label for="deportesReg" style="display: inline; font-weight: normal;">Deportes</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="musicaReg" name="interesesReg" value="Música">
+                            <label for="musicaReg" style="display: inline; font-weight: normal;">Música</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="lecturaReg" name="interesesReg" value="Lectura">
+                            <label for="lecturaReg" style="display: inline; font-weight: normal;">Lectura</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="viajesReg" name="interesesReg" value="Viajes">
+                            <label for="viajesReg" style="display: inline; font-weight: normal;">Viajes</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="tecnologiaReg" name="interesesReg" value="Tecnología">
+                            <label for="tecnologiaReg" style="display: inline; font-weight: normal;">Tecnología</label>
+                        </div>
                     </div>
-                    <div>
-                        <input type="checkbox" id="musicaReg" name="interesesReg" value="Música">
-                        <label for="musicaReg" style="display: inline; font-weight: normal;">Música</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="lecturaReg" name="interesesReg" value="Lectura">
-                        <label for="lecturaReg" style="display: inline; font-weight: normal;">Lectura</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="viajesReg" name="interesesReg" value="Viajes">
-                        <label for="viajesReg" style="display: inline; font-weight: normal;">Viajes</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="tecnologiaReg" name="interesesReg" value="Tecnología">
-                        <label for="tecnologiaReg" style="display: inline; font-weight: normal;">Tecnología</label>
-                    </div>
-                </div>
 
-                <!--
+                    <!--
                     ════════════════════════════════════════════════════════
                     PARTE 5: TEXTAREA (BIOGRAFÍA)
                     ════════════════════════════════════════════════════════
                 -->
 
-                <div class="campo-formulario">
-                    <label for="biografiaReg">Biografía (cuéntanos sobre ti):</label>
-                    <textarea id="biografiaReg" rows="4" placeholder="Escribe una breve descripción sobre ti..."></textarea>
-                </div>
+                    <div class="campo-formulario">
+                        <label for="biografiaReg">Biografía (cuéntanos sobre ti):</label>
+                        <textarea id="biografiaReg" rows="4"
+                            placeholder="Escribe una breve descripción sobre ti..."></textarea>
+                    </div>
 
 
 
@@ -579,4 +582,5 @@
         </div>
     </div>
 </body>
+
 </html>
