@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 6 - Bootstrap</title>
-    
+
     <!-- 🎨 BOOTSTRAP CSS - Librería de estilos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -34,6 +34,7 @@
             margin-bottom: 30px;
         }
     </style>
+    
 </head>
 <body>
     <!-- BARRA DE NAVEGACIÓN CON BOOTSTRAP -->
@@ -184,7 +185,18 @@
             </div>
             
             <!-- 🎯 ESCRIBE TU VERSIÓN AQUÍ DEBAJO -->
-            
+            <div class="row">
+                    <div class="col-md-4">
+                        <div class="bg-info text-dark p-3 text-center">Columna 1</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bg-info text-dark p-3 text-center">Columna 2</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bg-info text-dark p-3 text-center">Columna 3</div>
+                    </div>
+                
+                </div>
             
             
         </div>
@@ -281,7 +293,17 @@
             </div>
             
             <!-- 🎯 ESCRIBE TUS BOTONES AQUÍ DEBAJO -->
-            
+            <button class="btn btn-info btn-lg">
+                    <i class="bi bi-balloon-heart"></i> Me Gusta
+                </button>
+                
+                <button class="btn btn-light btn-lg">
+                    <i class="bi bi-emoji-sunglasses"></i> Eliminar
+                </button>
+                
+                <button class="btn btn-dark btn-lg">
+                    <i class="bi bi-cloud-fill"></i> Descargar
+                </button>
             
             
         </div>
@@ -342,44 +364,43 @@
                     
                     ESTRUCTURA COMPLETA:
                 -->
-                
                 <div class="row">
-                    <!-- TARJETA 1 -->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="URL_DE_TU_IMAGEN" class="card-img-top" alt="Descripción">
-                            <div class="card-body">
-                                <h5 class="card-title">Título de tu Película/Serie/Libro</h5>
-                                <p class="card-text">Escribe una breve descripción aquí.</p>
-                                <a href="#" class="btn btn-primary">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
+    <!-- TARJETA 1: Harry Potter -->
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <img src="https://m.media-amazon.com/images/I/81YOuOGFCJL._AC_UF894,1000_QL80_.jpg" class="card-img-top" alt="Harry Potter">
+            <div class="card-body">
+                <h5 class="card-title">Harry Potter</h5>
+                <p class="card-text">Una saga mágica que sigue la historia de un joven mago que descubre su destino en Hogwarts mientras enfrenta al temible Lord Voldemort.</p>
+                <a href="https://www.imdb.com/title/tt0241527/" target="_blank" class="btn btn-primary">Ver más</a>
+            </div>
+        </div>
+    </div>
 
-                    <!-- TARJETA 2 -->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="URL_DE_TU_IMAGEN" class="card-img-top" alt="Descripción">
-                            <div class="card-body">
-                                <h5 class="card-title">Título de tu Película/Serie/Libro</h5>
-                                <p class="card-text">Escribe una breve descripción aquí.</p>
-                                <a href="#" class="btn btn-success">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
+    <!-- TARJETA 2: El extraño mundo de Jack -->
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <img src="https://cdn.arema.dev/live/eventos/16063.jpg" class="card-img-top" alt="El extraño mundo de Jack">
+            <div class="card-body">
+                <h5 class="card-title">El extraño mundo de Jack</h5>
+                <p class="card-text">Jack Skellington, el rey de Halloween, descubre la Navidad y decide llevar su propia versión de la festividad al mundo, con resultados inesperados.</p>
+                <a href="https://www.imdb.com/title/tt0107688/" target="_blank" class="btn btn-warning">Ver más</a>
+            </div>
+        </div>
+    </div>
 
-                    <!-- TARJETA 3 -->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="URL_DE_TU_IMAGEN" class="card-img-top" alt="Descripción">
-                            <div class="card-body">
-                                <h5 class="card-title">Título de tu Película/Serie/Libro</h5>
-                                <p class="card-text">Escribe una breve descripción aquí.</p>
-                                <a href="#" class="btn btn-danger">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- TARJETA 3: El cadáver de la novia -->
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <img src="https://static.wikia.nocookie.net/cine/images/3/3c/Corpse_Bride_Poster.jpg" class="card-img-top" alt="El cadáver de la novia">
+            <div class="card-body">
+                <h5 class="card-title">El cadáver de la novia</h5>
+                <p class="card-text">Una oscura y encantadora historia de amor entre un joven tímido y una novia que regresa del más allá en busca de un corazón que la comprenda.</p>
+                <a href="https://www.imdb.com/title/tt0121164/" target="_blank" class="btn btn-dark">Ver más</a>
+            </div>
+        </div>
+    </div>
+</div>
                 
                 <!-- 
                     DÓNDE CONSEGUIR IMÁGENES:
@@ -405,6 +426,7 @@
             <!-- 🎯 ESCRIBE TUS TARJETAS AQUÍ DEBAJO -->
             
             
+
             
         </div>
 
@@ -534,7 +556,153 @@
             
             <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
             
-            
+            <!-- 🌟 PORTFOLIO PERSONAL - STHEFANNY GÓMEZ -->
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Sthefanny Gómez</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="portfolioNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="text-center bg-light py-5">
+  <div class="container">
+    <h1 class="display-4 fw-bold">¡Hola! Soy Sthefanny Gómez ✨</h1>
+    <p class="lead">Analista de datos y desarrolladora web en formación</p>
+    <a href="#contacto" class="btn btn-primary mt-3">Contáctame</a>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Sobre mí</h2>
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="https://via.placeholder.com/250" class="rounded-circle img-fluid shadow" alt="Foto de Sthefanny">
+      </div>
+      <div class="col-md-8">
+        <p>Soy una apasionada por la tecnología, el análisis de datos y el desarrollo de soluciones digitales. Me encanta aprender, crear y mejorar continuamente mis habilidades para ofrecer resultados con impacto.</p>
+        <p>Actualmente estoy enfocada en fortalecer mis conocimientos en SQL, Power BI, y desarrollo web con HTML, CSS y Bootstrap.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HABILIDADES -->
+<section id="habilidades" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Habilidades</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Análisis de Datos</h5>
+            <p class="card-text">Manejo de Excel avanzado, SQL y visualización de datos con Power BI.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Desarrollo Web</h5>
+            <p class="card-text">Experiencia con HTML, CSS, JavaScript y Bootstrap para crear interfaces modernas y responsivas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Liderazgo y Comunicación</h5>
+            <p class="card-text">Capacidad para coordinar proyectos, liderar equipos y comunicar ideas de forma efectiva.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Proyectos</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="https://picsum.photos/400/200?1" class="card-img-top" alt="Proyecto 1">
+          <div class="card-body">
+            <h5 class="card-title">Dashboard de Ventas</h5>
+            <p class="card-text">Panel interactivo en Power BI para analizar ventas y rentabilidad en tiempo real.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="https://picsum.photos/400/200?2" class="card-img-top" alt="Proyecto 2">
+          <div class="card-body">
+            <h5 class="card-title">Sistema Web de Inventario</h5>
+            <p class="card-text">Aplicación creada con HTML, CSS y JavaScript para la gestión de productos en bodegas pequeñas.</p>
+            <a href="#" class="btn btn-success">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="https://picsum.photos/400/200?3" class="card-img-top" alt="Proyecto 3">
+          <div class="card-body">
+            <h5 class="card-title">Análisis de Clientes</h5>
+            <p class="card-text">Estudio de comportamiento de clientes y segmentación con herramientas de análisis de datos.</p>
+            <a href="#" class="btn btn-warning">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contáctame</h2>
+    <form class="mx-auto" style="max-width: 600px;">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" required>
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark w-100">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gradient text-white text-center py-4" style="background: linear-gradient(90deg, #6f42c1, #a370f7);">
+    <p>© 2025 Sthefanny Gómez 💜</p>
+</footer>
+
+</footer>
+
             
         </div>
 
