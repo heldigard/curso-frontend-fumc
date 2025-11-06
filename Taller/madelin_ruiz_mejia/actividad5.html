@@ -388,6 +388,9 @@
                 -->
 
                 <!-- Nombre completo -->
+                <form class="formulario" onsubmit="return enviarRegistro(event);">
+
+                
                 <div class="campo-formulario">
                     <label for="nombreReg">Nombre Completo (requerido):</label>
                     <input type="text" id="nombreReg" required placeholder="Ej: María García López">
@@ -494,7 +497,7 @@
 
 
 
-                    <button type="submit">Registrarse</button>
+                    <button type="submit" class="btn-enviar">Registrarse</button>
                 </form>
 
                 <div id="resultadoRegistro" class="resultado-formulario" style="display: none;"></div>
