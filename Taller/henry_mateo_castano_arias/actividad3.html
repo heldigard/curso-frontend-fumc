@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 3 - JavaScript Interactivo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <!-- NAVEGACIÓN -->
@@ -81,12 +83,13 @@
                         // RECUERDA:
                         // - El texto va entre comillas " "
                         // - Termina con punto y coma ;
-                        //
                         // EJEMPLO COMPLETO:
                         // alert("Hola, soy María González y tengo 22 años");
                         //
                         // AHORA TÚ: Escribe tu alerta aquí debajo (borra esta línea y escribe tu código):
 
+                        alert("Hola, soy HENRY MATEO y tengo 33 años");
+                        <button onclick="alert()">Mi Alerta</button>
                     }
                 </script>
             </div>
@@ -148,6 +151,8 @@
                         //
                         // AHORA TÚ: Copia las 2 líneas del ejemplo y pégalas aquí debajo:
 
+                        let edad = prompt("¿Cuántos años tienes?");
+                        document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
 
                     }
                 </script>
@@ -209,33 +214,40 @@
                 <p id="resultadoResta" style="color: #f44336; font-weight: bold; margin-top: 10px;"></p>
 
                 <script>
-                    function hacerResta() {
-                        // 🎯 ESCRIBE TU CÓDIGO AQUÍ
-                        // 1. Pide dos números con prompt()
-                        // 2. Convierte a números con Number()
-                        // 3. Haz la resta
-                        // 4. Muestra el resultado en "resultadoResta"
-                        //
-                        // PISTA - SIGUE ESTOS PASOS:
-                        //
-                        // PASO 1: Pedir el primer número
-                        // let num1 = prompt("Ingresa el primer número:");
-                        //
-                        // PASO 2: Pedir el segundo número
-                        // let num2 = prompt("Ingresa el segundo número:");
-                        //
-                        // PASO 3: Convertir a números (IMPORTANTE)
-                        // num1 = Number(num1);
-                        // num2 = Number(num2);
-                        //
-                        // PASO 4: Hacer la resta
-                        // let resta = num1 - num2;
-                        //
-                        // PASO 5: Mostrar el resultado
-                        // document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
-                        //
-                        // AHORA TÚ: Copia los 5 pasos de arriba y pégalos aquí debajo:
 
+                    // 🎯 ESCRIBE TU CÓDIGO AQUÍ
+                    // 1. Pide dos números con prompt()
+                    // 2. Convierte a números con Number()
+                    // 3. Haz la resta
+                    // 4. Muestra el resultado en "resultadoResta"
+                    //
+                    // PISTA - SIGUE ESTOS PASOS:
+                    //
+                    // PASO 1: Pedir el primer número
+                    // let num1 = prompt("Ingresa el primer número:");
+                    //
+                    // PASO 2: Pedir el segundo número
+                    // let num2 = prompt("Ingresa el segundo número:");
+                    //
+                    // PASO 3: Convertir a números (IMPORTANTE)
+                    // num1 = Number(num1);
+                    // num2 = Number(num2);
+                    //
+                    // PASO 4: Hacer la resta
+                    // let resta = num1 - num2;
+                    //
+                    // PASO 5: Mostrar el resultado
+                    // document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
+                    //
+                    // AHORA TÚ: Copia los 5 pasos de arriba y pégalos aquí debajo:
+
+                    function hacerResta() {
+                        let num1 = prompt("Ingresa el primer número:");
+                        let num2 = prompt("Ingresa el segundo número:");
+                        num1 = Number(num1);
+                        num2 = Number(num2);
+                        let resta = num1 - num2;
+                        document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
 
                     }
                 </script>
@@ -250,25 +262,39 @@
 
                 <script>
                     function hacerDivision() {
-                        // 🎯 ESCRIBE TU CÓDIGO AQUÍ
-                        // Igual que la resta, pero usa el operador /
-                        //
-                        // PISTA: Es MUY SIMILAR a la resta, solo cambia:
-                        // - En lugar de: let resta = num1 - num2;
-                        // - Usa: let division = num1 / num2;
-                        // - El símbolo / significa división
-                        //
-                        // PASOS COMPLETOS:
-                        // let num1 = prompt("Ingresa el primer número:");
-                        // let num2 = prompt("Ingresa el segundo número:");
-                        // num1 = Number(num1);
-                        // num2 = Number(num2);
-                        // let division = num1 / num2;
-                        // document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
-                        //
-                        // AHORA TÚ: Copia los pasos de arriba y pégalos aquí debajo:
+                        let num1 = prompt("Ingresa el primer número:");
+                        let num2 = prompt("Ingresa el segundo número:");
+                        num1 = Number(num1);
+                        num2 = Number(num2);
+                        let division = num1 / num2;
+                        document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
+                    }
 
+                    // 🎯 ESCRIBE TU CÓDIGO AQUÍ
+                    // Igual que la resta, pero usa el operador /
+                    //
+                    // PISTA: Es MUY SIMILAR a la resta, solo cambia:
+                    // - En lugar de: let resta = num1 - num2;
+                    // - Usa: let division = num1 / num2;
+                    // - El símbolo / significa división
+                    //
+                    // PASOS COMPLETOS:
+                    // let num1 = prompt("Ingresa el primer número:");
+                    // let num2 = prompt("Ingresa el segundo número:");
+                    // num1 = Number(num1);
+                    // num2 = Number(num2);
+                    // let division = num1 / num2;
+                    // document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
+                    //
+                    // AHORA TÚ: Copia los pasos de arriba y pégalos aquí debajo:
 
+                    function hacerDivision() {
+                        let num1 = prompt("Ingresa el primer número:");
+                        let num2 = prompt("Ingresa el segundo número:");
+                        num1 = Number(num1);
+                        num2 = Number(num2);
+                        let division = num1 / num2;
+                        document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
                     }
                 </script>
             </div>
@@ -438,4 +464,5 @@
         </div>
     </div>
 </body>
+
 </html>
