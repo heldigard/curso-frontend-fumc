@@ -15,9 +15,8 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
+        /* Armonización con styles.css: crema / terracota / acentos anaranjados */
+        body { background-color: #f6efe6; }
 
         .hero-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -27,15 +26,45 @@
         }
 
         .demo-box {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(180deg, #fffaf7 0%, #fbf6f0 100%);
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(163,110,70,0.06);
             margin-bottom: 30px;
+            border: 1px solid rgba(184,107,46,0.06);
+            color: #3d2f28;
+        }
+
+        .caja-ejemplo {
+            background: linear-gradient(135deg, #f0c89a 18%, #e8b17a 45%, #d79a5b 75%);
+            color: #3d2f28;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+        }
+
+        .alert-warning {
+            background-color: #fff7eb;
+            border-left: 6px solid #e7a45a;
+            color: #4a3b33;
+            border-radius: 8px;
+        }
+
+        form { background-color: #fff; padding: 16px; border-radius: 8px; border: 1px solid #efe0c8; }
+
+        .navbar-dark.bg-dark { background: linear-gradient(90deg,#3b2b24,#5a4637); }
+
+        footer.bg-dark { background: linear-gradient(90deg,#3b2b24,#5a4637); color: #fff; }
+
+        .alert-success {
+            background: linear-gradient(180deg, #eaf6e9, #f3efe8);
+            border-left: 6px solid #7bbf8a;
+            color: #155724;
+            border-radius: 10px;
         }
     </style>
 </head>
-<body>
+<body class="theme-light">
     <!-- BARRA DE NAVEGACIÓN CON BOOTSTRAP -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -185,6 +214,20 @@
 
             <!-- 🎯 ESCRIBE TU VERSIÓN AQUÍ DEBAJO -->
 
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="bg-primary text-white p-3 text-center">Columna 1</div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="bg-success text-white p-3 text-center">Columna 2</div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="bg-danger text-white p-3 text-center">Columna 3</div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="bg-warning text-dark p-3 text-center">Columna 4</div>
+                    </div>
+                </div>
 
 
         </div>
@@ -282,6 +325,17 @@
 
             <!-- 🎯 ESCRIBE TUS BOTONES AQUÍ DEBAJO -->
 
+                <button class="btn btn-success btn-lg">
+                    <i class="bi bi-heart"></i> Me Gusta
+                </button>
+
+                <button class="btn btn-danger">
+                    <i class="bi bi-trash"></i> Eliminar
+                </button>
+
+                <button class="btn btn-primary btn-sm">
+                    <i class="bi bi-download"></i> Descargar
+                </button>
 
 
         </div>
@@ -404,6 +458,40 @@
 
             <!-- 🎯 ESCRIBE TUS TARJETAS AQUÍ DEBAJO -->
 
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Descripción">
+                            <div class="card-body">
+                                <h5 class="card-title">Título de tu Película/Serie/Libro</h5>
+                                <p class="card-text">Escribe una breve descripción aquí.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Descripción">
+                            <div class="card-body">
+                                <h5 class="card-title">Título de tu Película/Serie/Libro</h5>
+                                <p class="card-text">Escribe una breve descripción aquí.</p>
+                                <a href="#" class="btn btn-success">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Descripción">
+                            <div class="card-body">
+                                <h5 class="card-title">Título de tu Película/Serie/Libro</h5>
+                                <p class="card-text">Escribe una breve descripción aquí.</p>
+                                <a href="#" class="btn btn-danger">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
         </div>
@@ -551,7 +639,7 @@
                             </h5>
                             <p class="card-text">La mejor fuente para aprender Bootstrap</p>
                             <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
-                               target="_blank" class="btn btn-primary">
+                                target="_blank" class="btn btn-primary">
                                 Visitar
                             </a>
                         </div>
@@ -566,7 +654,7 @@
                             </h5>
                             <p class="card-text">Miles de iconos gratuitos para usar</p>
                             <a href="https://icons.getbootstrap.com/"
-                               target="_blank" class="btn btn-primary">
+                                target="_blank" class="btn btn-primary">
                                 Visitar
                             </a>
                         </div>

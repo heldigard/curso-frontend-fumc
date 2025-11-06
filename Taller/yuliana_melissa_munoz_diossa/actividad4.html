@@ -154,10 +154,29 @@
                         </tr>
                     </table>
 
-                    AHORA TÚ: Copia el ejemplo de arriba y cambia los nombres, edades y pasatiempos:
-                -->
-
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Pasatiempo</th>
+                    </tr>
+                    <tr>
+                        <td>Ana Gómez</td>
+                        <td>23</td>
+                        <td>Leer libros</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Pérez</td>
+                        <td>25</td>
+                        <td>Jugar fútbol</td>
+                    </tr>
+                    <tr>
+                        <td>Luis Martínez</td>
+                        <td>28</td>
+                        <td>Tocar guitarra</td>
+                    </tr>
+                </table>
 
 
 
@@ -348,10 +367,32 @@
                     - En la segunda fila de "Acción" NO pones la celda de género (ya está ocupada por rowspan)
                     - Puedes usar estrellas ⭐ para la calificación o números del 1 al 5
 
-                    AHORA TÚ: Copia el ejemplo de arriba y cámbialo con tus películas favoritas:
-                -->
-
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+                <table>
+                    <tr>
+                        <th>Género</th>
+                        <th>Título</th>
+                        <th>Año</th>
+                        <th>Calificación</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Ciencia Ficción</td>
+                        <td>Interestelar</td>
+                        <td>2014</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Matrix</td>
+                        <td>1999</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Comedia</td>
+                        <td>Superbad</td>
+                        <td>2007</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                </table>
 
 
 
@@ -474,72 +515,53 @@
                 <p>Crea una tabla de "Tareas Pendientes" donde puedas agregar nuevas tareas</p>
                 <p>Columnas: Tarea, Prioridad (Alta/Media/Baja), Fecha Límite</p>
 
-                <!--
-                    PISTA - COMBINA HTML + JAVASCRIPT:
-
-                    PARTE 1: Crear la tabla HTML
-                    PARTE 2: Crear la función JavaScript para agregar filas
-
-                    CÓDIGO COMPLETO:
-
-                    <table id="tablaTareas">
-                        <thead>
-                            <tr>
-                                <th>Tarea</th>
-                                <th>Prioridad</th>
-                                <th>Fecha Límite</th>
-                            </tr>
-                        </thead>
-                        <tbody id="cuerpoTablaTareas">
-                            <tr>
-                                <td>Hacer la tarea de matemáticas</td>
-                                <td>Alta</td>
-                                <td>2025-11-15</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <button onclick="agregarTarea()">➕ Agregar Tarea</button>
-
-                    <script>
-                        function agregarTarea() {
-                            // PASO 1: Pedir los datos al usuario
-                            let tarea = prompt("¿Qué tarea tienes que hacer?");
-                            let prioridad = prompt("¿Qué prioridad? (Alta/Media/Baja)");
-                            let fecha = prompt("¿Fecha límite? (Ejemplo: 2025-11-30)");
-
-                            // PASO 2: Verificar que el usuario haya escrito algo
-                            if (tarea && prioridad && fecha) {
-                                // PASO 3: Obtener el cuerpo de la tabla
-                                let tbody = document.getElementById("cuerpoTablaTareas");
-
-                                // PASO 4: Crear una nueva fila
-                                let nuevaFila = document.createElement("tr");
-
-                                // PASO 5: Agregar las celdas con los datos
-                                nuevaFila.innerHTML = `
-                                    <td>${tarea}</td>
-                                    <td>${prioridad}</td>
-                                    <td>${fecha}</td>
-                                `;
-
-                                // PASO 6: Agregar la nueva fila a la tabla
-                                tbody.appendChild(nuevaFila);
-                            }
-                        }
-                    </script>
-
-                    EXPLICACIÓN:
-                    - getElementById("cuerpoTablaTareas") busca el <tbody> por su id
-                    - createElement("tr") crea una nueva fila
-                    - innerHTML agrega el contenido HTML de las celdas
-                    - ${tarea} inserta el valor de la variable (se llama template literal)
-                    - appendChild() agrega la nueva fila al final de la tabla
-
-                    AHORA TÚ: Copia TODO el código de arriba (HTML + JavaScript) y pégalo aquí debajo:
-                -->
-
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+                <table id="tablaTareas">
+                    <thead>
+                        <tr>
+                            <th>Tarea</th>
+                            <th>Prioridad</th>
+                            <th>Fecha Límite</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTablaTareas">
+                        <tr>
+                            <td>Hacer la tarea de matemáticas</td>
+                            <td>Alta</td>
+                            <td>2025-11-15</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button onclick="agregarTarea()">➕ Agregar Tarea</button>
+
+                <script>
+                    function agregarTarea() {
+                        // PASO 1: Pedir los datos al usuario
+                        let tarea = prompt("¿Qué tarea tienes que hacer?");
+                        let prioridad = prompt("¿Qué prioridad? (Alta/Media/Baja)");
+                        let fecha = prompt("¿Fecha límite? (Ejemplo: 2025-11-30)");
+
+                        // PASO 2: Verificar que el usuario haya escrito algo
+                        if (tarea && prioridad && fecha) {
+                            // PASO 3: Obtener el cuerpo de la tabla
+                            let tbody = document.getElementById("cuerpoTablaTareas");
+
+                            // PASO 4: Crear una nueva fila
+                            let nuevaFila = document.createElement("tr");
+
+                            // PASO 5: Agregar las celdas con los datos
+                            nuevaFila.innerHTML = `
+                                <td>${tarea}</td>
+                                <td>${prioridad}</td>
+                                <td>${fecha}</td>
+                            `;
+
+                            // PASO 6: Agregar la nueva fila a la tabla
+                            tbody.appendChild(nuevaFila);
+                        }
+                    }
+                </script>
 
 
 

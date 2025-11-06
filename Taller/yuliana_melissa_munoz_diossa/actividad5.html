@@ -373,126 +373,91 @@
                 </ul>
                 <p>Al enviar, debe mostrar todos los datos ingresados en un div de resultado.</p>
 
-                <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
-                <!--
-                    PISTA - GUÍA PASO A PASO PARA COMPLETAR EL FORMULARIO:
-
-                    Aquí te doy TODO el código que necesitas. Solo tienes que:
-                    1. Leer cada sección
-                    2. Copiar el código
-                    3. Personalizarlo con tus datos
-
-                    ════════════════════════════════════════════════════════
-                    PARTE 1: CAMPOS DE TEXTO
-                    ════════════════════════════════════════════════════════
-                -->
-
-                <!-- Nombre completo -->
-                <div class="campo-formulario">
-                    <label for="nombreReg">Nombre Completo (requerido):</label>
-                    <input type="text" id="nombreReg" required placeholder="Ej: María García López">
-                </div>
-
-                <!-- Email -->
-                <div class="campo-formulario">
-                    <label for="emailReg">Email (requerido):</label>
-                    <input type="email" id="emailReg" required placeholder="ejemplo@email.com">
-                </div>
-
-                <!-- Contraseña -->
-                <div class="campo-formulario">
-                    <label for="passwordReg">Contraseña (mínimo 6 caracteres, requerido):</label>
-                    <input type="password" id="passwordReg" minlength="6" required placeholder="Mínimo 6 caracteres">
-                </div>
-
-                <!-- Edad -->
-                <div class="campo-formulario">
-                    <label for="edadReg">Edad (18-100, requerido):</label>
-                    <input type="number" id="edadReg" min="18" max="100" required>
-                </div>
-
-                <!--
-                    ════════════════════════════════════════════════════════
-                    PARTE 2: SELECT (CIUDAD)
-                    ════════════════════════════════════════════════════════
-                -->
-
-                <div class="campo-formulario">
-                    <label for="ciudadReg">Ciudad:</label>
-                    <select id="ciudadReg" required>
-                        <option value="">-- Selecciona tu ciudad --</option>
-                        <option value="medellin">Medellín</option>
-                        <option value="bogota">Bogotá</option>
-                        <option value="cali">Cali</option>
-                        <option value="barranquilla">Barranquilla</option>
-                        <option value="cartagena">Cartagena</option>
-                    </select>
-                </div>
-
-                <!--
-                    ════════════════════════════════════════════════════════
-                    PARTE 3: RADIO BUTTONS (GÉNERO)
-                    ════════════════════════════════════════════════════════
-                -->
-
-                <div class="campo-formulario">
-                    <label>Género:</label>
-                    <div>
-                        <input type="radio" id="mascReg" name="generoReg" value="masculino" required>
-                        <label for="mascReg" style="display: inline; font-weight: normal;">Masculino</label>
+                <form class="formulario" onsubmit="return enviarRegistro(event);">
+                    <!-- Nombre completo -->
+                    <div class="campo-formulario">
+                        <label for="nombreReg">Nombre Completo (requerido):</label>
+                        <input type="text" id="nombreReg" required placeholder="Ej: María García López">
                     </div>
-                    <div>
-                        <input type="radio" id="femReg" name="generoReg" value="femenino" required>
-                        <label for="femReg" style="display: inline; font-weight: normal;">Femenino</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="otroReg" name="generoReg" value="otro" required>
-                        <label for="otroReg" style="display: inline; font-weight: normal;">Otro</label>
-                    </div>
-                </div>
 
-                <!--
-                    ════════════════════════════════════════════════════════
-                    PARTE 4: CHECKBOXES (INTERESES)
-                    ════════════════════════════════════════════════════════
-                -->
-
-                <div class="campo-formulario">
-                    <label>Intereses (selecciona los que te gusten):</label>
-                    <div>
-                        <input type="checkbox" id="deportesReg" name="interesesReg" value="Deportes">
-                        <label for="deportesReg" style="display: inline; font-weight: normal;">Deportes</label>
+                    <!-- Email -->
+                    <div class="campo-formulario">
+                        <label for="emailReg">Email (requerido):</label>
+                        <input type="email" id="emailReg" required placeholder="ejemplo@email.com">
                     </div>
-                    <div>
-                        <input type="checkbox" id="musicaReg" name="interesesReg" value="Música">
-                        <label for="musicaReg" style="display: inline; font-weight: normal;">Música</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="lecturaReg" name="interesesReg" value="Lectura">
-                        <label for="lecturaReg" style="display: inline; font-weight: normal;">Lectura</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="viajesReg" name="interesesReg" value="Viajes">
-                        <label for="viajesReg" style="display: inline; font-weight: normal;">Viajes</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="tecnologiaReg" name="interesesReg" value="Tecnología">
-                        <label for="tecnologiaReg" style="display: inline; font-weight: normal;">Tecnología</label>
-                    </div>
-                </div>
 
-                <!--
-                    ════════════════════════════════════════════════════════
-                    PARTE 5: TEXTAREA (BIOGRAFÍA)
-                    ════════════════════════════════════════════════════════
-                -->
+                    <!-- Contraseña -->
+                    <div class="campo-formulario">
+                        <label for="passwordReg">Contraseña (mínimo 6 caracteres, requerido):</label>
+                        <input type="password" id="passwordReg" minlength="6" required placeholder="Mínimo 6 caracteres">
+                    </div>
 
-                <div class="campo-formulario">
-                    <label for="biografiaReg">Biografía (cuéntanos sobre ti):</label>
-                    <textarea id="biografiaReg" rows="4" placeholder="Escribe una breve descripción sobre ti..."></textarea>
-                </div>
+                    <!-- Edad -->
+                    <div class="campo-formulario">
+                        <label for="edadReg">Edad (18-100, requerido):</label>
+                        <input type="number" id="edadReg" min="18" max="100" required>
+                    </div>
 
+                    <!-- Ciudad -->
+                    <div class="campo-formulario">
+                        <label for="ciudadReg">Ciudad:</label>
+                        <select id="ciudadReg" required>
+                            <option value="">-- Selecciona tu ciudad --</option>
+                            <option value="medellin">Medellín</option>
+                            <option value="bogota">Bogotá</option>
+                            <option value="cali">Cali</option>
+                            <option value="barranquilla">Barranquilla</option>
+                            <option value="cartagena">Cartagena</option>
+                        </select>
+                    </div>
 
+                    <!-- Género -->
+                    <div class="campo-formulario">
+                        <label>Género:</label>
+                        <div>
+                            <input type="radio" id="mascReg" name="generoReg" value="masculino" required>
+                            <label for="mascReg" style="display: inline; font-weight: normal;">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="femReg" name="generoReg" value="femenino" required>
+                            <label for="femReg" style="display: inline; font-weight: normal;">Femenino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="otroReg" name="generoReg" value="otro" required>
+                            <label for="otroReg" style="display: inline; font-weight: normal;">Otro</label>
+                        </div>
+                    </div>
+
+                    <!-- Intereses -->
+                    <div class="campo-formulario">
+                        <label>Intereses (selecciona los que te gusten):</label>
+                        <div>
+                            <input type="checkbox" id="deportesReg" name="interesesReg" value="Deportes">
+                            <label for="deportesReg" style="display: inline; font-weight: normal;">Deportes</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="musicaReg" name="interesesReg" value="Música">
+                            <label for="musicaReg" style="display: inline; font-weight: normal;">Música</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="lecturaReg" name="interesesReg" value="Lectura">
+                            <label for="lecturaReg" style="display: inline; font-weight: normal;">Lectura</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="viajesReg" name="interesesReg" value="Viajes">
+                            <label for="viajesReg" style="display: inline; font-weight: normal;">Viajes</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="tecnologiaReg" name="interesesReg" value="Tecnología">
+                            <label for="tecnologiaReg" style="display: inline; font-weight: normal;">Tecnología</label>
+                        </div>
+                    </div>
+
+                    <!-- Biografía -->
+                    <div class="campo-formulario">
+                        <label for="biografiaReg">Biografía (cuéntanos sobre ti):</label>
+                        <textarea id="biografiaReg" rows="4" placeholder="Escribe una breve descripción sobre ti..."></textarea>
+                    </div>
 
                     <button type="submit">Registrarse</button>
                 </form>

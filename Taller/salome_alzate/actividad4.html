@@ -158,6 +158,28 @@
                 -->
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+                 <table>
+                        <tr>
+                            <th>Nobre</th>
+                            <th>Edad</th>
+                            <th>Pasa tiempo</th>
+                        </tr>
+                        <tr>
+                            <td>Sthefa</td>
+                            <td>27</td>
+                            <td>Escuchar musica</td>
+                        </tr>
+                        <tr>
+                            <td>Jhon Fabir</td>
+                            <td>78</td>
+                            <td>Beber</td>
+                        </tr>
+                        <tr>
+                            <td>Sofia</td>
+                            <td>25</td>
+                            <td>Salir a bailar</td>
+                        </tr>
+                    </table>
 
 
 
@@ -352,6 +374,32 @@
                 -->
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+                 <table>
+                        <tr>
+                            <th>Género</th>
+                            <th>Título</th>
+                            <th>Año</th>
+                            <th>Calificación</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"> Fantasia</td>
+                            <td>Harry Potter y el caliz de fuego</td>
+                            <td>2005</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <!-- ¡FÍJATE! Esta fila NO tiene la celda de "Género" porque rowspan ya la ocupó -->
+                            <td>Harry Potter y el pricionero de azkaban</td>
+                            <td>2004</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>Comedia</td>
+                            <td>Son como niños</td>
+                            <td>2010</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                    </table>
 
 
 
@@ -540,6 +588,106 @@
                 -->
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+                 <table id="tablaTareas">
+    <thead>
+        <tr>
+            <th>Tarea</th>
+            <th>Prioridad</th>
+            <th>Fecha Límite</th>
+        </tr>
+    </thead>
+    <tbody id="cuerpoTablaTareas">
+        <tr>
+            <td>Hacer la tarea de la guardería de Emilio</td>
+            <td>Alta</td>
+            <td>2025-11-15</td>
+        </tr>
+    </tbody>
+</table>
+
+<button onclick="agregarTarea()">➕ Agregar Tarea</button>
+
+<script>
+function agregarTarea() {
+    // PASO 1: Pedir los datos al usuario
+    let tarea = prompt("¿Qué tarea tienes que hacer?");
+    let prioridad = prompt("¿Qué prioridad? (Alta/Media/Baja)");
+    let fecha = prompt("¿Fecha límite? (Ejemplo: 2025-11-30)");
+
+    // PASO 2: Verificar que el usuario haya escrito algo
+    if (tarea && prioridad && fecha) {
+        // PASO 3: Obtener el cuerpo de la tabla
+        let tbody = document.getElementById("cuerpoTablaTareas");
+
+        // PASO 4: Crear una nueva fila
+        let nuevaFila = document.createElement("tr");
+
+        // PASO 5: Agregar las celdas con los datos
+        nuevaFila.innerHTML = `
+            <td>${tarea}</td>
+            <td>${prioridad}</td>
+            <td>${fecha}</td>
+        `;
+
+        // PASO 6: Agregar la nueva fila a la tabla
+        tbody.appendChild(nuevaFila);
+    } else {
+        alert("Por favor, completa todos los campos antes de agregar la tarea 💖");
+    }
+}
+</script>
+
+<style>
+/* 🌸 Estilos rosados para la tabla */
+#tablaTareas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #ffe4ec; /* Rosado claro */
+    box-shadow: 2px 2px 8px rgba(255, 105, 180, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#tablaTareas th {
+    background-color: #ffb6c1; /* Rosa medio */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#tablaTareas td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ffc0cb;
+    color: #333;
+}
+
+/* Hover rosado en filas */
+#tablaTareas tr:hover {
+    background-color: #ffd9e6;
+}
+
+/* Botón rosado */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+}
+</style>
+
+                 
 
 
 

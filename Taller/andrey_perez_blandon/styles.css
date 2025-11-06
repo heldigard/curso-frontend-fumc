@@ -142,7 +142,9 @@ h6 {
 .seccion {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: rgb(236, 219, 220);
+    /* Use a warm cream gradient to match the workshop palette (avoids clashing pink tones) */
+    background: linear-gradient(180deg, #fbf6f0 0%, #f6ead9 100%);
+    border: 1px solid rgba(184,107,46,0.06);
     border-radius: 10px;
 }
 
