@@ -374,6 +374,71 @@
                 <p>Al enviar, debe mostrar todos los datos ingresados en un div de resultado.</p>
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
+
+                
+<head>
+<meta charset="UTF-8">
+<title>Formulario de Registro</title>
+
+</head>
+
+<body>
+
+<h2>Formulario de Registro</h2>
+
+<form>
+
+  <!-- Nombre -->
+  <label>Nombre Completo:</label>
+  <input type="text" placeholder="Ej: Juan Pérez" required>
+
+  <!-- Email -->
+  <label>Correo Electrónico:</label>
+  <input type="email" placeholder="ejemplo@email.com" required>
+
+  <!-- Password -->
+  <label>Contraseña:</label>
+  <input type="password" placeholder="Mínimo 6 caracteres" minlength="6" required>
+
+  <!-- Edad -->
+  <label>Edad:</label>
+  <input type="number" placeholder="Ej: 25" min="18" max="100" required>
+
+  <!-- Ciudad -->
+  <label>Ciudad:</label>
+  <select required>
+    <option value="">Seleccione una opción</option>
+    <option>Medellín</option>
+    <option>Bogotá</option>
+    <option>Cali</option>
+  </select>
+
+  <!-- Género -->
+  <label>Género:</label>
+  <input type="radio" name="genero" value="Femenino" required> Femenino
+  <br>
+  <input type="radio" name="genero" value="Masculino" required> Masculino
+  <br>
+  <input type="radio" name="genero" value="Otro" required> Otro
+
+  <!-- Intereses -->
+  <label>Intereses:</label>
+  <input type="checkbox" value="Arte"> Arte <br>
+  <input type="checkbox" value="Deporte"> Deporte <br>
+  <input type="checkbox" value="Tecnología"> Tecnología <br>
+  <input type="checkbox" value="Lectura"> Lectura <br>
+
+  <!-- Biografía -->
+  <label>Biografía:</label>
+  <textarea rows="4" placeholder="Cuéntanos algo sobre ti"></textarea>
+
+  <!-- Botón -->
+  <button type="submit">Enviar</button>
+
+</form>
+</body>
+
+
                 <!--
                     PISTA - GUÍA PASO A PASO PARA COMPLETAR EL FORMULARIO:
 

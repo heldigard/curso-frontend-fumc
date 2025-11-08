@@ -159,7 +159,31 @@
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
 
-
+                    <div class="caja-ejemplo">
+                <h3>Datos para el chismoso</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Pasatiempo</th>
+                    </tr>
+                    <tr>
+                        <td>Katherin Henao</td>
+                        <td>32</td>
+                        <td>Bordado y lectura</td>
+                    </tr>
+                    <tr>
+                        <td>María Camila Moná</td>
+                        <td>24</td>
+                        <td>Hacer rompecabezas</td>
+                    </tr>
+                    <tr>
+                        <td>Luisa Gutiérrez</td>
+                        <td>30</td>
+                        <td>Gym</td>
+                    </tr>
+                </table>
+            </div>
 
             </div>
         </div>
@@ -352,7 +376,31 @@
                 -->
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
-
+                <table>
+                        <tr>
+                            <th>Género</th>
+                            <th>Título</th>
+                            <th>Año</th>
+                            <th>Calificación</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Drama/Comedia</td>
+                            <td>Historias cruzadas</td>
+                            <td>2011</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>La sonrisa de Mona Lisa</td>
+                            <td>2003</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>Acción</td>
+                           <td>John Wick - Otro día para matar</td>
+                            <td>2014</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                    </table>
 
 
             </div>
@@ -541,8 +589,51 @@
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
 
+<table id="tablaTareas">
+                        <thead>
+                            <tr>
+                                <th>Tarea</th>
+                                <th>Prioridad</th>
+                                <th>Fecha Límite</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpoTablaTareas">
+                            <tr>
+                                <td>Terminar el taller de Fronted</td>
+                                <td>Alta</td>
+                                <td>2025-11-15</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
+                    <button onclick="agregarTarea()">➕ Agregar Tarea</button>
+                    <script>
+                        function agregarTarea() {
+                            // PASO 1: Pedir los datos al usuario
+                            let tarea = prompt("¿Qué tarea tienes que hacer?");
+                            let prioridad = prompt("¿Qué prioridad? (Alta/Media/Baja)");
+                            let fecha = prompt("¿Fecha límite? (Ejemplo: 2025-11-30)");
 
+                            // PASO 2: Verificar que el usuario haya escrito algo
+                            if (tarea && prioridad && fecha) {
+                                // PASO 3: Obtener el cuerpo de la tabla
+                                let tbody = document.getElementById("cuerpoTablaTareas");
+
+                                // PASO 4: Crear una nueva fila
+                                let nuevaFila = document.createElement("tr");
+
+                                // PASO 5: Agregar las celdas con los datos
+                                nuevaFila.innerHTML = `
+                                    <td>${tarea}</td>
+                                    <td>${prioridad}</td>
+                                    <td>${fecha}</td>
+                                `;
+
+                                // PASO 6: Agregar la nueva fila a la tabla
+                                tbody.appendChild(nuevaFila);
+                            }
+                        }
+                    </script>
             </div>
         </div>
 
