@@ -20,7 +20,7 @@
 
         /* Selector de clase - Se usa con un punto (.) */
         .caja-ejemplo {
-            background-color: #e3f2fd;
+            background-color: #e4e6ec;
             padding: 20px;
             margin: 20px 0;
             border-radius: 8px;
@@ -72,7 +72,7 @@
             padding: 10px;
             margin: 10px 0;
         }
-
+        
         /* 🎯 ZONA DE PRÁCTICA - Aquí escribirás tus estilos */
 
         /* TAREA 1: Crea una clase llamada "mi-estilo" */
@@ -100,7 +100,11 @@
            AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
         */
 
-
+           .mi-estilo {
+               background-color: lightblue;
+               text-align: center;
+               padding: 15px;
+           }
 
         /* TAREA 2: Crea una clase llamada "texto-importante" */
         /* Debe tener: color rojo, tamaño de fuente 20px, negrita */
@@ -119,7 +123,12 @@
 
            AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
         */
-
+         
+          .texto-importante {
+               color: red;
+               font-size: 20px;
+               font-weight: bold;
+           } 
 
 
         /* TAREA 3: Crea una clase llamada "tarjeta" */
@@ -143,7 +152,23 @@
 
            AHORA TÚ: Copia el ejemplo de arriba y pégalo aquí debajo:
         */
+        .tarjeta {
+               background-color: white;
+               border: 2px solid gray;
+               border-radius: 10px;
+               padding: 20px;
+               box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+           }
 
+            .mitarjeta {
+               background-color: #e8e1ff; 
+                border-radius: 10px;
+               padding: 20px; 
+               border: 2px solid #9b69ff; 
+               margin: 15px;
+               text-align: center;
+               box-shadow: 0 2px 5px rgba(32, 3, 82, 0.2);
+           }
 
 
     </style>
@@ -195,9 +220,9 @@
 
                 AHORA TÚ: Agrega class="mi-estilo" al div de abajo:
             -->
-            <div>
-                <p>Este div debe tener fondo azul claro, texto centrado y padding.</p>
-            </div>
+            <div class="mi-estilo">
+                    <p>Este div debe tener fondo azul claro, texto centrado y padding.</p>
+                </div>
         </div>
 
         <!-- SECCIÓN 2: FUENTES -->
@@ -224,7 +249,7 @@
 
                 AHORA TÚ: Modifica la línea de abajo agregando la clase:
             -->
-            <p>Este texto debe ser rojo, grande y en negrita.</p>
+            <p class="texto-importante">Este texto debe ser rojo, grande y en negrita.</p>
         </div>
 
         <!-- SECCIÓN 3: MÁRGENES Y PADDING -->
@@ -299,12 +324,12 @@
             <!--
                 AHORA TÚ: Agrega class="tarjeta" al div de abajo:
             -->
-            <div>
+            <div class="tarjeta">
                 <h3>Mi Tarjeta Personal</h3>
-                <p><strong>Nombre:</strong> [Tu nombre]</p>
-                <p><strong>Edad:</strong> [Tu edad]</p>
-                <p><strong>Ciudad:</strong> [Tu ciudad]</p>
-                <p><strong>Pasatiempo favorito:</strong> [Tu pasatiempo]</p>
+                <p><strong>Nombre:</strong> Carolina</p>
+                <p><strong>Edad:</strong> 35 </p>
+                <p><strong>Ciudad:</strong> Medellin</p>
+                <p><strong>Pasatiempo favorito:</strong> ir a cine </p>
             </div>
 
             <!-- 🎯 TAREA 4: Crea tu propia tarjeta con estilos inline -->
@@ -325,9 +350,9 @@
 
                 AHORA TÚ: Copia el ejemplo de arriba y modifica el div de abajo:
             -->
-            <div>
+             <div style="background-color: #e8e1ff; padding: 20px; border: 2px solid #9b69ff; text-align: center;">
                 <h3>Mi Comida Favorita</h3>
-                <p>[Escribe aquí tu comida favorita]</p>
+                <p>Comida peruana</p>
             </div>
         </div>
 
@@ -378,11 +403,13 @@
 
                 AHORA TÚ: Elige una opción y escribe tu código aquí debajo:
             -->
+                <div class="mitarjeta">
+                    <p>¡Esta es mi caja personalizada!</p>
+                </div>
 
-
-
+            
         </div>
-
+                                
         <!-- BOTONES DE NAVEGACIÓN -->
         <div style="text-align: center; margin-top: 40px; display: flex; gap: 20px; justify-content: center;">
             <a href="actividad1.html" class="btn-volver">← Actividad Anterior</a>
