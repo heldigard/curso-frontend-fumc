@@ -429,11 +429,6 @@
                     </select>
                 </div>
 
-                <!--
-                    ════════════════════════════════════════════════════════
-                    PARTE 3: RADIO BUTTONS (GÉNERO)
-                    ════════════════════════════════════════════════════════
-                -->
 
                 <div class="campo-formulario">
                     <label>Género:</label>
@@ -499,28 +494,26 @@
 
                 <div id="resultadoRegistro" class="resultado-formulario" style="display: none;"></div>
 
-                <!--
-                    ════════════════════════════════════════════════════════
-                    PARTE 6: JAVASCRIPT - FUNCIÓN PARA PROCESAR EL FORMULARIO
-                    ════════════════════════════════════════════════════════
+                
 
-                    Ahora necesitas completar la función que procesa todos estos datos
-                -->
+                    
+                
 
+                <!--script-->
                 <script>
                     function enviarRegistro(event) {
-                        event.preventDefault(); // Evita que la página se recargue
+                        event.preventDefault(); 
 
-                        // 🎯 AHORA TÚ: Completa esta función siguiendo los pasos:
+                        
 
-                        // PASO 1: Obtener todos los valores de los campos de texto
+                        //Obtener todos los valores de los campos de texto
                         let nombre = document.getElementById("nombreReg").value;
                         let email = document.getElementById("emailReg").value;
                         let edad = document.getElementById("edadReg").value;
                         let ciudad = document.getElementById("ciudadReg").value;
                         let biografia = document.getElementById("biografiaReg").value;
 
-                        // PASO 2: Obtener el género seleccionado (radio button)
+                        //Género 
                         let genero = "";
                         let radios = document.getElementsByName("generoReg");
                         for (let radio of radios) {
@@ -530,7 +523,7 @@
                             }
                         }
 
-                        // PASO 3: Obtener los intereses seleccionados (checkboxes)
+                        // Intereses 
                         let intereses = [];
                         let checkboxes = document.getElementsByName("interesesReg");
                         for (let checkbox of checkboxes) {
@@ -539,7 +532,7 @@
                             }
                         }
 
-                        // PASO 4: Mostrar todos los datos en el div de resultado
+                        // Mostrar resultado
                         let resultado = document.getElementById("resultadoRegistro");
                         resultado.style.display = "block";
                         resultado.innerHTML = `
