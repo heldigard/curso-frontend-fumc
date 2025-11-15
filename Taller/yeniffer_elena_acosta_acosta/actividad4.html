@@ -105,7 +105,28 @@
                 <h3>🎯 TAREA 1: Crea tu tabla de amigos</h3>
                 <p>Crea una tabla con 3 columnas: Nombre, Edad, Pasatiempo</p>
                 <p>Incluye al menos 3 filas con datos de tus amigos o familia</p>
-
+                    <table>
+                        <tr>
+                            <th>NOMBRE</th>
+                            <th>EDAD </th>
+                            <th>PASATIEMPO </th>
+                        </tr>
+                        <tr>
+                            <td>HERNAN</td>
+                            <td>33</td>
+                            <td>MONTAR BICICLETA</td>
+                        </tr>
+                        <tr>
+                        <td>María CESPEDES</td>
+                        <td>31</td>
+                        <td>CALI</td>
+                    </tr>
+                    <tr>
+                        <td>ROSA ESPINALES</td>
+                        <td>23</td>
+                        <td>MEDELLIN</td>
+                    </tr>
+                    </table> 
                 <!--
                     PISTA - ESTRUCTURA DE UNA TABLA:
 
@@ -120,7 +141,7 @@
                             <td>Dato 2</td>
                             <td>Dato 3</td>
                         </tr>
-                    </table>
+                    </table> 
 
                     RECUERDA:
                     - <table> abre la tabla
@@ -330,7 +351,7 @@
                             <td>⭐⭐⭐⭐⭐</td>
                         </tr>
                         <tr>
-                            <!-- ¡FÍJATE! Esta fila NO tiene la celda de "Género" porque rowspan ya la ocupó -->
+                        <!-- ¡FÍJATE! Esta fila NO tiene la celda de "Género" porque rowspan ya la ocupó -->
                             <td>Titanic</td>
                             <td>1997</td>
                             <td>⭐⭐⭐⭐⭐</td>
@@ -352,7 +373,31 @@
                 -->
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
-
+         <table>
+                        <tr>
+                            <th>Género</th>
+                            <th>Título</th>
+                            <th>Año</th>
+                            <th>Calificación</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Acción</td>
+                            <td>DURO DE MATAR</td>
+                            <td>1997</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>Mario brothers</td>
+                            <td>1997</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>Comedia</td>
+                            <td>soul plain</td>
+                            <td>2013</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                    </table>
 
 
             </div>
@@ -541,7 +586,54 @@
 
                 <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
 
+  <table id="tablaTareas">
+                        <thead>
+                            <tr>
+                                <th>Tarea</th>
+                                <th>Prioridad</th>
+                                <th>Fecha Límite</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpoTablaTareas">
+                            <tr>
+                                <td>Hacer la tarea de matemáticas</td>
+                                <td>Alta</td>
+                                <td>2025-11-15</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
+                    <button onclick="agregarTarea()">➕ Agregar Tarea</button>
+
+                    <script>
+                        function agregarTarea() {
+                            // PASO 1: Pedir los datos al usuario
+                            let tarea = prompt("¿Qué tarea tienes que hacer?");
+                            let prioridad = prompt("¿Qué prioridad? (Alta/Media/Baja)");
+                            let fecha = prompt("¿Fecha límite? (Ejemplo: 2025-11-30)");
+
+                            // PASO 2: Verificar que el usuario haya escrito algo
+                            if (tarea && prioridad && fecha) {
+                                // PASO 3: Obtener el cuerpo de la tabla
+                                let tbody = document.getElementById("cuerpoTablaTareas");
+
+                                // PASO 4: Crear una nueva fila
+                                let nuevaFila = document.createElement("tr");
+
+                                // PASO 5: Agregar las celdas con los datos
+                                nuevaFila.innerHTML = `
+                                    <td>${tarea}</td>
+                                    <td>${prioridad}</td>
+                                    <td>${fecha}</td>
+                                `;
+
+                                // PASO 6: Agregar la nueva fila a la tabla
+                                tbody.appendChild(nuevaFila);
+                            }
+                        }
+                    </script>
+
+                
 
             </div>
         </div>

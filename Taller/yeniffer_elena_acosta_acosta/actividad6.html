@@ -185,7 +185,32 @@
             
             <!-- 🎯 ESCRIBE TU VERSIÓN AQUÍ DEBAJO -->
             
-            
+              <div class="row">
+    <div class="col-md-4">
+        <div class="bg-info text-white p-4 text-start border border-dark rounded">
+            Caja 1
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="bg-dark text-light p-2 text-end border border-light rounded-3">
+            Caja 2
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="bg-warning text-dark p-5 text-center border border-secondary rounded-pill">
+            Caja 3
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="bg-success text-white p-1 text-uppercase fw-bold border border-white rounded-0">
+            Caja 4
+        </div>
+    </div>
+              </div>
+
             
         </div>
 
@@ -282,7 +307,18 @@
             
             <!-- 🎯 ESCRIBE TUS BOTONES AQUÍ DEBAJO -->
             
-            
+            <button class="btn btn-outline-success btn-lg rounded-pill shadow-sm px-4">
+    <i class="bi bi-heart-fill"></i> Me Gusta
+</button>
+
+<button class="btn btn-outline-danger rounded-0 shadow px-3 py-2 fw-bold">
+    <i class="bi bi-trash3"></i> Eliminar
+</button>
+
+<button class="btn btn-info btn-sm text-dark rounded-3 shadow-sm">
+    <i class="bi bi-download"></i> Descargar
+</button>
+
             
         </div>
 
@@ -404,7 +440,52 @@
             
             <!-- 🎯 ESCRIBE TUS TARJETAS AQUÍ DEBAJO -->
             
-            
+            <div class="row">
+
+    <!-- TARJETA A -->
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+            <img src="URL_IMAGEN_1" class="card-img-top rounded-top" alt="Imagen A">
+            <div class="card-body">
+                <h5 class="card-title text-primary">Aventura Épica</h5>
+                <p class="card-text">Una historia llena de acción, criaturas mágicas y paisajes increíbles.</p>
+                <a href="#" class="btn btn-outline-primary w-100">
+                    <i class="bi bi-film"></i> Ver más
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TARJETA B -->
+    <div class="col-md-4">
+        <div class="card shadow border border-success">
+            <img src="URL_IMAGEN_2" class="card-img-top" alt="Imagen B">
+            <div class="card-body">
+                <h5 class="card-title text-success">Comedia Romántica</h5>
+                <p class="card-text">Risas, amor y momentos que te harán sonreír de principio a fin.</p>
+                <a href="#" class="btn btn-success w-100">
+                    <i class="bi bi-heart"></i> Ver más
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TARJETA C -->
+    <div class="col-md-4">
+        <div class="card shadow-lg border-0 rounded-4">
+            <img src="URL_IMAGEN_3" class="card-img-top rounded-top-4" alt="Imagen C">
+            <div class="card-body">
+                <h5 class="card-title text-danger">Misterio Oscuro</h5>
+                <p class="card-text">Un suspenso profundo lleno de giros inesperados y secretos ocultos.</p>
+                <a href="#" class="btn btn-danger w-100">
+                    <i class="bi bi-search"></i> Ver más
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
             
         </div>
 
@@ -534,7 +615,184 @@
             
             <!-- 🎯 ESCRIBE TU CÓDIGO AQUÍ -->
             
-            
+            <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Mi Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="text-center p-5 bg-primary text-white">
+    <div class="container">
+        <h1 class="display-4">Tu Nombre Aquí</h1>
+        <p class="lead">Tu Profesión | Desarrollador Web | Diseñador | etc.</p>
+        <a href="#proyectos" class="btn btn-light btn-lg mt-3">Ver mis proyectos</a>
+    </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Sobre mí</h2>
+
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="https://imagenes.elpais.com/resizer/v2/3XLTWDI6QNOQBDZEOX4ZQQ67VI.jpg?auth=fb79e894ad6c3437584a9762d196fa379a9a986810dab87d83fbac72291a080e&width=414" class="img-fluid rounded-circle shadow" alt="Mi foto">
+            </div>
+            <div class="col-md-8">
+                <p>
+                    Hola, soy <strong>Yenifer</strong>, una apasionada del desarrollo web. Me encanta crear interfaces modernas,
+                    responsivas y fáciles de usar. Aquí puedes ver parte de mi trabajo y mis habilidades.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HABILIDADES -->
+<section id="habilidades" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Habilidades</h2>
+
+        <div class="row text-center">
+
+            <div class="col-md-4">
+                <div class="card p-3 shadow-sm">
+                    <i class="bi bi-code-slash display-4 text-primary"></i>
+                    <h5 class="mt-2">Desarrollo Web</h5>
+                    <p>HTML, CSS, JavaScript, Bootstrap.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-3 shadow-sm">
+                    <i class="bi bi-palette display-4 text-warning"></i>
+                    <h5 class="mt-2">Diseño UI/UX</h5>
+                    <p>Figma, prototipos, diseño responsive.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-3 shadow-sm">
+                    <i class="bi bi-server display-4 text-success"></i>
+                    <h5 class="mt-2">Backend</h5>
+                    <p>PHP, MySQL, Node.js básico.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Proyectos</h2>
+
+        <div class="row g-4">
+
+          <div class="row">
+
+    <!-- TARJETA 1 -->
+    <div class="col-md-4">
+        <div class="card">
+            <img src="URL_IMAGEN_1" class="card-img-top" alt="NovaTask Manager">
+            <div class="card-body">
+                <h5 class="card-title">NovaTask Manager</h5>
+                <p class="card-text">
+                    Una aplicación para gestionar tareas de forma rápida y visual. Incluye recordatorios,
+                    categorización inteligente y seguimiento del progreso.
+                </p>
+                <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TARJETA 2 -->
+    <div class="col-md-4">
+        <div class="card">
+            <img src="URL_IMAGEN_2" class="card-img-top" alt="PixelCraft Portfolio">
+            <div class="card-body">
+                <h5 class="card-title">PixelCraft Portfolio</h5>
+                <p class="card-text">
+                    Un portfolio minimalista para creativos. Incluye galerías animadas, modo oscuro y un panel para
+                    administrar proyectos de manera sencilla.
+
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Contacto</h2>
+
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" placeholder="Tu nombre">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" placeholder="tuemail@gmail.com">
+            </div>
+            <div class="col-12">
+                <label class="form-label">Mensaje</label>
+                <textarea class="form-control" rows="5" placeholder="Escribe tu mensaje"></textarea>
+            </div>
+            <div class="col-12 text-center">
+                <button class="btn btn-primary px-4">Enviar</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-3">
+    <p>© 2024 Tu Nombre | Todos los derechos reservados</p>
+    <div>
+        <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-github"></i></a>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
             
         </div>
 

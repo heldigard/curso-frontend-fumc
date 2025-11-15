@@ -73,10 +73,10 @@
                 <script>
                     function miAlerta() {
                         // 🎯 ESCRIBE TU CÓDIGO AQUÍ
-                        // Usa: alert("Tu mensaje aquí");
+                         Usa: alert("MI ALERTA");
                         //
                         // PISTA: Una alerta se escribe así:
-                        // alert("Hola, soy Juan y tengo 25 años");
+                        alert("Hola, soy YENIFER y tengo 40 años");
                         //
                         // RECUERDA:
                         // - El texto va entre comillas " "
@@ -132,10 +132,10 @@
                         // PISTA - PASO A PASO:
                         //
                         // PASO 1: Pedir la edad al usuario
-                        // let edad = prompt("¿Cuántos años tienes?");
+                         let edad = prompt("¿Cuántos años tienes?");
                         //
                         // PASO 2: Mostrar el mensaje en la página
-                        // document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
+                         document.getElementById("mensajeEdad").textContent = "Tienes " + edad + " años";
                         //
                         // RECUERDA:
                         // - let es para crear una variable (como una caja donde guardas datos)
@@ -219,20 +219,20 @@
                         // PISTA - SIGUE ESTOS PASOS:
                         //
                         // PASO 1: Pedir el primer número
-                        // let num1 = prompt("Ingresa el primer número:");
+                     let num1 = prompt("Ingresa el primer número:");
                         //
                         // PASO 2: Pedir el segundo número
-                        // let num2 = prompt("Ingresa el segundo número:");
+                        let num2 = prompt("Ingresa el segundo número:");
                         //
                         // PASO 3: Convertir a números (IMPORTANTE)
-                        // num1 = Number(num1);
-                        // num2 = Number(num2);
+                         num1 = Number(num1);
+                        num2 = Number(num2);
                         //
                         // PASO 4: Hacer la resta
-                        // let resta = num1 - num2;
+                       let resta = num1 - num2;
                         //
                         // PASO 5: Mostrar el resultado
-                        // document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
+                        document.getElementById("resultadoResta").textContent = num1 + " - " + num2 + " = " + resta;
                         //
                         // AHORA TÚ: Copia los 5 pasos de arriba y pégalos aquí debajo:
 
@@ -259,12 +259,12 @@
                         // - El símbolo / significa división
                         //
                         // PASOS COMPLETOS:
-                        // let num1 = prompt("Ingresa el primer número:");
-                        // let num2 = prompt("Ingresa el segundo número:");
-                        // num1 = Number(num1);
-                        // num2 = Number(num2);
-                        // let division = num1 / num2;
-                        // document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
+                         let num1 = prompt("Ingresa el primer número:");
+                         let num2 = prompt("Ingresa el segundo número:");
+                         num1 = Number(num1);
+                         num2 = Number(num2);
+                         let division = num1 / num2;
+                         document.getElementById("resultadoDivision").textContent = num1 + " ÷ " + num2 + " = " + division;
                         //
                         // AHORA TÚ: Copia los pasos de arriba y pégalos aquí debajo:
 
@@ -307,7 +307,7 @@
 
             <!-- 🎯 TAREA 5 -->
             <div class="tarea">
-                <h3>🎯 TAREA 5: Crea un contador</h3>
+                <h3>🎯 TAREA 5: Crea un contadoR</h3>
                 <p>Crea un botón que cuente cuántas veces se ha hecho clic</p>
                 <p id="contador" style="font-size: 32px; font-weight: bold; color: #2196f3;">0</p>
                 <button onclick="incrementarContador()">Incrementar Contador</button>
@@ -323,11 +323,11 @@
                         // PISTA - PASO A PASO:
                         //
                         // PASO 1: Aumentar el contador en 1
-                        // cuenta = cuenta + 1;
+                           cuenta = cuenta+1;
                         // (También puedes escribir: cuenta++; es lo mismo)
                         //
                         // PASO 2: Mostrar el nuevo número en la página
-                        // document.getElementById("contador").textContent = cuenta;
+                           document.getElementById("contador").textContent = cuenta;
                         //
                         // EXPLICACIÓN:
                         // - cuenta = cuenta + 1; significa: "toma el valor actual de cuenta, súmale 1, y guárdalo de nuevo en cuenta"
@@ -388,21 +388,21 @@
                         // PISTA - PASO A PASO:
                         //
                         // PASO 1: Pedir un número
-                        // let numero = prompt("Ingresa un número:");
-                        // numero = Number(numero);
+                         let numero = prompt("Ingresa un número:");
+                         numero = Number(numero);
                         //
                         // PASO 2: Obtener el elemento donde mostraremos el resultado
-                        // let mensaje = document.getElementById("mensajeParImpar");
+                          let mensaje = document.getElementById("mensajeParImpar");
                         //
                         // PASO 3: Verificar si es par o impar usando if/else
-                        // if (numero % 2 == 0) {
-                        //     mensaje.textContent = "El número " + numero + " es PAR";
-                        //     mensaje.style.color = "#4caf50";
-                        // } else {
-                        //     mensaje.textContent = "El número " + numero + " es IMPAR";
-                        //     mensaje.style.color = "#f44336";
-                        // }
-                        //
+                           if (numero % 2 == 0) {
+                              mensaje.textContent = "El número " + numero + " es PAR";
+                              mensaje.style.color = "#4caf50";
+                           } else {
+                            mensaje.textContent = "El número " + numero + " es IMPAR";
+                            mensaje.style.color = "#f44336";
+                        }
+                        
                         // EXPLICACIÓN DEL OPERADOR %:
                         // - El % (módulo) da el RESTO de una división
                         // - 10 % 2 = 0 (porque 10 dividido 2 da 5, resto 0) → PAR
